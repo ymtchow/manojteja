@@ -122,7 +122,7 @@ import '../styles/global.css';
 <nav class="top" id="topnav">
 <div class="inner">
 <a class="nav-left" href="#top">
-<img alt="YMT logo" class="nav-logo" src="assets/ymt-logo-mark.png"/>
+<img alt="YMT logo" class="nav-logo" src="/assets/ymt-logo-mark.png"/>
 <span class="role">Insurance Practitioner · Dubai</span>
 </a>
 <div class="nav-right">
@@ -136,7 +136,6 @@ import '../styles/global.css';
 </div>
 </nav>
 <main id="top">
-<!-- ─── 1. Masthead ─────────────────────────────────────── -->
 <section class="masthead" data-screen-label="01 Masthead">
 <div class="wrap">
 <div class="head-grid reveal">
@@ -207,7 +206,6 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 2. Practice ─────────────────────────────────────── -->
 <section class="practice" data-screen-label="02 Practice" id="practice" style="color: rgb(73, 90, 114)">
 <div class="wrap">
 <div class="practice-grid">
@@ -271,7 +269,6 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 3. Coverage Lines ───────────────────────────────── -->
 <section class="coverage" data-screen-label="03 Coverage" id="coverage">
 <div class="wrap">
 <span class="label section-label reveal"><span class="num">ii.</span><span class="icon-inline"><svg class="icon"><use href="#icon-insurance"></use></svg>Coverage Lines</span></span>
@@ -321,7 +318,6 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 4. Positions Held ───────────────────────────────── -->
 <section class="positions" data-screen-label="04 Positions" id="positions">
 <div class="wrap">
 <span class="label section-label reveal"><span class="num">iii.</span><span class="icon-inline"><svg class="icon"><use href="#icon-positions"></use></svg>Positions Held</span></span>
@@ -353,7 +349,6 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 5. Education ────────────────────────────────────── -->
 <section class="education" data-screen-label="05 Education" id="education">
 <div class="wrap">
 <span class="label section-label reveal"><span class="num">iv.</span><span class="icon-inline"><svg class="icon"><use href="#icon-education"></use></svg>Education</span></span>
@@ -383,7 +378,6 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 6. Credentials (interactive) ────────────────────── -->
 <section class="credentials" data-screen-label="06 Credentials" id="credentials">
 <div class="wrap">
 <div class="creds-header reveal">
@@ -450,40 +444,38 @@ import '../styles/global.css';
 </div>
 </div>
 </section>
-<!-- ─── 7. Insights ──────────────────────────────────────── -->
 <section class="insights" data-screen-label="07 Insights" id="insights">
 <div class="wrap">
 <span class="label section-label reveal"><span class="num">vi.</span><span class="icon-inline"><svg class="icon"><use href="#icon-insights"></use></svg>Insights</span></span>
 <h2 class="reveal">Future-ready resources for articles, PDFs, and podcasts.</h2>
 <div class="insight-grid reveal-stagger">
-<article class="insight-card">
+<article class="insight-card interactive-card">
 <div>
 <svg class="icon"><use href="#icon-article"></use></svg>
 <h3>Articles</h3>
 </div>
 <p>Insurance commentary, market observations, and practical notes.</p>
-<a class="status" href="/articles/">View articles →</a>
+<a class="status stretched-link" href="/articles/">View articles → Coming Soon</a>
 </article>
-<article class="insight-card">
+<article class="insight-card interactive-card">
 <div>
 <svg class="icon"><use href="#icon-pdf"></use></svg>
 <h3>PDF Briefs</h3>
 </div>
 <p>Downloadable explainers, checklists, and client-facing references.</p>
-<div class="status">Coming soon</div>
+<a class="status stretched-link" href="/pdfs/">View PDF's - Coming Soon</a>
 </article>
-<article class="insight-card">
+<article class="insight-card interactive-card">
 <div>
 <svg class="icon"><use href="#icon-podcast"></use></svg>
 <h3>Podcasts</h3>
 </div>
 <p>Audio reflections on placement, risk, and the evolving insurance market.</p>
-<div class="status">Articles and podcasts coming soon</div>
+<a class="status stretched-link" href="/podcasts/">Podcasts - Coming Soon</a>
 </article>
 </div>
 </div>
 </section>
-<!-- ─── 8. Engagement ───────────────────────────────────── -->
 <section class="engagement" data-screen-label="08 Engagement" id="engagement">
 <div class="wrap">
 <div class="center reveal">
@@ -545,22 +537,17 @@ import '../styles/global.css';
 <footer>
 <div class="inner">
 <div>© 2026 Manoj Teja Y · Dubai, UAE</div>
-<img alt="YMT logo" class="footer-logo" src="assets/ymt-logo-mark.png"/>
+<img alt="YMT logo" class="footer-logo" src="/assets/ymt-logo-mark.png"/>
 </div>
 </footer>
 <script is:inline >
-
-  // ── Sticky nav border + active-section highlight ──────────────
   (function () {
     const nav = document.getElementById('topnav');
     const sectLinks = nav.querySelectorAll('.sect-link');
     const sections = ['practice','coverage','positions','credentials','insights'].map(id => document.getElementById(id)).filter(Boolean);
-
     function onScroll() {
       if (window.scrollY > 8) nav.classList.add('scrolled');
       else nav.classList.remove('scrolled');
-
-      // active section
       const y = window.scrollY + 120;
       let active = null;
       for (const s of sections) {
@@ -574,7 +561,6 @@ import '../styles/global.css';
     onScroll();
   })();
 
-  // ── Reveal on scroll (single trigger) ─────────────────────────
   (function () {
     const els = document.querySelectorAll('.reveal, .reveal-stagger');
     if (!('IntersectionObserver' in window)) {
@@ -592,7 +578,6 @@ import '../styles/global.css';
     els.forEach(el => io.observe(el));
   })();
 
-  // ── Stat count-up ─────────────────────────────────────────────
   (function () {
     const stats = document.getElementById('stats');
     if (!stats) return;
@@ -622,11 +607,9 @@ import '../styles/global.css';
     io.observe(stats);
   })();
 
-  // ── Mobile coverage accordion ─────────────────────────────────
   (function () {
     const mq = window.matchMedia('(max-width: 768px)');
     const pillars = document.querySelectorAll('[data-pillar]');
-
     function attach() {
       pillars.forEach(p => {
         const h3 = p.querySelector('h3');
@@ -647,7 +630,6 @@ import '../styles/global.css';
       });
     }
     attach();
-
     function syncFirstOpen() {
       if (mq.matches) {
         pillars.forEach((p, i) => {
@@ -661,8 +643,6 @@ import '../styles/global.css';
     syncFirstOpen();
     mq.addEventListener('change', syncFirstOpen);
   })();
-
-
 </script>
   </body>
 </html>
