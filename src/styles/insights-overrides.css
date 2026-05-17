@@ -226,3 +226,184 @@ nav.top .nav-right a.sect-link.active::after {
     padding: 28px 24px;
   }
 }
+
+/* Mobile visual upgrade: preserve the premium Dubai-night atmosphere */
+@media (max-width: 768px) {
+  html {
+    background-image:
+      radial-gradient(circle at 82% 8%, rgba(232, 184, 136, 0.16), transparent 28%),
+      radial-gradient(circle at 12% 34%, rgba(212, 165, 116, 0.10), transparent 32%),
+      linear-gradient(180deg, rgba(11, 19, 34, 0.10), rgba(11, 19, 34, 0.86)),
+      url('/assets/dubai-skyline-clean.jpg');
+    background-position: 62% top;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  body {
+    background:
+      linear-gradient(180deg, rgba(11, 19, 34, 0.22) 0%, rgba(11, 19, 34, 0.62) 26%, rgba(11, 19, 34, 0.90) 68%, rgba(11, 19, 34, 0.98) 100%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      linear-gradient(135deg, rgba(232, 184, 136, 0.08), transparent 34%),
+      radial-gradient(circle at 50% 0%, rgba(237, 230, 214, 0.05), transparent 42%);
+  }
+
+  .wrap {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .masthead {
+    padding-top: 54px;
+    padding-bottom: 72px;
+  }
+
+  .masthead::before {
+    background:
+      radial-gradient(circle at 72% 0%, rgba(232, 184, 136, 0.16), transparent 34%),
+      linear-gradient(180deg, rgba(11, 19, 34, 0.08), rgba(11, 19, 34, 0.78));
+  }
+
+  .masthead .head-grid {
+    justify-items: stretch;
+    margin-bottom: 44px;
+  }
+
+  .masthead .head-name {
+    text-align: left;
+    max-width: 100%;
+    padding: 26px 22px;
+    border: 1px solid rgba(232, 184, 136, 0.20);
+    border-radius: 28px;
+    background: linear-gradient(145deg, rgba(11, 19, 34, 0.58), rgba(20, 33, 59, 0.32));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  }
+
+  .masthead .practice-line {
+    justify-content: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .masthead h1 {
+    white-space: normal;
+    font-size: clamp(42px, 13vw, 64px);
+  }
+
+  .masthead .name-block {
+    display: block;
+  }
+
+  .masthead .creds-strip {
+    justify-content: flex-start;
+    gap: 9px;
+  }
+
+  .masthead .tagline {
+    margin-left: 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+
+  .meta-row {
+    gap: 10px;
+  }
+
+  .meta-chip {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 14px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .stats {
+    border: 1px solid rgba(232, 184, 136, 0.18);
+    border-radius: 28px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(11, 19, 34, 0.62), rgba(20, 33, 59, 0.34));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+  }
+
+  .stat {
+    padding: 24px 20px;
+  }
+
+  .stat .num {
+    font-size: 42px;
+  }
+
+  .practice .portrait,
+  .practice-highlight,
+  .pillar,
+  .position,
+  .edu,
+  .creds-group,
+  .insight-card,
+  .engagement-panel {
+    border-radius: 26px !important;
+    background: linear-gradient(145deg, rgba(11, 19, 34, 0.70), rgba(20, 33, 59, 0.38));
+    border-color: rgba(232, 184, 136, 0.20) !important;
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.22);
+  }
+
+  .practice .practice-grid,
+  .engagement-grid {
+    gap: 28px;
+  }
+
+  .practice h2,
+  .coverage h2,
+  .credentials .creds-header h2,
+  .insights h2,
+  .engagement h2 {
+    font-size: 26px;
+    line-height: 1.18;
+  }
+
+  nav.top {
+    background: rgba(11, 19, 34, 0.80);
+  }
+
+  nav.top .inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  nav.top .nav-right {
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  nav.top .nav-right::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav.top .nav-right a.sect-link,
+  nav.top .engage {
+    flex: 0 0 auto;
+    padding: 8px 12px 10px;
+    border-radius: 999px;
+    background: rgba(237, 230, 214, 0.04);
+    border: 1px solid rgba(237, 230, 214, 0.08);
+  }
+}
