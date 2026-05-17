@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[[redirects]]
+  from = "/thanks.html"
+  to = "/thanks/"
+  status = 301
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
