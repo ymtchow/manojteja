@@ -1,0 +1,30 @@
+.interactive-card {
+  position: relative;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.interactive-card:hover,
+.interactive-card:focus-within {
+  transform: translateY(-2px);
+  background: rgba(11, 19, 34, 0.58);
+  border-color: var(--rule-strong);
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.interactive-card .status,
+.interactive-card .icon,
+.interactive-card h3,
+.interactive-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.interactive-card {
+  cursor: pointer;
+}
