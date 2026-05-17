@@ -28,3 +28,145 @@
 .interactive-card {
   cursor: pointer;
 }
+
+/* Premium card polish: rounded edges + subtle interactive movement */
+.meta-chip,
+.practice-highlight,
+.pillar,
+.position,
+.edu,
+.cred,
+.insight-card,
+.engagement-panel {
+  border-radius: 22px;
+}
+
+.meta-chip,
+.practice-highlight {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(212, 165, 116, 0.24);
+  background: linear-gradient(145deg, rgba(11, 19, 34, 0.66), rgba(20, 33, 59, 0.38));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.meta-chip:hover,
+.meta-chip:focus-within,
+.practice-highlight:hover,
+.practice-highlight:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(232, 184, 136, 0.58);
+  background: linear-gradient(145deg, rgba(11, 19, 34, 0.78), rgba(20, 33, 59, 0.54));
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.24), 0 0 0 1px rgba(232, 184, 136, 0.10) inset;
+}
+
+.meta-chip .icon,
+.practice-highlight .icon {
+  transition: transform 0.22s ease, color 0.22s ease;
+}
+
+.meta-chip:hover .icon,
+.practice-highlight:hover .icon {
+  transform: scale(1.08) rotate(-3deg);
+  color: var(--amber-bright);
+}
+
+.practice-highlight strong {
+  transition: color 0.22s ease;
+}
+
+.practice-highlight:hover strong {
+  color: var(--ink);
+}
+
+.practice-highlights {
+  gap: 18px;
+}
+
+.practice-highlight {
+  padding: 24px 22px;
+}
+
+.practice-highlight .label {
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+/* Coverage cards: smoother visual grouping while preserving desktop layout */
+.coverage .pillars {
+  gap: 18px;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.pillar {
+  border: 1px solid rgba(212, 165, 116, 0.20) !important;
+  background: linear-gradient(145deg, rgba(11, 19, 34, 0.62), rgba(20, 33, 59, 0.32));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.pillar:first-child,
+.pillar:last-child {
+  padding: 40px 36px 44px;
+}
+
+.pillar:hover,
+.pillar:focus-within {
+  transform: translateY(-5px);
+  border-color: rgba(232, 184, 136, 0.58) !important;
+  background: linear-gradient(145deg, rgba(11, 19, 34, 0.78), rgba(20, 33, 59, 0.48));
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.26), 0 0 0 1px rgba(232, 184, 136, 0.10) inset;
+}
+
+.pillar::after,
+.practice-highlight::after,
+.meta-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 18% 0%, rgba(232, 184, 136, 0.16), transparent 34%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.pillar:hover::after,
+.practice-highlight:hover::after,
+.meta-chip:hover::after {
+  opacity: 1;
+}
+
+.pillar h3,
+.pillar li,
+.pillar .number {
+  transition: color 0.22s ease, transform 0.22s ease;
+}
+
+.pillar:hover h3 {
+  color: var(--amber-bright);
+  transform: translateX(2px);
+}
+
+.pillar:hover li {
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .coverage .pillars,
+  .practice-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar:first-child,
+  .pillar:last-child,
+  .pillar {
+    padding: 28px 24px;
+  }
+}
