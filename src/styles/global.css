@@ -290,6 +290,7 @@
     padding: 8px 16px;
     border: 1px solid var(--crimson);
     transition: background 0.18s ease, color 0.18s ease;
+    border-radius: 16px;
   }
   nav.top .engage:hover { background: var(--crimson); color: var(--paper); }
 
@@ -993,6 +994,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 24px;
+    overflow: hidden;
   }
   .insight-card h3 {
     font-family: var(--sans);
@@ -1040,6 +1043,8 @@
     background: var(--glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    border-radius: 24px;
+    overflow: hidden;
   }
   .engagement-list {
     display: grid;
@@ -1086,6 +1091,7 @@
     color: var(--ink);
     font: inherit;
     padding: 13px 14px;
+    border-radius: 16px;
   }
   .contact-form textarea {
     min-height: 150px;
@@ -1112,15 +1118,14 @@
     padding: 14px 20px;
     cursor: pointer;
     transition: background 0.18s ease, border-color 0.18s ease;
+    border-radius: 16px;
   }
   .contact-form button:hover {
     background: var(--amber-bright);
     border-color: var(--amber-bright);
   }
   .contact-form .note {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.5;
+    display: none;
   }
 
   footer {
@@ -1338,3 +1343,11 @@
 .text-link { color: inherit; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
 .text-link:hover { opacity: .78; }
 .meta { opacity: .74; font-size: .95rem; }
+
+/* Soft corner refinements */
+@media (min-width: 769px) {
+  .engagement-panel,
+  .insight-card {
+    border-radius: 24px;
+  }
+}
