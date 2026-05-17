@@ -29,6 +29,62 @@
   cursor: pointer;
 }
 
+/* Premium nav interaction */
+nav.top .nav-right a.sect-link {
+  position: relative;
+  padding: 8px 4px 10px;
+  border-radius: 14px;
+  transition: color 0.22s ease, transform 0.22s ease, text-shadow 0.22s ease;
+}
+
+nav.top .nav-right a.sect-link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--amber-bright), transparent);
+  opacity: 0;
+  transition: left 0.24s ease, right 0.24s ease, opacity 0.24s ease;
+}
+
+nav.top .nav-right a.sect-link::after {
+  content: "";
+  position: absolute;
+  inset: 0 -10px;
+  border-radius: 16px;
+  background: rgba(232, 184, 136, 0.06);
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: -1;
+}
+
+nav.top .nav-right a.sect-link:hover,
+nav.top .nav-right a.sect-link:focus-visible,
+nav.top .nav-right a.sect-link.active {
+  color: var(--ink);
+  transform: translateY(-1px);
+  text-shadow: 0 0 18px rgba(232, 184, 136, 0.22);
+}
+
+nav.top .nav-right a.sect-link:hover::before,
+nav.top .nav-right a.sect-link:focus-visible::before,
+nav.top .nav-right a.sect-link.active::before {
+  left: 10%;
+  right: 10%;
+  opacity: 1;
+}
+
+nav.top .nav-right a.sect-link:hover::after,
+nav.top .nav-right a.sect-link:focus-visible::after,
+nav.top .nav-right a.sect-link.active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* Premium card polish: rounded edges + subtle interactive movement */
 .meta-chip,
 .practice-highlight,
