@@ -342,6 +342,36 @@ nav.top .nav-right a.sect-link.active::after {
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
   }
 
+  .stat,
+  .position,
+  .edu,
+  .cred,
+  .pillar,
+  .practice-highlight,
+  .insight-card {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .position .period,
+  .edu .period,
+  .cred .period,
+  .stat .label,
+  .stat .num,
+  .pillar .number {
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .position ul,
+  .pillar ul,
+  .insight-card p {
+    text-align: center;
+  }
+
   .stat {
     padding: 24px 20px;
   }
