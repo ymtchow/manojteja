@@ -19,12 +19,29 @@ function googleAnalyticsHtml() {
   ].join('\n');
 }
 
-function legalNoticeHtml() {
+function el(name, attrs, body) {
   const lt = String.fromCharCode(60);
   const gt = String.fromCharCode(62);
-  const notice = 'All opinions expressed on this website are personal and provided for informational purposes only. They do not represent the views, policies, positions, or recommendations of any current or former employer, insurer, broker, client, or affiliated organization. Nothing on this website should be treated as legal, financial, regulatory, underwriting, or insurance placement advice.';
-  const style = 'max-width:980px;margin:18px auto 0;padding:18px 24px 0;border-top:1px solid rgba(232,184,136,.18);color:rgba(237,230,214,.68);font-size:12px;line-height:1.7;text-align:center;';
-  return `${lt}p class="site-legal-notice" style="${style}"${gt}${notice}${lt}/p${gt}`;
+  const sp = attrs ? ' ' : '';
+  return `${lt}${name}${sp}${attrs}${gt}${body}${lt}/${name}${gt}`;
+}
+
+function legalBlock(where) {
+  const text = [
+    'Important Notice:',
+    'views shared here are personal and informational;',
+    'not employer or organisation views;',
+    'not legal, financial, regulatory, underwriting, or placement advice.'
+  ].join(' ');
+  const linkStyle = 'color:#e8b888;text-decoration:none;font-weight:600;';
+  const links = [
+    el('a', `href="/disclaimer/" style="${linkStyle}"`, 'Full disclaimer'),
+    el('a', `href="/privacy-policy/" style="${linkStyle}"`, 'Privacy'),
+    el('a', `href="/terms-and-conditions/" style="${linkStyle}"`, 'Terms')
+  ].join(' · ');
+  const topStyle = 'max-width:1180px;margin:88px auto 0;padding:14px 22px;border:1px solid rgba(232,184,136,.24);border-radius:18px;background:rgba(11,19,34,.58);color:rgba(237,230,214,.82);font-size:12.5px;line-height:1.7;text-align:center;backdrop-filter:blur(10px);';
+  const footStyle = 'max-width:980px;margin:18px auto 0;padding:18px 24px 0;border-top:1px solid rgba(232,184,136,.18);color:rgba(237,230,214,.68);font-size:12px;line-height:1.7;text-align:center;';
+  return el('div', `class="${where}-legal-notice" style="${where === 'landing' ? topStyle : footStyle}"`, `${text} ${links}`);
 }
 
 export default defineConfig({
@@ -39,8 +56,11 @@ export default defineConfig({
           if (!output.includes(googleAnalyticsId)) {
             output = output.replace('</head>', `${googleAnalyticsHtml()}\n</head>`);
           }
-          if (!output.includes('site-legal-notice')) {
-            output = output.replace('</footer>', `${legalNoticeHtml()}\n</footer>`);
+          if (!output.includes('landing-legal-notice')) {
+            output = output.replace('<main id="top">', `<main id="top">\n${legalBlock('landing')}`);
+          }
+          if (!output.includes('footer-legal-notice')) {
+            output = output.replace('</footer>', `${legalBlock('footer')}\n</footer>`);
           }
           return output;
         },
