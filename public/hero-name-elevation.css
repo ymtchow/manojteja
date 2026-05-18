@@ -73,6 +73,19 @@
     0 0 16px rgba(232, 184, 136, 0.14);
 }
 
+/* Safe visual tagline replacement */
+.masthead .tagline {
+  font-size: 0 !important;
+  line-height: 1.45 !important;
+}
+
+.masthead .tagline::after {
+  content: "Insurance Placements & Client Relations";
+  display: inline-block;
+  font-size: 17px;
+  color: var(--muted);
+}
+
 @media (max-width: 768px) {
   .masthead h1 {
     letter-spacing: -0.012em !important;
@@ -91,5 +104,9 @@
     top: 10%;
     bottom: 24%;
     filter: blur(16px);
+  }
+
+  .masthead .tagline::after {
+    font-size: 15px;
   }
 }
