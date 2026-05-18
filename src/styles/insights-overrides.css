@@ -437,3 +437,153 @@ nav.top .nav-right a.sect-link.active::after {
     border: 1px solid rgba(237, 230, 214, 0.08);
   }
 }
+
+/* Strict mobile alignment pass for iPhone Safari */
+@media (max-width: 768px) {
+  .meta-row,
+  .practice-highlights,
+  .coverage .pillars,
+  .positions .reveal-stagger,
+  .education-list,
+  .creds-list,
+  .insight-grid {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .meta-chip,
+  .practice-highlight,
+  .pillar,
+  .position,
+  .edu,
+  .cred,
+  .insight-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center !important;
+  }
+
+  .meta-chip {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .practice-highlight,
+  .pillar,
+  .position,
+  .edu,
+  .cred {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .practice-highlight .label,
+  .pillar h3,
+  .pillar .number,
+  .position .idx,
+  .position .body,
+  .position .company,
+  .position .role,
+  .position .dates,
+  .edu .idx,
+  .edu .school,
+  .edu .degree,
+  .cred .name,
+  .cred .body,
+  .creds-group .head,
+  .creds-group .note,
+  .creds-group .count,
+  .insight-card h3,
+  .insight-card p {
+    width: 100%;
+    max-width: 100%;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .practice-highlight .label {
+    justify-content: center !important;
+  }
+
+  .pillar ul {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .pillar li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pillar li::before {
+    display: none;
+  }
+
+  .position {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 30px 22px !important;
+  }
+
+  .position .dates {
+    display: block;
+    white-space: normal !important;
+    letter-spacing: 0.09em;
+    line-height: 1.6;
+  }
+
+  .edu {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 30px 22px !important;
+  }
+
+  .creds-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 28px !important;
+    padding: 34px 22px !important;
+    text-align: center !important;
+  }
+
+  .creds-group .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cred {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .cred .name {
+    font-size: clamp(20px, 6vw, 26px);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .cred .body {
+    font-size: clamp(15px, 4.6vw, 18px);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .section-label {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
