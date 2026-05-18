@@ -1,0 +1,65 @@
+/* Warm Ivory Elevation treatment for the hero name */
+.masthead h1 {
+  color: #FFF4DC !important;
+  letter-spacing: -0.018em !important;
+  font-weight: 520 !important;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 26px rgba(0, 0, 0, 0.52),
+    0 0 28px rgba(232, 184, 136, 0.18) !important;
+  filter: drop-shadow(0 0 10px rgba(255, 239, 205, 0.08));
+}
+
+.masthead .name-block {
+  position: relative;
+}
+
+.masthead .name-block::before {
+  content: "";
+  position: absolute;
+  left: -3%;
+  right: -3%;
+  top: 16%;
+  bottom: 28%;
+  z-index: -1;
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 46% 50%, rgba(255, 244, 220, 0.08), transparent 52%),
+    linear-gradient(90deg, transparent, rgba(11, 19, 34, 0.18), transparent);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.masthead .creds-strip {
+  margin-top: 18px !important;
+  color: rgba(237, 230, 214, 0.86) !important;
+  letter-spacing: 0.035em !important;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.46);
+}
+
+.masthead .creds-strip .abbr {
+  color: rgba(255, 244, 220, 0.92) !important;
+}
+
+.masthead .practice-line .label {
+  color: rgba(255, 244, 220, 0.90) !important;
+  letter-spacing: 0.15em !important;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.46);
+}
+
+@media (max-width: 768px) {
+  .masthead h1 {
+    letter-spacing: -0.014em !important;
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.10),
+      0 7px 22px rgba(0, 0, 0, 0.55),
+      0 0 22px rgba(232, 184, 136, 0.16) !important;
+  }
+
+  .masthead .name-block::before {
+    left: -6%;
+    right: -6%;
+    top: 14%;
+    bottom: 26%;
+  }
+}
