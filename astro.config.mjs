@@ -39,7 +39,7 @@ function legalBlock(where) {
     el('a', `href="/privacy-policy/" style="${linkStyle}"`, 'Privacy'),
     el('a', `href="/terms-and-conditions/" style="${linkStyle}"`, 'Terms')
   ].join(' · ');
-  const topStyle = 'max-width:1180px;margin:88px auto 0;padding:14px 22px;border:1px solid rgba(232,184,136,.24);border-radius:18px;background:rgba(11,19,34,.58);color:rgba(237,230,214,.82);font-size:12.5px;line-height:1.7;text-align:center;backdrop-filter:blur(10px);';
+  const topStyle = 'display:none;';
   const footStyle = 'max-width:980px;margin:18px auto 0;padding:18px 24px 0;border-top:1px solid rgba(232,184,136,.18);color:rgba(237,230,214,.68);font-size:12px;line-height:1.7;text-align:center;';
   return el('div', `class="${where}-legal-notice" style="${where === 'landing' ? topStyle : footStyle}"`, `${text} ${links}`);
 }
@@ -55,6 +55,9 @@ export default defineConfig({
           let output = html;
           if (!output.includes(googleAnalyticsId)) {
             output = output.replace('</head>', `${googleAnalyticsHtml()}\n</head>`);
+          }
+          if (!output.includes('hero-name-elevation.css')) {
+            output = output.replace('</head>', '\n<link rel="stylesheet" href="/hero-name-elevation.css">\n</head>');
           }
           if (!output.includes('landing-legal-notice')) {
             output = output.replace('<main id="top">', `<main id="top">\n${legalBlock('landing')}`);
