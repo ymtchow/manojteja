@@ -1,65 +1,95 @@
-/* Warm Ivory Elevation treatment for the hero name */
+/* Warm Ivory Elevation treatment for the hero name - enhanced */
 .masthead h1 {
-  color: #FFF4DC !important;
-  letter-spacing: -0.018em !important;
-  font-weight: 520 !important;
+  color: #FFF6E3 !important;
+  letter-spacing: -0.016em !important;
+  font-weight: 535 !important;
+  -webkit-text-stroke: 0.18px rgba(255, 246, 227, 0.18);
   text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.12),
-    0 8px 26px rgba(0, 0, 0, 0.52),
-    0 0 28px rgba(232, 184, 136, 0.18) !important;
-  filter: drop-shadow(0 0 10px rgba(255, 239, 205, 0.08));
+    0 1px 0 rgba(255, 255, 255, 0.18),
+    0 3px 10px rgba(0, 0, 0, 0.70),
+    0 10px 30px rgba(0, 0, 0, 0.58),
+    0 0 22px rgba(255, 246, 227, 0.30),
+    0 0 42px rgba(232, 184, 136, 0.34),
+    0 0 76px rgba(212, 165, 116, 0.22) !important;
+  filter:
+    drop-shadow(0 0 12px rgba(255, 246, 227, 0.18))
+    drop-shadow(0 0 28px rgba(232, 184, 136, 0.18));
 }
 
 .masthead .name-block {
   position: relative;
+  isolation: isolate;
 }
 
 .masthead .name-block::before {
   content: "";
   position: absolute;
-  left: -3%;
-  right: -3%;
-  top: 16%;
-  bottom: 28%;
+  left: -5%;
+  right: -5%;
+  top: 10%;
+  bottom: 22%;
   z-index: -1;
-  border-radius: 36px;
+  border-radius: 42px;
   background:
-    radial-gradient(circle at 46% 50%, rgba(255, 244, 220, 0.08), transparent 52%),
-    linear-gradient(90deg, transparent, rgba(11, 19, 34, 0.18), transparent);
-  filter: blur(14px);
+    radial-gradient(circle at 46% 50%, rgba(255, 246, 227, 0.18), transparent 48%),
+    radial-gradient(circle at 50% 55%, rgba(232, 184, 136, 0.14), transparent 58%),
+    linear-gradient(90deg, rgba(11, 19, 34, 0.05), rgba(11, 19, 34, 0.34), rgba(11, 19, 34, 0.06));
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.masthead .name-block::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  top: 24%;
+  height: 42%;
+  z-index: -2;
+  border-radius: 999px;
+  background: rgba(11, 19, 34, 0.34);
+  filter: blur(24px);
   pointer-events: none;
 }
 
 .masthead .creds-strip {
-  margin-top: 18px !important;
-  color: rgba(237, 230, 214, 0.86) !important;
-  letter-spacing: 0.035em !important;
-  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.46);
+  margin-top: 20px !important;
+  color: rgba(237, 230, 214, 0.88) !important;
+  letter-spacing: 0.04em !important;
+  text-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.56),
+    0 0 18px rgba(232, 184, 136, 0.12);
 }
 
 .masthead .creds-strip .abbr {
-  color: rgba(255, 244, 220, 0.92) !important;
+  color: rgba(255, 246, 227, 0.94) !important;
 }
 
 .masthead .practice-line .label {
-  color: rgba(255, 244, 220, 0.90) !important;
+  color: rgba(255, 246, 227, 0.92) !important;
   letter-spacing: 0.15em !important;
-  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.46);
+  text-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.56),
+    0 0 16px rgba(232, 184, 136, 0.14);
 }
 
 @media (max-width: 768px) {
   .masthead h1 {
-    letter-spacing: -0.014em !important;
+    letter-spacing: -0.012em !important;
     text-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.10),
-      0 7px 22px rgba(0, 0, 0, 0.55),
-      0 0 22px rgba(232, 184, 136, 0.16) !important;
+      0 1px 0 rgba(255, 255, 255, 0.14),
+      0 3px 9px rgba(0, 0, 0, 0.70),
+      0 8px 24px rgba(0, 0, 0, 0.62),
+      0 0 22px rgba(255, 246, 227, 0.26),
+      0 0 38px rgba(232, 184, 136, 0.28),
+      0 0 58px rgba(212, 165, 116, 0.18) !important;
   }
 
   .masthead .name-block::before {
-    left: -6%;
-    right: -6%;
-    top: 14%;
-    bottom: 26%;
+    left: -8%;
+    right: -8%;
+    top: 10%;
+    bottom: 24%;
+    filter: blur(16px);
   }
 }
