@@ -214,58 +214,146 @@ nav.top .engage:focus-visible::after {
   line-height: 1.04;
 }
 
-/* Mobile continuity */
+/* Final brand implementation batch */
+html {
+  background-image: url('/assets/brand-executive-home-bg-v3.svg') !important;
+  background-position: center top !important;
+  background-size: cover !important;
+}
+
+.landing-legal-notice { display: none !important; }
+
+nav.top .role {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px !important;
+  font-weight: 700;
+  color: rgba(237, 230, 214, 0.78) !important;
+}
+
+.masthead {
+  padding-top: 108px !important;
+}
+
+.masthead .head-grid {
+  justify-items: center !important;
+  margin-bottom: 74px !important;
+}
+
+.masthead .head-name {
+  text-align: center !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+}
+
+.masthead .practice-line {
+  justify-content: center !important;
+}
+
+.masthead .name-block {
+  text-align: center !important;
+}
+
+.masthead .tagline {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.masthead .meta-row,
+.masthead .ctas {
+  justify-content: center !important;
+}
+
+.coverage .wrap {
+  text-align: center;
+}
+
+.coverage h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coverage .pillars {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 0 !important;
+}
+
+.coverage .pillar {
+  padding: 34px 28px 38px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 330px;
+}
+
+.coverage .pillar h3 {
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coverage .pillar li {
+  justify-content: center;
+  text-align: center;
+}
+
+.insights h2.reveal {
+  display: none !important;
+}
+
+.insights .insight-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 901px) {
+  .hub-hero {
+    background:
+      linear-gradient(105deg, rgba(11,19,34,.92) 0%, rgba(11,19,34,.74) 48%, rgba(20,33,59,.36) 100%),
+      url('/assets/brand-editorial-article-bg-v1.svg') center / cover !important;
+  }
+}
+
 @media (max-width: 768px) {
   html {
-    background-color: var(--bg-base);
     background-image:
       radial-gradient(circle at 82% 8%, rgba(232, 184, 136, 0.16), transparent 28%),
       linear-gradient(180deg, rgba(11, 19, 34, 0.10), rgba(11, 19, 34, 0.64)),
-      url('/assets/dubai-skyline-clean.jpg');
-    background-position: 62% top, center top, center top;
-    background-size: auto, auto, cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+      url('/assets/brand-executive-home-bg-v3.svg') !important;
+    background-position: 62% top, center top, center top !important;
+    background-size: auto, auto, cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
   }
 
-  nav.top {
-    background: rgba(11, 19, 34, 0.86);
+  .masthead .head-name,
+  .masthead .name-block,
+  .masthead .tagline {
+    text-align: center !important;
   }
 
-  nav.top .nav-right {
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scrollbar-width: none;
+  .masthead .practice-line,
+  .masthead .meta-row,
+  .masthead .ctas {
+    justify-content: center !important;
   }
 
-  nav.top .nav-right::-webkit-scrollbar {
-    display: none;
+  .coverage .pillars {
+    grid-template-columns: 1fr !important;
   }
 
-  nav.top .nav-right a.sect-link,
-  nav.top .engage {
-    flex: 0 0 auto;
-    padding: 8px 12px 10px;
-    background: rgba(237, 230, 214, 0.04);
-    border: 1px solid rgba(237, 230, 214, 0.08);
-    font-size: 10.5px;
+  .coverage .pillar {
+    min-height: auto;
   }
 
-  .insights .insight-card:first-child {
-    min-height: 300px;
-    padding: 30px 24px;
-    text-align: left !important;
-    align-items: flex-start !important;
-  }
-
-  .insights .insight-card:first-child::before {
-    top: 28px;
-    left: 24px;
-  }
-
-  .insights .insight-card:first-child::after {
-    font-size: 15px;
-    line-height: 1.7;
+  .hub-hero {
+    background:
+      linear-gradient(135deg, rgba(11,19,34,.9), rgba(11,19,34,.58)),
+      url('/assets/brand-editorial-article-bg-v1.svg') center / cover !important;
   }
 }
