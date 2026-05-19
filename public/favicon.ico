@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>YMT monogram logo</title>
+  <rect width="512" height="512" fill="#ffffff"/>
+  <image href="/assets/ymt-logo-mark.png" x="0" y="0" width="512" height="512" preserveAspectRatio="xMidYMid meet"/>
+</svg>
