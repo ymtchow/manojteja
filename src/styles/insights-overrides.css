@@ -26,20 +26,27 @@
   z-index: 2;
 }
 
-/* Premium nav interaction */
-nav.top .nav-right a.sect-link {
+/* Premium header navigation */
+nav.top .nav-right a.sect-link,
+nav.top .engage {
   position: relative;
-  padding: 8px 4px 10px;
-  border-radius: 14px;
-  transition: color 0.22s ease, transform 0.22s ease, text-shadow 0.22s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(237, 230, 214, 0.74);
+  padding: 9px 12px 11px;
+  border-radius: 999px;
+  transition: color 0.22s ease, transform 0.22s ease, text-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
 }
 
-nav.top .nav-right a.sect-link::before {
+nav.top .nav-right a.sect-link::before,
+nav.top .engage::before {
   content: "";
   position: absolute;
   left: 50%;
   right: 50%;
-  bottom: 2px;
+  bottom: 4px;
   height: 2px;
   border-radius: 999px;
   background: linear-gradient(90deg, transparent, var(--amber-bright), transparent);
@@ -47,21 +54,25 @@ nav.top .nav-right a.sect-link::before {
   transition: left 0.24s ease, right 0.24s ease, opacity 0.24s ease;
 }
 
-nav.top .nav-right a.sect-link::after {
+nav.top .nav-right a.sect-link::after,
+nav.top .engage::after {
   content: "";
   position: absolute;
-  inset: 0 -10px;
-  border-radius: 16px;
-  background: rgba(232, 184, 136, 0.06);
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(232, 184, 136, 0.07);
+  border: 1px solid rgba(232, 184, 136, 0.0);
   opacity: 0;
   transform: scale(0.96);
-  transition: opacity 0.22s ease, transform 0.22s ease;
+  transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
   z-index: -1;
 }
 
 nav.top .nav-right a.sect-link:hover,
 nav.top .nav-right a.sect-link:focus-visible,
-nav.top .nav-right a.sect-link.active {
+nav.top .nav-right a.sect-link.active,
+nav.top .engage:hover,
+nav.top .engage:focus-visible {
   color: var(--ink);
   transform: translateY(-1px);
   text-shadow: 0 0 18px rgba(232, 184, 136, 0.22);
@@ -69,17 +80,22 @@ nav.top .nav-right a.sect-link.active {
 
 nav.top .nav-right a.sect-link:hover::before,
 nav.top .nav-right a.sect-link:focus-visible::before,
-nav.top .nav-right a.sect-link.active::before {
-  left: 10%;
-  right: 10%;
+nav.top .nav-right a.sect-link.active::before,
+nav.top .engage:hover::before,
+nav.top .engage:focus-visible::before {
+  left: 18%;
+  right: 18%;
   opacity: 1;
 }
 
 nav.top .nav-right a.sect-link:hover::after,
 nav.top .nav-right a.sect-link:focus-visible::after,
-nav.top .nav-right a.sect-link.active::after {
+nav.top .nav-right a.sect-link.active::after,
+nav.top .engage:hover::after,
+nav.top .engage:focus-visible::after {
   opacity: 1;
   transform: scale(1);
+  border-color: rgba(232, 184, 136, 0.20);
 }
 
 /* Premium card polish */
@@ -125,7 +141,7 @@ nav.top .nav-right a.sect-link.active::after {
   overflow: hidden;
 }
 
-/* Homepage Insights: convert three separate cards into one unified publication gateway */
+/* Homepage Insights: one unified publication gateway */
 .insights .insight-grid {
   grid-template-columns: 1fr !important;
   max-width: 900px;
@@ -136,14 +152,14 @@ nav.top .nav-right a.sect-link.active::after {
 }
 
 .insights .insight-card:first-child {
-  min-height: 270px;
+  min-height: 255px;
   padding: 38px;
   border-radius: 30px;
   justify-content: flex-end;
   overflow: hidden;
   background:
     radial-gradient(circle at 12% 10%, rgba(232, 184, 136, 0.16), transparent 34%),
-    linear-gradient(135deg, rgba(11, 19, 34, 0.78), rgba(20, 33, 59, 0.42));
+    linear-gradient(135deg, rgba(11, 19, 34, 0.80), rgba(20, 33, 59, 0.42));
 }
 
 .insights .insight-card:first-child::before {
@@ -159,14 +175,14 @@ nav.top .nav-right a.sect-link.active::after {
 }
 
 .insights .insight-card:first-child::after {
-  content: "A unified publication space for insurance commentary, legal observations, practical notes, downloadable briefs, and audio reflections on risk, placement, claims, and the evolving insurance market.";
+  content: "Practical commentary on insurance, liability, placement strategy, cross-border risk, and evolving market issues across the UAE and international jurisdictions.";
   position: relative;
   display: block;
-  max-width: 720px;
+  max-width: 740px;
   color: var(--ink-soft);
-  font-size: 17px;
-  line-height: 1.75;
-  margin-bottom: 34px;
+  font-size: 16px;
+  line-height: 1.72;
+  margin-bottom: 32px;
 }
 
 .insights .insight-card:first-child > div,
@@ -193,7 +209,9 @@ nav.top .nav-right a.sect-link.active::after {
 }
 
 .insights h2 {
-  max-width: 860px;
+  max-width: 760px;
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.04;
 }
 
 /* Mobile continuity */
@@ -211,7 +229,7 @@ nav.top .nav-right a.sect-link.active::after {
   }
 
   nav.top {
-    background: rgba(11, 19, 34, 0.82);
+    background: rgba(11, 19, 34, 0.86);
   }
 
   nav.top .nav-right {
@@ -229,9 +247,9 @@ nav.top .nav-right a.sect-link.active::after {
   nav.top .engage {
     flex: 0 0 auto;
     padding: 8px 12px 10px;
-    border-radius: 999px;
     background: rgba(237, 230, 214, 0.04);
     border: 1px solid rgba(237, 230, 214, 0.08);
+    font-size: 10.5px;
   }
 
   .insights .insight-card:first-child {
