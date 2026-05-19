@@ -4,7 +4,7 @@ description: "A practical insurance-professional guide to jurisdiction, governin
 date: 2026-05-19
 category: "Cross-Border Risk"
 pdf: "https://drive.google.com/file/d/1YFldqmJecGxXKwdMGCzb1Kor358U3D9x/view?usp=sharing"
-featuredImage: "/assets/articles/whose-law-which-court/hero.png"
+featuredImage: "/assets/article-page-banner-19-may-2025.png"
 draft: false
 ---
 
@@ -14,7 +14,7 @@ draft: false
 
 *A practical insurance-professional guide to jurisdiction, governing law, enforcement and coverage alignment*
 
-![Article Hero](/assets/articles/whose-law-which-court/hero.png)
+![Article Hero](/assets/article-page-banner-19-may-2025.png)
 
 ## EXECUTIVE TAKE-AWAY
 
@@ -27,8 +27,6 @@ A contract may be negotiated in London, performed in Dubai, serviced from Mumbai
 For insurance professionals, that contest is not an academic legal problem. It affects claim notification, reservation of rights, defence strategy, settlement leverage and the insured’s realistic route to recovery. The question is not simply, “Which court is named in the contract?” The better question is, “Does the entire risk architecture still work when pressure arrives?”
 
 That architecture has four moving parts: the court or tribunal, the law that governs the substance of the dispute, the place where a judgment or award can be enforced, and the insurance policy that is expected to respond. If those parts were not reviewed together at placement or renewal, a dispute can expose gaps that felt invisible at the contracting stage.
-
-![Figure 1](/assets/articles/whose-law-which-court/figure-1.png)
 
 *Figure 1. A minimalist framework for aligning dispute planning with insurance response.*
 
@@ -50,8 +48,6 @@ The DIFC Courts remain attractive in many commercial settings because they offer
 
 But DIFC should not be treated as a prestige label inserted by habit. A DIFC clause is useful only if it supports the enforcement strategy, reflects the counterparty profile and sits comfortably with the insurance programme. The same caution applies to any preferred forum: the clause must be commercially useful, not merely familiar.
 
-![Figure 2](/assets/articles/whose-law-which-court/figure-2.png)
-
 *Figure 2. DIFC forum selection should be tested against enforcement, governing law and insurance response.*
 
 ### The UAE is not one dispute environment
@@ -59,8 +55,6 @@ But DIFC should not be treated as a prestige label inserted by habit. A DIFC cla
 Businesses often speak loosely about “UAE law”. In dispute planning, that shorthand can obscure important distinctions. Onshore UAE courts, DIFC Courts and ADGM Courts each carry different procedural expectations, legal traditions and drafting implications.
 
 That distinction matters when a group contracts across multiple jurisdictions, services clients from different UAE bases, or buys liability coverage that may be expected to respond to disputes filed in more than one forum. A policy that looks adequate for domestic operations may feel narrow once the claim path becomes international.
-
-![Figure 3](/assets/articles/whose-law-which-court/figure-3.png)
 
 *Figure 3. Mainland UAE, DIFC and ADGM should be treated as distinct environments for drafting and insurance review.*
 
@@ -71,8 +65,6 @@ The biggest cross-border coverage problems often arise from misalignment rather 
 For Commercial General Liability, the stress points are commonly territorial limits, foreign proceedings, defence-cost handling and the breadth of the definition of claim. For Professional Indemnity, the analysis often shifts toward claims-made timing, retroactive dates, notification mechanics, service geography, foreign-law liability standards and whether the policy contemplates the forums where clients can realistically sue.
 
 The coverage question should therefore be asked twice. First, does the policy respond to the type of liability alleged? Second, does it respond in the place, procedure and timing in which that liability is being asserted?
-
-![Figure 4](/assets/articles/whose-law-which-court/figure-4.png)
 
 *Figure 4. Underlying liability and policy response should be mapped separately, then aligned commercially.*
 
