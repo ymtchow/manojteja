@@ -1,36 +1,77 @@
 ---
 import '../../styles/global.css';
+import '../../styles/insights-overrides.css';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+const estimateReadTime = (article) => `${Math.max(3, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 220))} min read`;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Insurance Insights | Manoj Teja Y</title>
-    <meta name="description" content="Insurance articles, PDFs, and podcast links by Manoj Teja Y." />
+    <title>Insights | Manoj Teja Y</title>
+    <meta name="description" content="A unified publication hub for articles, PDF briefs, and podcast resources by Manoj Teja Y." />
   </head>
   <body>
-    <main class="articles-page">
-      <section class="panel reveal show" style="max-width: 980px; margin: 40px auto; padding: 28px;">
-        <p class="eyebrow">Insurance Knowledge Library</p>
-        <h1>Articles & Insights</h1>
-        <p class="lede">A growing library of practical insurance commentary, technical notes, PDF briefs, and podcast references.</p>
-        <div class="insight-grid" style="margin-top: 24px;">
-          {articles.map((article) => (
-            <article class="insight-card">
-              <p class="meta">{article.data.category} · {article.data.date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
-              <h3><a href={`/articles/${article.slug}/`}>{article.data.title}</a></h3>
-              {article.data.description && <p>{article.data.description}</p>}
-              <a class="text-link" href={`/articles/${article.slug}/`}>Read article →</a>
-            </article>
-          ))}
+    <main class="insights-hub-page">
+      <section class="hub-hero">
+        <div>
+          <p class="hub-kicker">Insights</p>
+          <h1>Articles, PDF briefs, and audio resources in one place.</h1>
+          <p class="hub-lede">A unified publication space for insurance commentary, legal observations, practical notes, downloadable briefs, and audio reflections on risk, placement, claims, and the evolving insurance market.</p>
         </div>
-        <p style="margin-top: 28px;"><a class="text-link" href="/">← Back to home</a></p>
+        <button class="hub-search-toggle" type="button" aria-expanded="false" aria-controls="insightsSearch">Search</button>
+      </section>
+      <section class="hub-library">
+        <div class="hub-toolbar">
+          <div>
+            <p class="hub-eyebrow">Publication Library</p>
+            <h2>Latest insights</h2>
+          </div>
+          <div class="hub-search" id="insightsSearch" hidden>
+            <label for="insightsSearchInput">Search insights</label>
+            <input id="insightsSearchInput" type="search" placeholder="Search insights, PDFs, podcasts, jurisdictions, topics..." />
+          </div>
+        </div>
+        <div class="publication-list" id="publicationList">
+          {articles.length ? articles.map((article) => (
+            <article class="publication-row" data-search={`${article.data.title} ${article.data.description || ''} ${article.data.category || ''}`.toLowerCase()}>
+              <div class="publication-date">{formatDate(article.data.date)}</div>
+              <div class="publication-copy">
+                <h3><a href={`/articles/${article.slug}/`}>{article.data.title}</a></h3>
+                {article.data.description && <p>{article.data.description}</p>}
+                <div class="publication-meta"><span>{estimateReadTime(article)}</span><span>{article.data.category}</span></div>
+              </div>
+              <div class="publication-actions">
+                {article.data.pdf ? <a href={article.data.pdf} class="resource-pill" target="_blank" rel="noopener noreferrer">PDF</a> : <span class="resource-pill disabled">PDF</span>}
+                {article.data.audio ? <a href={article.data.audio} class="resource-pill" target="_blank" rel="noopener noreferrer">Audio</a> : <span class="resource-pill disabled">Audio</span>}
+              </div>
+            </article>
+          )) : <div class="hub-empty"><h3>Insights library ready.</h3><p>The publication structure is live. New articles can now be added with optional PDF and podcast links.</p></div>}
+        </div>
+        <p class="hub-home-link"><a href="/">Back to home</a></p>
       </section>
     </main>
+    <script is:inline>
+      const toggle = document.querySelector('.hub-search-toggle');
+      const search = document.getElementById('insightsSearch');
+      const input = document.getElementById('insightsSearchInput');
+      const rows = Array.from(document.querySelectorAll('.publication-row'));
+      toggle?.addEventListener('click', () => {
+        const opening = search.hasAttribute('hidden');
+        search.toggleAttribute('hidden', !opening);
+        toggle.setAttribute('aria-expanded', String(opening));
+        if (opening) input?.focus();
+      });
+      input?.addEventListener('input', () => {
+        const q = input.value.trim().toLowerCase();
+        rows.forEach((row) => { row.hidden = q.length > 0 && !row.dataset.search.includes(q); });
+      });
+    </script>
   </body>
 </html>
