@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1238" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="g1" cx="16%" cy="8%" r="52%"><stop offset="0" stop-color="#dca35e" stop-opacity="0.48"/><stop offset="0.26" stop-color="#6e471f" stop-opacity="0.22"/><stop offset="1" stop-color="#07101e" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="50%" cy="48%" r="40%"><stop offset="0" stop-color="#15243b"/><stop offset="1" stop-color="#08111f"/></radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1526"/><stop offset="1" stop-color="#02060c"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2c36c"/><stop offset="0.45" stop-color="#b37a2e"/><stop offset="1" stop-color="#f0b85c"/></linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08203d"/><stop offset="0.5" stop-color="#0e315d"/><stop offset="1" stop-color="#030b16"/></linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.48"/></filter>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.25" fill="#c58a43" opacity="0.42"/></pattern>
+  </defs>
+  <rect width="2200" height="1238" fill="#07101e"/>
+  <rect width="2200" height="1238" fill="url(#g2)"/>
+  <rect width="2200" height="1238" fill="url(#g1)"/>
+  <g opacity="0.52" transform="translate(1110 160) scale(1.12)">
+    <path d="M108 210c90-68 198-113 322-96 120 16 187 75 296 48 88-22 152-78 252-62 84 14 142 66 240 68" fill="none" stroke="#c58a43" stroke-opacity="0.34" stroke-width="2"/>
+    <path d="M150 340c170-88 315-92 456-34 120 50 218 40 332-14 112-54 226-43 342 38" fill="none" stroke="#c58a43" stroke-opacity="0.22" stroke-width="1.4"/>
+    <path d="M160 70h780v470H160z" fill="url(#dots)" opacity="0.26"/>
+  </g>
+  <g opacity="0.24" stroke="#d49a4d" stroke-width="1.2" fill="none">
+    <path d="M0 690 C210 530, 390 520, 590 720"/><path d="M0 575 C280 430, 510 430, 820 655"/><path d="M0 810 C260 650, 470 710, 720 870"/>
+  </g>
+  <rect y="870" width="2200" height="368" fill="url(#floor)"/>
+  <path d="M0 930h2200M0 1030h2200M0 1130h2200M270 870l-120 368M610 870l-40 368M1040 870l15 368M1540 870l120 368M1900 870l220 368" stroke="#c58a43" stroke-opacity="0.15"/>
+  <g filter="url(#shadow)" transform="translate(946 432) scale(1.18)">
+    <path d="M30 112c34-70 101-112 180-112s146 42 180 112" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round" opacity="0.92"/>
+    <path d="M42 286c42 58 102 86 168 86 67 0 127-29 169-86" fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round" opacity="0.92"/>
+    <text x="210" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="190" font-weight="700" fill="url(#gold)">Y</text>
+    <text x="210" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="190" font-weight="700" dx="42" fill="url(#navy)">M</text>
+    <text x="210" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="190" font-weight="700" dx="130" fill="url(#gold)">T</text>
+  </g>
+  <rect width="2200" height="1238" fill="url(#g2)" opacity="0.18"/>
+</svg>
