@@ -517,26 +517,28 @@ p {
   align-self: stretch;
   min-height: 430px;
   isolation: isolate;
+  overflow: visible;
 }
 
 .about-portrait::before {
   position: absolute;
-  inset: 4% auto auto -16%;
+  inset: -4% auto auto -24%;
   z-index: -1;
-  width: 78%;
+  width: 92%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(217, 166, 74, 0.32), rgba(217, 166, 74, 0.12) 34%, transparent 70%);
+  background: radial-gradient(circle, rgba(217, 166, 74, 0.34), rgba(217, 166, 74, 0.13) 36%, transparent 72%);
   content: "";
-  filter: blur(8px);
+  filter: blur(18px);
 }
 
 .about-portrait::after {
   position: absolute;
-  inset: 0;
+  inset: -1px;
   background:
-    linear-gradient(90deg, transparent 58%, rgba(3, 13, 22, 0.72) 92%),
-    linear-gradient(180deg, transparent 62%, var(--navy-950) 100%);
+    radial-gradient(ellipse at 48% 34%, transparent 28%, rgba(3, 13, 22, 0.16) 58%, rgba(3, 13, 22, 0.72) 96%),
+    linear-gradient(90deg, rgba(3, 13, 22, 0.82) 0%, transparent 18%, transparent 66%, rgba(3, 13, 22, 0.9) 100%),
+    linear-gradient(180deg, rgba(3, 13, 22, 0.38) 0%, transparent 22%, transparent 55%, var(--navy-950) 100%);
   content: "";
   pointer-events: none;
 }
@@ -548,7 +550,9 @@ p {
   border-radius: 0;
   object-fit: cover;
   object-position: center top;
-  filter: saturate(0.94) contrast(1.04);
+  filter: saturate(0.9) contrast(1.05) brightness(0.9);
+  -webkit-mask-image: radial-gradient(ellipse 82% 96% at 50% 43%, #000 0 58%, rgba(0, 0, 0, 0.76) 71%, transparent 98%);
+  mask-image: radial-gradient(ellipse 82% 96% at 50% 43%, #000 0 58%, rgba(0, 0, 0, 0.76) 71%, transparent 98%);
 }
 
 .about-copy h2 {
