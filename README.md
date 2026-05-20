@@ -1,6 +1,6 @@
-# Manoj Teja Y Astro Practice Site
+# Manoj Teja Y — Premium Editorial Publication Platform
 
-This is an Astro conversion of the original static HTML package.
+Astro website for Manoj Teja Y, positioned as a premium practitioner-led publication platform for cross-border insurance, liability, commercial risk, and audio-supported insights.
 
 ## Local commands
 
@@ -23,23 +23,33 @@ Add articles in:
 src/content/articles/
 ```
 
-Each article uses Markdown with frontmatter:
+Each article uses Markdown frontmatter:
 
 ```md
 ---
 title: "Article title"
 description: "Short summary"
-date: "2026-05-17"
-category: "Property & Casualty"
+date: "2026-05-19"
+category: "Cross-Border Risk"
 pdf: "https://example.com/file.pdf"
-audio: "https://example.com/audio.mp3"
+audio: "https://example.com/audio.m4a"
+featuredImage: "/assets/article-page-banner-19-may-2025.png"
 draft: false
 ---
-
-Article content here.
 ```
 
-## Browser admin
+## Included launch features
 
-The project includes Decap CMS files at `/admin`.
-To use it on Netlify, enable Identity and Git Gateway in the Netlify site settings.
+- Premium editorial homepage
+- Articles / Insights hub
+- Flagship article page
+- Cloudflare R2 audio integration
+- Inline browser audio player
+- PDF resource link
+- Disclaimer and legal navigation
+- Mobile-responsive layouts
+- Decap CMS files retained for future `/admin` publishing setup
+
+## Do not upload
+
+Do not commit `node_modules/`, `dist/`, or `.netlify/`.
