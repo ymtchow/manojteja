@@ -186,5 +186,45 @@ const areas = [
       </section>
     </main>
     <SiteFooter />
+    <style is:global>
+      .contact-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .contact-actions > .button,
+      .contact-actions .contact-drawer > summary {
+        width: 250px;
+        min-height: 72px;
+        padding: 0 24px;
+      }
+
+      .contact-actions .contact-drawer {
+        margin-top: 0;
+      }
+
+      .contact-actions .contact-form {
+        width: min(360px, 100%);
+        margin-top: 18px;
+        padding: 22px;
+        border: 1px solid rgba(7, 18, 29, 0.12);
+        border-radius: 4px;
+        background: #fff;
+      }
+
+      @media (max-width: 980px) {
+        .contact-actions {
+          align-items: stretch;
+        }
+
+        .contact-actions > .button,
+        .contact-actions .contact-drawer > summary {
+          width: 100%;
+          max-width: 280px;
+        }
+      }
+    </style>
   </body>
 </html>
