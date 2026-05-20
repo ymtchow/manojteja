@@ -26,12 +26,6 @@
   line-height: 1.6;
 }
 
-.article-hero {
-  background:
-    linear-gradient(90deg, rgba(2, 11, 19, 0.9), rgba(2, 11, 19, 0.62)),
-    url("/assets/article-whose-law-card.webp") center / cover;
-}
-
 @media (max-width: 640px) {
   .hero {
     min-height: 620px;
