@@ -1,22 +1,116 @@
 ---
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 ---
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>Message received | Manoj Teja Y</title>
-    <meta content="noindex" name="robots"/>
-    <meta http-equiv="refresh" content="3;url=/#engagement"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Message received | The Cross-Border Risk Review</title>
+    <meta content="noindex" name="robots" />
+    <meta http-equiv="refresh" content="6;url=/#contact" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <main class="engagement" style="min-height:100vh;display:grid;place-items:center;padding:32px;">
-      <section class="engagement-panel" style="max-width:680px;width:100%;text-align:center;">
-        <h1>Thank you for reaching out.</h1>
-        <p>I will respond shortly.</p>
-        <p class="note">You will be redirected back to the site in a moment.</p>
-        <a class="link" href="/#engagement">Return to the site</a>
+    <SiteHeader />
+    <main class="thanks-page">
+      <section class="thanks-panel" aria-labelledby="thanks-title">
+        <p class="eyebrow">Message received</p>
+        <div class="thanks-rule" aria-hidden="true"></div>
+        <h1 id="thanks-title">Thank you for writing to the editor.</h1>
+        <p class="thanks-copy">Your message has been received with appreciation. The Cross-Border Risk Review values thoughtful professional dialogue on insurance, liability, cross-border risk, and AI-driven change.</p>
+        <p class="thanks-note">You will be returned to the publication in a moment.</p>
+        <a class="button button--gold" href="/#contact">Return to the site</a>
       </section>
     </main>
+    <SiteFooter />
+    <style is:global>
+      .thanks-page {
+        min-height: calc(100vh - 76px);
+        display: grid;
+        place-items: center;
+        padding: clamp(48px, 8vw, 96px) 28px;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 24%, rgba(217, 166, 74, 0.18), transparent 32%),
+          radial-gradient(circle at 82% 20%, rgba(239, 201, 121, 0.09), transparent 30%),
+          linear-gradient(135deg, rgba(2, 11, 19, 0.98), rgba(6, 21, 34, 0.96) 48%, rgba(2, 11, 19, 0.99));
+      }
+
+      .thanks-panel {
+        position: relative;
+        width: min(780px, 100%);
+        padding: clamp(36px, 6vw, 64px);
+        text-align: center;
+        border: 1px solid rgba(239, 201, 121, 0.28);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+          rgba(2, 11, 19, 0.58);
+        box-shadow:
+          0 34px 90px rgba(0, 0, 0, 0.44),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+      }
+
+      .thanks-panel::before,
+      .thanks-panel::after {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        height: 1px;
+        content: "";
+        background: linear-gradient(90deg, transparent, rgba(239, 201, 121, 0.56), transparent);
+      }
+
+      .thanks-panel::before {
+        top: 18px;
+      }
+
+      .thanks-panel::after {
+        bottom: 18px;
+      }
+
+      .thanks-rule {
+        width: 96px;
+        height: 2px;
+        margin: 20px auto 28px;
+        background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+      }
+
+      .thanks-panel h1 {
+        max-width: 660px;
+        margin: 0 auto;
+        font-size: clamp(38px, 5.6vw, 64px);
+        line-height: 1.02;
+      }
+
+      .thanks-copy {
+        max-width: 620px;
+        margin: 24px auto 0;
+        color: rgba(247, 241, 232, 0.82);
+        font-size: clamp(17px, 1.8vw, 20px);
+        line-height: 1.65;
+      }
+
+      .thanks-note {
+        margin: 22px auto 28px;
+        color: rgba(217, 208, 194, 0.68);
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 640px) {
+        .thanks-page {
+          padding: 36px 18px;
+        }
+
+        .thanks-panel {
+          padding: 34px 24px 38px;
+        }
+      }
+    </style>
   </body>
 </html>

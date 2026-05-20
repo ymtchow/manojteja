@@ -60,50 +60,27 @@ That distinction matters when a group contracts across multiple jurisdictions, s
   <figcaption>Figure 3. Mainland UAE, DIFC and ADGM should be treated as distinct environments for drafting and insurance review.</figcaption>
 </figure>
 
-## Where coverage problems usually appear
+## Insurance response is a separate question
 
-The biggest cross-border coverage problems often arise from misalignment rather than from one dramatic exclusion. The contract may point in one direction, the claim may be filed in another, and the policy may have been written for a narrower territorial or jurisdictional footprint.
+A liability policy does not automatically follow the commercial contract. The policy has its own insuring clause, territorial limits, jurisdictional extensions, exclusions, defence-cost provisions, sanctions language and claims conditions. That means the dispute clause and the insurance clause should be analysed separately before being tested together.
 
-For Commercial General Liability, the stress points are commonly territorial limits, foreign proceedings, defence-cost handling and the breadth of the definition of claim. For Professional Indemnity, the analysis often shifts toward claims-made timing, retroactive dates, notification mechanics, service geography, foreign-law liability standards and whether the policy contemplates the forums where clients can realistically sue.
+In practice, the policy question may be: will defence costs be advanced in that forum, will local counsel be covered, will an overseas judgment or award be recognised for indemnity purposes, and are there restrictions on settlement authority? A contract can send the dispute to one place while the policy quietly limits response in another.
 
-The coverage question should therefore be asked twice. First, does the policy respond to the type of liability alleged? Second, does it respond in the place, procedure and timing in which that liability is being asserted?
+## Practical checklist before placement or renewal
 
-<figure class="article-figure">
-  <img src="/assets/articles/whose-law-insurance-alignment.svg" alt="Insurance alignment diagram comparing underlying liability factors with policy response factors before signing." loading="lazy" />
-  <figcaption>Figure 4. Underlying liability and policy response should be mapped separately, then aligned commercially.</figcaption>
-</figure>
+A simple pre-loss review can prevent expensive surprises. At minimum, the contract, forum clause, governing law clause, enforcement route and insurance wording should be reviewed together.
 
-## A practical alignment checklist
+The most useful questions are:
 
-Before signing or renewing a material cross-border contract, insurance teams and advisers should test the contract and policy side by side.
+1. Does the forum clause match the commercial enforcement strategy?
+2. Is the governing law clause clear and separate from the forum clause?
+3. Where are the assets or business operations that matter for recovery?
+4. Does the liability policy respond to proceedings in that forum?
+5. Are defence costs, local counsel and settlement control addressed clearly?
+6. Do any exclusions, sanctions provisions or territorial limits narrow the expected response?
 
-| Review point | Question to ask | Insurance implication |
-| --- | --- | --- |
-| Governing law | Is the substantive law express and commercially suitable? | Affects liability standards and defence analysis. |
-| Forum clause | Is the clause exclusive, non-exclusive or arbitral, and is it internally consistent? | Shapes defence costs, counsel choice and claim handling. |
-| Asset location | Where would a judgment or award need to be enforced? | Determines whether legal spend creates a recoverable path. |
-| Policy territory | Does the policy territory match where services, clients and claims may arise? | Prevents false comfort at placement. |
-| Proceedings wording | Are foreign proceedings, investigations or pre-action demands treated as claims? | Controls notification timing and trigger certainty. |
-| Disclosure | Have cross-border services and contract templates been disclosed to brokers and insurers? | Improves placement accuracy and reduces renewal surprises. |
+## Closing perspective
 
-## Bottom line
+The strongest risk architecture is not the most complicated one. It is the one where the contract, the chosen forum, the governing law, the enforcement path and the insurance programme all point in a commercially coherent direction.
 
-Jurisdiction, governing law, enforceability and insurance should be treated as one connected risk architecture. The cheapest time to align them is before the contract is signed. The most expensive time is after the claim has already been filed.
-
-## Professional lens
-
-For insurance professionals, the strongest advice is often not a legal opinion on the perfect forum. It is a disciplined question: if this dispute happens exactly where the contract allows it to happen, will the insurance programme still behave as expected?
-
-## Selected official references reviewed
-
-Accessed and checked on 19 May 2026 for the general institutional descriptions used in this article.
-
-- DIFC Courts: jurisdiction and court FAQs describing the English-language common-law commercial forum and jurisdiction framework: [DIFC Courts FAQ](https://www.difccourts.ae/about/faq/courts-faq) and [DIFC Courts jurisdiction](https://www.difccourts.ae/about/jurisdiction).
-- ADGM Courts: official materials describing ADGM Courts and the direct application of English common law within ADGM: [ADGM Courts](https://www.adgm.com/adgm-courts/) and [ADGM English common law](https://www.adgm.com/adgm-courts/english-common-law).
-- UAE Government portal: federal judiciary overview explaining the federal and local court structure in the UAE: [UAE federal judiciary](https://u.ae/about-the-uae/the-uae-government/the-federal-judiciary).
-
-## Disclaimer
-
-This article is provided for general information and professional discussion only. It does not constitute legal, insurance, broking or risk-management advice. Specific matters should be reviewed with qualified legal counsel, insurance brokers and relevant specialists.
-
-*Whose Law, Which Court? | General information only*
+That coherence should be tested before a claim exists. Once a dispute begins, parties often discover that jurisdiction and coverage are not technical footnotes. They are the structure that decides whether a legal right becomes a practical recovery.
