@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 660" role="img" aria-labelledby="title desc">
+  <title id="title">UAE Dispute Planning: Three Legal Environments</title>
+  <desc id="desc">A comparison of onshore UAE courts, DIFC Courts and ADGM Courts for dispute planning and insurance review.</desc>
+  <style>
+    .title{font:700 44px Arial,Helvetica,sans-serif;fill:#07121d}.sub{font:400 26px Arial,Helvetica,sans-serif;fill:#66717d}.card-title{font:700 30px Arial,Helvetica,sans-serif;fill:#efc979}.body{font:400 24px Arial,Helvetica,sans-serif;fill:#07121d}.rule{font:700 22px Arial,Helvetica,sans-serif;fill:#12355b}.card{fill:#fff;stroke:#d5dbe3;stroke-width:3}.navy{fill:#061522}.gold-line{stroke:#d9a64a;stroke-width:4}
+  </style>
+  <rect width="1600" height="660" fill="#ffffff"/>
+  <text class="title" x="80" y="97">UAE Dispute Planning: Three Legal Environments</text>
+  <text class="sub" x="80" y="136">For drafting and insurance review, 'UAE' is not a single operational label.</text>
+  <g transform="translate(125 220)">
+    <rect class="card" width="420" height="320" rx="15"/>
+    <rect class="navy" width="420" height="56"/>
+    <text class="card-title" x="25" y="39">Onshore UAE Courts</text>
+    <text class="body" x="32" y="110">Civil-law court environment; local or</text>
+    <text class="body" x="32" y="144">federal pathway depending on</text>
+    <text class="body" x="32" y="178">emirate and matter.</text>
+    <line class="gold-line" x1="32" y1="262" x2="390" y2="262"/>
+    <text class="rule" x="32" y="301">Draft separately. Insure deliberately.</text>
+  </g>
+  <g transform="translate(590 220)">
+    <rect class="card" width="420" height="320" rx="15"/>
+    <rect class="navy" width="420" height="56"/>
+    <text class="card-title" x="25" y="39">DIFC Courts</text>
+    <text class="body" x="32" y="110">Dubai financial centre court system;</text>
+    <text class="body" x="32" y="144">English-language common-law</text>
+    <text class="body" x="32" y="178">commercial forum.</text>
+    <line class="gold-line" x1="32" y1="262" x2="390" y2="262"/>
+    <text class="rule" x="32" y="301">Draft separately. Insure deliberately.</text>
+  </g>
+  <g transform="translate(1055 220)">
+    <rect class="card" width="420" height="320" rx="15"/>
+    <rect class="navy" width="420" height="56"/>
+    <text class="card-title" x="25" y="39">ADGM Courts</text>
+    <text class="body" x="32" y="110">Abu Dhabi financial centre courts;</text>
+    <text class="body" x="32" y="144">common-law framework with digital</text>
+    <text class="body" x="32" y="178">court infrastructure.</text>
+    <line class="gold-line" x1="32" y1="262" x2="390" y2="262"/>
+    <text class="rule" x="32" y="301">Draft separately. Insure deliberately.</text>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 ---
 import '../../styles/global.css';
+import '../../styles/article-seo.css';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import { getCollection, render } from 'astro:content';
@@ -12,22 +13,96 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content, headings } = await render(article);
 const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' });
-const readTime = `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
+const wordCount = (article.body || '').split(/\s+/).filter(Boolean).length;
+const readTime = `${Math.max(6, Math.ceil(wordCount / 210))} min read`;
 const heroImage = article.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png';
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.manojteja.com';
+const articleUrl = new URL(`/articles/${article.id}/`, `${siteUrl}/`).toString();
+const absoluteUrl = (path) => path?.startsWith('http') ? path : new URL(path ?? '/', `${siteUrl}/`).toString();
+const heroImageUrl = absoluteUrl(heroImage);
+const seoDescription = article.data.description ?? 'Independent insurance perspective from The Cross-Border Risk Review.';
+const pageTitle = `${article.data.title} | The Cross-Border Risk Review`;
+const publishedIso = article.data.date.toISOString();
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
+  },
+  headline: article.data.title,
+  description: seoDescription,
+  image: [heroImageUrl],
+  datePublished: publishedIso,
+  dateModified: publishedIso,
+  author: {
+    '@type': 'Person',
+    name: 'Manoj Teja Yadlapati',
+    url: siteUrl,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'The Cross-Border Risk Review',
+    logo: {
+      '@type': 'ImageObject',
+      url: absoluteUrl('/assets/ymt-logo-mark.png'),
+    },
+  },
+  articleSection: article.data.category,
+  wordCount,
+};
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${siteUrl}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Articles',
+      item: new URL('/articles/', `${siteUrl}/`).toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: article.data.title,
+      item: articleUrl,
+    },
+  ],
+};
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{article.data.title} | Manoj Teja</title>
-    {article.data.description && <meta name="description" content={article.data.description} />}
+    <title>{pageTitle}</title>
+    <meta name="description" content={seoDescription} />
+    <link rel="canonical" href={articleUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content={`${article.data.title} | Manoj Teja`} />
-    {article.data.description && <meta property="og:description" content={article.data.description} />}
-    <meta property="og:image" content={heroImage} />
+    <meta property="og:site_name" content="The Cross-Border Risk Review" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={seoDescription} />
+    <meta property="og:url" content={articleUrl} />
+    <meta property="og:image" content={heroImageUrl} />
+    <meta property="article:published_time" content={publishedIso} />
+    <meta property="article:modified_time" content={publishedIso} />
+    <meta property="article:author" content="Manoj Teja Yadlapati" />
+    <meta property="article:section" content={article.data.category} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={seoDescription} />
+    <meta name="twitter:image" content={heroImageUrl} />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)}></script>
     <style>
       .article-hero {
         grid-template-columns: 1fr;
@@ -59,7 +134,7 @@ const heroImage = article.data.featuredImage ?? '/assets/article-page-banner-19-
         )}
         <div style="margin-top: 34px;">
           <h2>Share</h2>
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://www.manojteja.com/articles/${article.id}/`} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         </div>
       </aside>
 

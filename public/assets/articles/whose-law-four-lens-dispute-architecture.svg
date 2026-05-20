@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 660" role="img" aria-labelledby="title desc">
+  <title id="title">The Four-Lens Dispute Architecture</title>
+  <desc id="desc">A four-part framework showing forum, law, assets and policy as connected parts of cross-border dispute planning.</desc>
+  <style>
+    .title{font:700 46px Arial,Helvetica,sans-serif;fill:#07121d}.sub{font:400 26px Arial,Helvetica,sans-serif;fill:#66717d}.box-title{font:700 33px Arial,Helvetica,sans-serif;fill:#07121d}.box-text{font:400 22px Arial,Helvetica,sans-serif;fill:#66717d}.num{font:700 30px Arial,Helvetica,sans-serif;fill:#efc979}.rule{font:700 25px Arial,Helvetica,sans-serif;fill:#12355b}.card{fill:#fff;stroke:#d5dbe3;stroke-width:3}.navy{fill:#061522}.gold{fill:#d9a64a}
+  </style>
+  <rect width="1600" height="660" fill="#ffffff"/>
+  <text class="title" x="80" y="98">The Four-Lens Dispute Architecture</text>
+  <text class="sub" x="80" y="137">Forum, law, enforcement and policy wording must point to the same commercial recovery path.</text>
+  <g transform="translate(80 243)">
+    <rect class="card" width="330" height="216" rx="17"/>
+    <circle class="navy" cx="165" cy="68" r="43" stroke="#b77a25" stroke-width="4"/>
+    <text class="num" x="165" y="80" text-anchor="middle">1</text>
+    <text class="box-title" x="165" y="144" text-anchor="middle">Forum</text>
+    <text class="box-text" x="165" y="173" text-anchor="middle">Where will the dispute be</text>
+    <text class="box-text" x="165" y="202" text-anchor="middle">heard?</text>
+  </g>
+  <polygon class="gold" points="405,339 427,351 405,363"/>
+  <g transform="translate(451 243)">
+    <rect class="card" width="330" height="216" rx="17"/>
+    <circle class="navy" cx="165" cy="68" r="43" stroke="#b77a25" stroke-width="4"/>
+    <text class="num" x="165" y="80" text-anchor="middle">2</text>
+    <text class="box-title" x="165" y="144" text-anchor="middle">Law</text>
+    <text class="box-text" x="165" y="173" text-anchor="middle">Which law decides the</text>
+    <text class="box-text" x="165" y="202" text-anchor="middle">merits?</text>
+  </g>
+  <polygon class="gold" points="776,339 798,351 776,363"/>
+  <g transform="translate(822 243)">
+    <rect class="card" width="330" height="216" rx="17"/>
+    <circle class="navy" cx="165" cy="68" r="43" stroke="#b77a25" stroke-width="4"/>
+    <text class="num" x="165" y="80" text-anchor="middle">3</text>
+    <text class="box-title" x="165" y="144" text-anchor="middle">Assets</text>
+    <text class="box-text" x="165" y="173" text-anchor="middle">Where can recovery</text>
+    <text class="box-text" x="165" y="202" text-anchor="middle">happen?</text>
+  </g>
+  <polygon class="gold" points="1146,339 1168,351 1146,363"/>
+  <g transform="translate(1192 243)">
+    <rect class="card" width="330" height="216" rx="17"/>
+    <circle class="navy" cx="165" cy="68" r="43" stroke="#b77a25" stroke-width="4"/>
+    <text class="num" x="165" y="80" text-anchor="middle">4</text>
+    <text class="box-title" x="165" y="144" text-anchor="middle">Policy</text>
+    <text class="box-text" x="165" y="173" text-anchor="middle">Will insurance respond</text>
+    <text class="box-text" x="165" y="202" text-anchor="middle">there?</text>
+  </g>
+  <line x1="80" y1="606" x2="1520" y2="606" stroke="#d5dbe3" stroke-width="2"/>
+  <text class="rule" x="80" y="642">Minimal working rule: do not choose a court until you know where the assets and insurance response are likely to sit.</text>
+</svg>

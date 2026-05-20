@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 660" role="img" aria-labelledby="title desc">
+  <title id="title">Insurance Alignment: The Claim Path Must Match the Policy Path</title>
+  <desc id="desc">A coverage alignment diagram comparing underlying liability factors with policy response factors before signing.</desc>
+  <style>
+    .title{font:700 42px Arial,Helvetica,sans-serif;fill:#07121d}.sub{font:400 26px Arial,Helvetica,sans-serif;fill:#66717d}.card-title{font:700 34px Arial,Helvetica,sans-serif;fill:#07121d}.body{font:400 28px Arial,Helvetica,sans-serif;fill:#07121d}.pill-title{font:700 38px Arial,Helvetica,sans-serif;fill:#efc979}.pill-text{font:400 26px Arial,Helvetica,sans-serif;fill:#fff}.card{fill:#fff;stroke:#d5dbe3;stroke-width:3}.pill{fill:#061522;stroke:#b77a25;stroke-width:5}.gold{stroke:#b77a25;stroke-width:4}
+  </style>
+  <rect width="1600" height="660" fill="#ffffff"/>
+  <text class="title" x="80" y="96">Insurance Alignment: The Claim Path Must Match the Policy Path</text>
+  <text class="sub" x="80" y="136">Coverage review is a mapping exercise, not a last-minute document search.</text>
+  <line class="gold" x1="620" y1="388" x2="650" y2="388"/>
+  <line class="gold" x1="950" y1="388" x2="980" y2="388"/>
+  <g transform="translate(140 262)">
+    <rect class="card" width="480" height="238" rx="17"/>
+    <text class="card-title" x="40" y="58">Underlying liability</text>
+    <text class="body" x="40" y="104">Contractual forum</text>
+    <text class="body" x="40" y="137">Governing law</text>
+    <text class="body" x="40" y="170">Counterparty assets</text>
+    <text class="body" x="40" y="203">Claimant location</text>
+  </g>
+  <g transform="translate(650 316)">
+    <rect class="pill" width="300" height="146" rx="73"/>
+    <text class="pill-title" x="150" y="65" text-anchor="middle">ALIGN</text>
+    <text class="pill-text" x="150" y="108" text-anchor="middle">before signing</text>
+  </g>
+  <g transform="translate(980 262)">
+    <rect class="card" width="480" height="238" rx="17"/>
+    <text class="card-title" x="40" y="58">Policy response</text>
+    <text class="body" x="40" y="104">Territory</text>
+    <text class="body" x="40" y="137">Jurisdiction limits</text>
+    <text class="body" x="40" y="170">Definition of claim</text>
+    <text class="body" x="40" y="203">Claims-made timing</text>
+  </g>
+</svg>

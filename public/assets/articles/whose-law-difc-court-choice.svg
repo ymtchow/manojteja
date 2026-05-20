@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 660" role="img" aria-labelledby="title desc">
+  <title id="title">DIFC Court Choice: Strategic Fit, Not Default Habit</title>
+  <desc id="desc">A DIFC court selection diagram showing procedural familiarity, governing law, enforcement route and insurance response.</desc>
+  <style>
+    .title{font:700 46px Arial,Helvetica,sans-serif;fill:#07121d}.sub{font:400 26px Arial,Helvetica,sans-serif;fill:#66717d}.card-title{font:700 30px Arial,Helvetica,sans-serif;fill:#12355b}.card-text{font:400 24px Arial,Helvetica,sans-serif;fill:#66717d}.circle-title{font:700 44px Arial,Helvetica,sans-serif;fill:#efc979}.circle-text{font:400 30px Arial,Helvetica,sans-serif;fill:#fff}.card{fill:#fff;stroke:#d5dbe3;stroke-width:3}.navy{fill:#061522;stroke:#b77a25;stroke-width:5}.line{stroke:#b77a25;stroke-width:3}
+  </style>
+  <rect width="1600" height="660" fill="#ffffff"/>
+  <text class="title" x="80" y="98">DIFC Court Choice: Strategic Fit, Not Default Habit</text>
+  <text class="sub" x="80" y="140">A forum clause works only when it matches enforcement, counterparty profile and policy response.</text>
+  <line class="line" x1="535" y1="247" x2="682" y2="318"/>
+  <line class="line" x1="535" y1="501" x2="682" y2="404"/>
+  <line class="line" x1="924" y1="318" x2="1065" y2="247"/>
+  <line class="line" x1="924" y1="404" x2="1065" y2="501"/>
+  <circle class="navy" cx="800" cy="361" r="122"/>
+  <text class="circle-title" x="800" y="356" text-anchor="middle">DIFC</text>
+  <text class="circle-text" x="800" y="407" text-anchor="middle">Courts</text>
+  <g transform="translate(96 185)">
+    <rect class="card" width="440" height="122" rx="15"/>
+    <text class="card-title" x="29" y="50">Procedural familiarity</text>
+    <text class="card-text" x="29" y="87">English-language commercial forum</text>
+  </g>
+  <g transform="translate(96 440)">
+    <rect class="card" width="440" height="122" rx="15"/>
+    <text class="card-title" x="29" y="50">Governing law</text>
+    <text class="card-text" x="29" y="87">Forum and substantive law differ</text>
+  </g>
+  <g transform="translate(1065 185)">
+    <rect class="card" width="440" height="122" rx="15"/>
+    <text class="card-title" x="29" y="50">Enforcement route</text>
+    <text class="card-text" x="29" y="87">Can the decision travel to assets?</text>
+  </g>
+  <g transform="translate(1065 440)">
+    <rect class="card" width="440" height="122" rx="15"/>
+    <text class="card-title" x="29" y="50">Insurance response</text>
+    <text class="card-text" x="29" y="87">Foreign proceedings and claim wording</text>
+  </g>
+</svg>
