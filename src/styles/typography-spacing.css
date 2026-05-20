@@ -5,34 +5,45 @@
   page, and all generated article pages.
 */
 :root {
-  --label-heading-gap: clamp(14px, 1.6vw, 20px);
-  --label-heading-gap-compact: clamp(10px, 1.1vw, 14px);
+  --label-heading-gap: clamp(22px, 2.2vw, 32px);
+  --label-heading-gap-compact: clamp(14px, 1.4vw, 20px);
 }
 
 .eyebrow {
   display: block;
   line-height: 1.1;
+  margin-bottom: 0;
 }
 
-/* Default future-proof rule: any current or future label followed by a heading gets breathing room. */
-.eyebrow + :where(h1, h2, h3) {
+/*
+  Strong selectors are intentional here. Existing page styles such as
+  .section__head h2 and .featured-publication h2 were overriding the earlier
+  spacing rule, so these rules directly target every label-to-heading pairing.
+*/
+.eyebrow + h1,
+.eyebrow + h2,
+.eyebrow + h3,
+.section__head .eyebrow + h1,
+.section__head .eyebrow + h2,
+.section__head .eyebrow + h3,
+.insights-header .eyebrow + h1,
+.insights-header .eyebrow + h2,
+.article-hero .eyebrow + h1,
+.article-hero .eyebrow + h2,
+#contact .eyebrow + h2 {
   margin-top: var(--label-heading-gap);
 }
 
 /* Compact cards still need separation, but not as much as page/section headings. */
-:where(.article-card__body, .insight-row, .featured-publication__copy) .eyebrow + :where(h2, h3) {
+.article-card__body .eyebrow + h3,
+.insight-row .eyebrow + h2,
+.featured-publication__copy .eyebrow + h2 {
   margin-top: var(--label-heading-gap-compact);
 }
 
-/* Contact and page headers should read like premium editorial sections, not cramped labels. */
-:where(.section__head, .insights-header, .article-hero, #contact) .eyebrow + :where(h1, h2) {
-  margin-top: var(--label-heading-gap);
-}
-
-/* Large responsive headings need a little more air on small screens. */
 @media (max-width: 640px) {
   :root {
-    --label-heading-gap: 16px;
-    --label-heading-gap-compact: 12px;
+    --label-heading-gap: 24px;
+    --label-heading-gap-compact: 16px;
   }
 }
