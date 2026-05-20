@@ -2,6 +2,7 @@
 import '../../styles/global.css';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles'))
@@ -15,9 +16,6 @@ const comingSoon = [
     image: '/assets/brand-editorial-article-bg-v1.svg',
   },
 ];
-
-const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
 ---
 <html lang="en">
   <head>
@@ -45,39 +43,8 @@ const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').spli
       </div>
       <div class="two-column">
         <section class="insight-list" aria-label="Article list">
-          {articles.map((article) => (
-            <article class="insight-row">
-              <a href={`/articles/${article.id}/`}>
-                <img src={article.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
-              </a>
-              <div>
-                <p class="eyebrow">{article.data.category}</p>
-                <h2><a href={`/articles/${article.id}/`}>{article.data.title}</a></h2>
-                {article.data.description && <p>{article.data.description}</p>}
-                <div class="meta-row">
-                  <span>{formatDate(article.data.date)}</span>
-                  <span>{readTime(article)}</span>
-                  {article.data.audio && <span>Audio available</span>}
-                </div>
-              </div>
-              <a class="play-link" href={`/articles/${article.id}/`} aria-label={`Open ${article.data.title}`}>▶</a>
-            </article>
-          ))}
-          {comingSoon.map((item) => (
-            <article class="insight-row insight-row--soon" aria-label={`${item.title} coming soon`}>
-              <img src={item.image} alt="" />
-              <div>
-                <p class="eyebrow">{item.category}</p>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-                <div class="meta-row">
-                  <span>Coming soon</span>
-                  <span>In preparation</span>
-                </div>
-              </div>
-              <span class="play-link">…</span>
-            </article>
-          ))}
+          {articles.map((article) => <ArticleCard article={article} variant="row" />)}
+          {comingSoon.map((item) => <ArticleCard item={item} variant="row" comingSoon />)}
         </section>
         <aside>
           <div class="side-card">
