@@ -1,0 +1,216 @@
+---
+const {
+  article,
+  item,
+  href,
+  variant = 'grid',
+  comingSoon = false,
+  metaLabel,
+  actionLabel = '→',
+} = Astro.props;
+
+const data = article?.data ?? item ?? {};
+const title = data.title ?? '';
+const description = data.description ?? '';
+const category = data.category ?? '';
+const image = data.featuredImage ?? data.image ?? '/assets/article-page-banner-19-may-2025.png';
+const date = data.date;
+const hasAudio = Boolean(data.audio);
+const resolvedHref = href ?? (article ? `/articles/${article.id}/` : undefined);
+const isLinked = Boolean(resolvedHref && !comingSoon);
+const imageAlt = title ? `${title} article image` : '';
+const formattedDate = date?.toLocaleDateString?.('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+const readTime = article ? `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read` : undefined;
+const classes = ['article-card', `article-card--${variant}`, { 'article-card--soon': comingSoon }];
+---
+{isLinked ? (
+  <a class:list={classes} href={resolvedHref}>
+    <div class="article-card__media">
+      <img src={image} alt={imageAlt} loading="lazy" />
+    </div>
+    <div class="article-card__body">
+      {category && <p class="eyebrow">{category}</p>}
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+      <div class="meta-row">
+        {formattedDate && <span>{formattedDate}</span>}
+        {readTime && <span>{readTime}</span>}
+        {metaLabel && <span>{metaLabel}</span>}
+        {hasAudio && !metaLabel && <span>Audio available</span>}
+      </div>
+    </div>
+    <span class="article-card__action" aria-hidden="true">{actionLabel}</span>
+  </a>
+) : (
+  <article class:list={classes} aria-label={title ? `${title} coming soon` : undefined}>
+    <div class="article-card__media">
+      <img src={image} alt={imageAlt} loading="lazy" />
+    </div>
+    <div class="article-card__body">
+      {category && <p class="eyebrow">{category}</p>}
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+      <div class="meta-row">
+        <span>Coming soon</span>
+        <span>In preparation</span>
+      </div>
+    </div>
+    <span class="article-card__action" aria-hidden="true">…</span>
+  </article>
+)}
+
+<style>
+  .article-card {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    border: 1px solid rgba(7, 18, 29, 0.14);
+    border-radius: 6px;
+    background: #fff;
+    color: inherit;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  a.article-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 148, 55, 0.28);
+    box-shadow: 0 20px 42px rgba(7, 18, 29, 0.12);
+  }
+
+  .article-card__media {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy-900);
+  }
+
+  .article-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 240ms ease;
+  }
+
+  a.article-card:hover .article-card__media img {
+    transform: scale(1.025);
+  }
+
+  .article-card__body {
+    padding: 24px;
+  }
+
+  .article-card__body h2 {
+    color: var(--paper-ink);
+    font-size: 26px;
+  }
+
+  .article-card__body > p:not(.eyebrow) {
+    margin-top: 12px;
+    color: var(--paper-muted);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .article-card--grid {
+    grid-template-rows: auto 1fr;
+  }
+
+  .article-card--grid .article-card__media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .article-card--row {
+    grid-template-columns: 260px minmax(0, 1fr) 72px;
+    min-height: 202px;
+    align-items: stretch;
+  }
+
+  .article-card--row .article-card__media {
+    min-height: 202px;
+  }
+
+  .article-card--row .article-card__body {
+    padding: 26px 30px;
+  }
+
+  .article-card--row .article-card__body h2 {
+    font-size: 30px;
+  }
+
+  .article-card__action {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid rgba(7, 18, 29, 0.24);
+    border-radius: 50%;
+    color: var(--navy-900);
+    font-size: 14px;
+  }
+
+  .article-card--grid .article-card__action {
+    display: none;
+  }
+
+  .article-card--soon {
+    opacity: 0.95;
+  }
+
+  .article-card--soon::after {
+    content: "Coming soon";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 7px 10px;
+    background: rgba(2, 11, 19, 0.86);
+    color: var(--gold-soft);
+    border: 1px solid rgba(239, 201, 121, 0.38);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .article-card--soon .article-card__action {
+    color: var(--paper-muted);
+  }
+
+  @media (max-width: 980px) {
+    .article-card--row {
+      grid-template-columns: 180px minmax(0, 1fr);
+    }
+
+    .article-card--row .article-card__action {
+      grid-column: 2;
+      justify-self: start;
+      margin: 0 0 24px 30px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .article-card--row {
+      grid-template-columns: 1fr;
+    }
+
+    .article-card--row .article-card__media {
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+
+    .article-card--row .article-card__body {
+      padding: 24px;
+    }
+
+    .article-card--row .article-card__body h2,
+    .article-card__body h2 {
+      font-size: 26px;
+    }
+
+    .article-card--row .article-card__action {
+      grid-column: auto;
+      margin: 0 0 24px 24px;
+    }
+  }
+</style>
