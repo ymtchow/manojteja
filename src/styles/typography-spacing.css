@@ -1,0 +1,38 @@
+/*
+  Typography rhythm overrides.
+  This file keeps the visual gap between small uppercase labels and large
+  editorial headings consistent across the home page, listing pages, podcast
+  page, and all generated article pages.
+*/
+:root {
+  --label-heading-gap: clamp(14px, 1.6vw, 20px);
+  --label-heading-gap-compact: clamp(10px, 1.1vw, 14px);
+}
+
+.eyebrow {
+  display: block;
+  line-height: 1.1;
+}
+
+/* Default future-proof rule: any current or future label followed by a heading gets breathing room. */
+.eyebrow + :where(h1, h2, h3) {
+  margin-top: var(--label-heading-gap);
+}
+
+/* Compact cards still need separation, but not as much as page/section headings. */
+:where(.article-card__body, .insight-row, .featured-publication__copy) .eyebrow + :where(h2, h3) {
+  margin-top: var(--label-heading-gap-compact);
+}
+
+/* Contact and page headers should read like premium editorial sections, not cramped labels. */
+:where(.section__head, .insights-header, .article-hero, #contact) .eyebrow + :where(h1, h2) {
+  margin-top: var(--label-heading-gap);
+}
+
+/* Large responsive headings need a little more air on small screens. */
+@media (max-width: 640px) {
+  :root {
+    --label-heading-gap: 16px;
+    --label-heading-gap-compact: 12px;
+  }
+}
