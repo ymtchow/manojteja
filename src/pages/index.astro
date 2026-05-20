@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import '../styles/image-overrides.css';
+import '../styles/about-refresh.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getCollection } from 'astro:content';
@@ -11,11 +13,11 @@ const articles = (await getCollection('articles'))
 const featured = articles.find((article) => article.id === 'whose-law-which-court') ?? articles[0];
 const comingSoon = [
   {
-    title: 'Letters of Credit â€“ Bridges of Global Trust',
-    description: 'Understanding the legal architecture behind trade finance.',
-    category: 'Insurance Wordings',
+    title: 'Marine Insurance â€“ Bridges of Global Trade',
+    description: 'A practical look at maritime risk, cargo movement, ports, and the insurance structures behind global trade.',
+    category: 'Marine Insurance',
     date: 'Coming soon',
-    image: '/assets/brand-editorial-article-bg-v1.svg',
+    image: '/assets/article-marine-card.webp',
   },
   {
     title: 'Why Policy Wordings Determine Outcomes More Than Most Realize',
@@ -26,18 +28,18 @@ const comingSoon = [
   },
 ];
 
-const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '02-digit', month: 'short', year: 'numeric' });
 const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
 
 const areas = [
-  ['â—', 'Large Multinational Corporate Accounts', 'Cross-border programmes, fronting considerations, and complex account servicing.'],
+  ['â—", 'Large Multinational Corporate Accounts', 'Cross-border programmes, fronting considerations, and complex account servicing.'],
   ['â™¢', 'Liability Lines', 'Commercial liability, casualty exposure, defence strategy, and claims pathways.'],
-  ['â™™', 'Professional Indemnity', 'PI disputes, claims-made pressure points, and advisory-risk wording issues.'],
+  ['b”™', 'Professional Indemnity', 'PI disputes, claims-made pressure points, and advisory-risk wording issues.'],
   ['â–¤', 'Insurance Wordings', 'Policy language, exclusions, jurisdiction clauses, and coverage alignment.'],
-  ['âœ¦', 'Specialty Lines', 'Cyber, financial lines, niche placements, and emerging risk transfer.'],
-  ['â–¥', 'Property Insurance', 'Property programme structure, catastrophe exposure, and business interruption themes.'],
-  ['â—‰', 'Geopolitical Risk & Insurance', 'Trade disruption, sanctions context, political volatility, and territorial risk.'],
-  ['â—‡', 'Cross-Border Disputes', 'Forum, law, enforcement and insurance response across jurisdictions.'],
+  ['âœ¦", 'Specialty Lines', 'Cyber, financial lines, niche placements, and emerging risk transfer.'],
+  ['b”¥%', 'Property Insurance', 'Property programme structure, catastrophe exposure, and business interruption themes.'],
+  ['b”‹', 'Geopolitical Risk & Insurance', 'Trade disruption, sanctions context, political volatility, and territorial risk.'],
+  ['â—†', 'Cross-Border Disputes', 'Forum, law, enforcement and insurance response across jurisdictions.'],
 ];
 ---
 <html lang="en">
@@ -45,14 +47,14 @@ const areas = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Manoj Teja Yadlapati | Cross-border Insurance Perspectives</title>
-    <meta name="description" content="High-level articles on insurance, liability, wordings, specialty lines and cross-border risk from Dubai." />
+    <meta name="description" content="Independent perspectives on insurance wordings, complex claims, jurisdictional risk, and the commercial forces shaping global risk transfer." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Manoj Teja Yadlapati | Cross-border Insurance Perspectives" />
-    <meta property="og:description" content="Perspectives on insurance, liability and cross-border risk from Dubai." />
-    <meta property="og:image" content="/assets/brand-executive-home-bg-v3.svg" />
+    <meta property="og:description" content="Insurance, liability, and cross-border risk perspectives from Dubai to global markets." />
+    <meta property="og:image" content="/assets/site-hero-main.webp" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
   </head>
   <body>
     <SiteHeader />
@@ -61,9 +63,9 @@ const areas = [
         <div class="hero__inner">
           <div class="hero__copy">
             <p class="eyebrow">Cross-border insurance perspectives</p>
-            <h1>Perspectives on insurance, liability, and cross-border risk from <em>Dubai.</em></h1>
+            <h1>Insurance, liability, and cross-border risk â€” from <em>Dubai to global markets.</em></h1>
             <div class="hero__line"></div>
-            <p class="hero__lede">High-level articles on evolving jurisdictions, complex risks, insurance wordings, and the global commercial landscape that shapes them.</p>
+            <p class="hero__lede">Independent perspectives on insurance wordings, complex claims, jurisdictional risk, and the commercial forces shaping global risk transfer.</p>
             <div class="hero__actions">
               <a class="button button--gold" href="/articles/">Explore latest perspectives â†’</a>
               <a class="button button--line" href="/podcasts/">Listen to podcast â†’</a>
@@ -79,14 +81,14 @@ const areas = [
               <p class="eyebrow">Featured publication</p>
               <h2>{featured.data.title}</h2>
               {featured.data.description && <p>{featured.data.description}</p>}
-              <p>A practical framework for determining governing law and jurisdiction in cross-border commercial and insurance disputes.</p>
+              <p>A practical lens on law, forum, enforcement, and insurance response in cross-border commercial and insurance disputes.</p>
               <div class="featured-publication__actions">
                 <a class="button button--dark" href={`/articles/${featured.id}/`}>Read article</a>
-                {featured.data.audio && <a class="button button--ghost" href={`/articles/${featured.id}/#audio`}>Listen to podcast â–¶</a>}
+                {featured.data.audio && <a class="button button--ghost" href={`/articles/${featured.id}/#audio}>Listen to podcast â–¶</a>}
               </div>
             </div>
             <a class="feature-image" href={`/articles/${featured.id}/`} aria-label={`Read ${featured.data.title}`}>
-              <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+              <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
             </a>
           </div>
         </section>
@@ -97,7 +99,7 @@ const areas = [
           <div class="section__head">
             <div>
               <p class="eyebrow">Areas of interest</p>
-              <h2>Insurance themes for serious readers.</h2>
+              <h2>Insurance themes shaped by law, markets, and global risk.</h2>
             </div>
             <a class="text-link" href="/articles/">View all articles â†’</a>
           </div>
@@ -123,9 +125,9 @@ const areas = [
             <a class="text-link" href="/articles/">View all articles â†’</a>
           </div>
           <div class="article-grid">
-            {featured && (
+          {featured && (
               <a class="article-card" href={`/articles/${featured.id}/`}>
-                <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+                <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
                 <div class="article-card__body">
                   <p class="eyebrow">{featured.data.category}</p>
                   <h3>{featured.data.title}</h3>
@@ -158,69 +160,12 @@ const areas = [
 
       <section class="section section--navy" id="about">
         <div class="container about-band">
-          <img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Yadlapati" />
+          <div class="about-portrait">
+            <img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Yadlapati" />
+          </div>
           <div class="about-copy">
             <p class="eyebrow">About Manoj Teja Yadlapati</p>
+            <div class="about-rule" aria-hidden="true"></div>
             <p class="about-kicker">Editorial focus</p>
-            <h2>Insurance. Liability. Wordings. Cross-border risk.</h2>
-            <p>Independent perspectives for serious insurance readers, shaped by commercial context and practical market experience.</p>
-            <a class="button button--line" href="/articles/">Read the articles â†’</a>
-          </div>
-          <div class="about-principle">
-            <div class="interest-icon">â—</div>
-            <h3>Global Perspective</h3>
-            <p>Insights shaped by international exposure and cross-border commercial realities.</p>
-          </div>
-          <div class="about-principle">
-            <div class="interest-icon">â™¢</div>
-            <h3>Practical Insight</h3>
-            <p>Connecting legal, insurance, and commercial considerations that truly matter.</p>
-          </div>
-          <div class="about-principle">
-            <div class="interest-icon">âœ</div>
-            <h3>Independent Thinking</h3>
-            <p>Unbiased perspectives on emerging risks and evolving jurisdictions.</p>
-          </div>
-          <blockquote class="quote-card">Complex risks demand clarity, context, and the right perspective.<span>â€” Manoj Teja Yadlapati</span></blockquote>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="container two-column">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Publishing, speaking, and professional conversations.</h2>
-            <p style="margin-top: 14px; color: var(--paper-muted); max-width: 680px;">For article collaborations, podcast conversations, or professional dialogue around liability, wordings, specialty lines, and cross-border risk, connect through LinkedIn or email.</p>
-          </div>
-          <div class="side-card">
-            <a class="button button--dark" href="https://www.linkedin.com/in/yadlapati/" target="_blank" rel="noopener noreferrer">LinkedIn â†—</a>
-            <details class="contact-drawer">
-              <summary class="button button--ghost">Email Manoj</summary>
-              <form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="subject" value="Message from Manoj Teja website" />
-                <p class="hidden-field">
-                  <label>Do not fill this out <input name="bot-field" /></label>
-                </p>
-                <label>
-                  Name
-                  <input type="text" name="name" autocomplete="name" required />
-                </label>
-                <label>
-                  Email address
-                  <input type="email" name="email" autocomplete="email" required />
-                </label>
-                <label>
-                  Message
-                  <textarea name="message" rows="5" required></textarea>
-                </label>
-                <button class="button button--dark" type="submit">Send message</button>
-              </form>
-            </details>
-          </div>
-        </div>
-      </section>
-    </main>
-    <SiteFooter />
-  </body>
-</html>
+            <h2>Insurance, liability, and cross-border risk â€” ^Z[™YÚ]˜XİXØ[Û\š]KÚ‚ˆHÛ\ÜÏH˜]Ûˆ]Û‹K[[™Hˆ™YH‹Ø\XÛ\ËÈ”™XYH\XÛ\È8¡¤ØO‚ˆÙ]‚ˆ]ˆÛ\ÜÏH˜X›İ]\š[˜Ú\H‚ˆ]ˆÛ\ÜÏHš[\™\İZXÛÛˆ¸¥ãÙ]‚ˆÏ‘ÛØ˜[\œÜXİ]™OÚÏ‚ˆ’[œÚYÚÈÚ\YH[\›˜][Û˜[^Üİ\™H[™Ü›ÜÜËX›Ü™\ˆÛÛ[Y\˜ÚX[™X[]Y\ËÜ‚ˆÙ]‚ˆ]ˆÛ\ÜÏH˜X›İ]\š[˜Ú\H‚ˆ]ˆÛ\ÜÏHš[\™\İZXÛÛˆ¸¦hÙ]‚ˆÏ”˜XİXØ[[œÚYÚÚÏ‚ˆÛÛ›™Xİ[™ÈYØ[[œİ\˜[˜ÙK[™ÛÛ[Y\˜ÚX[ÛÛœÚY\˜][ÛœÈ][HX]\‹Ü‚ˆÙ]‚ˆ]ˆÛ\ÜÏH˜X›İ]\š[˜Ú\H‚ˆ]ˆÛ\ÜÏHš[\™\İZXÛÛˆ¸§#OÙ]‚ˆÏ’[™\[™[[šÚ[™ÏÚÏ‚ˆ•[˜šX\ÙY\œÜXİ]™\ÈÛˆ[Y\™Ú[™Èš\ÚÜÈ[™]›Ûš[™È\š\ÙXİ[ÛœËÜ‚ˆÙ]‚ˆÙ]‚ˆÜÙXİ[Û‚‚ˆÙXİ[ÛˆÛ\ÜÏHœÙXİ[ÛˆˆYH˜ÛÛXİ‚ˆ]ˆÛ\ÜÏH˜ÛÛZ[™\ˆÛËXÛÛ[[ˆ‚ˆ]‚ˆÛ\ÜÏH™^YXœ›İÈÛÛXİÜ‚ˆ”X›\Ú[™ËÜXZÚ[™Ë[™›Ù™\ÜÚ[Û˜[ÛÛ™\œØ][ÛœËÚ‚ˆİ[OH›X\™Ú[‹]ÜˆMÈÛÛÜˆ˜\ŠK\\\‹[]]Y
+NÈX^]ÚYˆÈ‘›Üˆ\XÛHÛÛX›Ü˜][ÛœËÙØ\İÛÛ™\œØ][ÛœËÜˆ›Ù™\ÜÚ[Û˜[X[ÙİYH\›İ[™XXš[]KÛÜ™[™ÜËÜXÚX[H[™\Ë[™Ü›ÜÜËX›Ü™\ˆš\ÚËÛÛ›™Xİ›İYÚ[šÙY[ˆÜˆ[XZ[Ü‚ˆÙ]‚ˆ]ˆÛ\ÜÏHœÚYKXØ\™‚ˆHÛ\ÜÏH˜]Ûˆ]Û‹KY\šÈˆ™YHšÎ‹ËİİİË›[šÙY[‹˜ÛÛKÚ[‹ŞXY\]KÈˆ\™Ù]H—Ø›[šÈˆ™[H››ÛÜ[™\ˆ›Ü™Y™\œ™\ˆ“[šÙY[ˆ8¡ªOØO‚ˆ]Z[ÈÛ\ÜÏH˜ÛÛXİY˜]Ù\ˆ‚ˆİ[[X\HÛ\ÜÏH˜]Ûˆ]Û‹KYÚÜİ‘[XZ[X[›ÚÜİ[[X\O‚ˆ›Ü›H˜[YOH˜ÛÛXİˆY]ÙH”ÔÕˆXİ[ÛH‹İ[šÜËÈˆ]K[™]YOHYHˆ™]YKZÛ™^\İH˜›İYšY[ˆÛ\ÜÏH˜ÛÛXİY›Ü›H‚ˆ[œ]\OHšY[ˆˆ˜[YOH™›Ü›K[˜[YHˆ˜[YOH˜ÛÛXİˆÏ‚ˆ[œ]\OHšY[ˆˆ˜[YOHœİXš™Xİˆ˜[YOH“Y\ÜØYÙHœ›ÛHX[›ÚˆZ˜HÙXœÚ]HˆÏ‚ˆÛ\ÜÏHšY[‹YšY[‚ˆX™[“X]™H\ÈšY[›[šÈ[œ]˜[YOH˜›İYšY[ˆÏÛX™[‚ˆÜ‚ˆX™[‚ˆ˜[YBˆ[œ]\OH^ˆ˜[YOH›˜[YHˆ]]ØÛÛ\]OH›˜[YHˆ™\]Z\™YÏ‚ˆÛX™[‚ˆX™[‚ˆ[XZ[Y™\ÜÂˆ[œ]\OH™[XZ[ˆ˜[YOH™[XZ[ˆ]]ØÛÛ\]OH™[XZ[ˆ™\]Z\™YÏ‚ˆÛX™[‚ˆX™[‚ˆY\ÜØYÙBˆ^\™XH˜[YOH›Y\ÜØYÙHˆ›İÜÏHHˆ™\]Z\™Yİ^\™XO‚ˆÛX™[‚ˆ]ÛˆÛ\ÜÏH˜]Ûˆ]Û‹KY\šÈˆ\OHœİX›Z]”Ù[™Y\ÜØYÙOØ]Û‚ˆÙ›Ü›O‚ˆÙ]Z[Ï‚ˆÙ]‚ˆÙ]‚ˆÜÙXİ[Û‚ˆÛXZ[‚ˆÚ]Q›Ûİ\ˆÏ‚ˆØ›ÙO‚Ú[‚
