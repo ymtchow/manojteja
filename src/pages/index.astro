@@ -11,11 +11,11 @@ const articles = (await getCollection('articles'))
 const featured = articles.find((article) => article.id === 'whose-law-which-court') ?? articles[0];
 const comingSoon = [
   {
-    title: 'Letters of Credit – Bridges of Global Trust',
-    description: 'Understanding the legal architecture behind trade finance.',
-    category: 'Insurance Wordings',
+    title: 'Marine Insurance – Bridges of Global Trade',
+    description: 'A practical look at maritime risk, cargo movement, ports, and the insurance structures behind global trade.',
+    category: 'Marine Insurance',
     date: 'Coming soon',
-    image: '/assets/brand-editorial-article-bg-v1.svg',
+    image: '/assets/article-marine-card.webp',
   },
   {
     title: 'Why Policy Wordings Determine Outcomes More Than Most Realize',
@@ -49,7 +49,7 @@ const areas = [
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Manoj Teja Yadlapati | Cross-border Insurance Perspectives" />
     <meta property="og:description" content="Perspectives on insurance, liability and cross-border risk from Dubai." />
-    <meta property="og:image" content="/assets/brand-executive-home-bg-v3.svg" />
+    <meta property="og:image" content="/assets/site-hero-main.webp" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
@@ -86,7 +86,7 @@ const areas = [
               </div>
             </div>
             <a class="feature-image" href={`/articles/${featured.id}/`} aria-label={`Read ${featured.data.title}`}>
-              <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+              <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
             </a>
           </div>
         </section>
@@ -125,7 +125,7 @@ const areas = [
           <div class="article-grid">
             {featured && (
               <a class="article-card" href={`/articles/${featured.id}/`}>
-                <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+                <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
                 <div class="article-card__body">
                   <p class="eyebrow">{featured.data.category}</p>
                   <h3>{featured.data.title}</h3>
