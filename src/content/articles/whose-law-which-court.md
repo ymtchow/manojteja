@@ -5,7 +5,7 @@ date: 2026-05-19
 category: "Cross-Border Risk"
 pdf: "https://drive.google.com/file/d/1YFldqmJecGxXKwdMGCzb1Kor358U3D9x/view?usp=sharing"
 audio: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Podcast%20Whose%20law%20%3F%20which%20court%20%3F.m4a"
-featuredImage: "/assets/article-page-banner-19-may-2025.png"
+featuredImage: "/assets/article-whose-law-card.webp"
 draft: false
 ---
 
