@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/image-overrides.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles'))
@@ -15,13 +16,9 @@ const comingSoon = [
     title: 'Marine Insurance – Bridges of Global Trade',
     description: 'A practical look at maritime risk, cargo movement, ports, and the insurance structures behind global trade.',
     category: 'Marine Insurance',
-    date: 'Coming soon',
     image: '/assets/article-marine-card.webp',
   },
 ];
-
-const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
 
 const areas = [
   ['◎', 'Large Multinational Corporate Accounts', 'Cross-border programmes, fronting considerations, and complex account servicing.'],
@@ -117,35 +114,8 @@ const areas = [
             <a class="text-link" href="/articles/">View all articles →</a>
           </div>
           <div class="article-grid">
-            {featured && (
-              <a class="article-card" href={`/articles/${featured.id}/`}>
-                <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
-                <div class="article-card__body">
-                  <p class="eyebrow">{featured.data.category}</p>
-                  <h3>{featured.data.title}</h3>
-                  {featured.data.description && <p>{featured.data.description}</p>}
-                  <div class="meta-row">
-                    <span>{readTime(featured)}</span>
-                    <span>{formatDate(featured.data.date)}</span>
-                    <span>→</span>
-                  </div>
-                </div>
-              </a>
-            )}
-            {comingSoon.map((item) => (
-              <article class="article-card article-card--soon" aria-label={`${item.title} coming soon`}>
-                <img src={item.image} alt="" />
-                <div class="article-card__body">
-                  <p class="eyebrow">{item.category}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <div class="meta-row">
-                    <span>{item.date}</span>
-                    <span>In preparation</span>
-                  </div>
-                </div>
-              </article>
-            ))}
+            {featured && <ArticleCard article={featured} variant="grid" />}
+            {comingSoon.map((item) => <ArticleCard item={item} variant="grid" comingSoon />)}
           </div>
         </div>
       </section>
