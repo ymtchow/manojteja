@@ -1,0 +1,11 @@
+.hero {
+  background:
+    linear-gradient(90deg, rgba(2, 11, 19, 0.92) 0%, rgba(2, 11, 19, 0.76) 45%, rgba(2, 11, 19, 0.24) 74%),
+    url("/assets/site-hero-main.webp") center / cover;
+}
+
+.article-hero {
+  background:
+    linear-gradient(90deg, rgba(2, 11, 19, 0.9), rgba(2, 11, 19, 0.62)),
+    url("/assets/article-whose-law-card.webp") center / cover;
+}
