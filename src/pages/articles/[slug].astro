@@ -24,6 +24,12 @@ const heroImageUrl = absoluteUrl(heroImage);
 const seoDescription = article.data.description ?? 'Independent insurance perspective from The Cross-Border Risk Review.';
 const pageTitle = `${article.data.title} | The Cross-Border Risk Review`;
 const publishedIso = article.data.date.toISOString();
+const encodedArticleUrl = encodeURIComponent(articleUrl);
+const encodedShareText = encodeURIComponent(`${article.data.title} | The Cross-Border Risk Review`);
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedArticleUrl}`;
+const xShareUrl = `https://twitter.com/intent/tweet?url=${encodedArticleUrl}&text=${encodedShareText}`;
+const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedArticleUrl}`;
+const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(`${article.data.title} ${articleUrl}`)}`;
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -119,6 +125,73 @@ const breadcrumbJsonLd = {
         max-width: 680px;
       }
 
+      .share-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .share-link,
+      .copy-share-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        border: 1px solid rgba(190, 153, 91, 0.34);
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(247, 240, 228, 0.62));
+        color: #102031;
+        cursor: pointer;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        padding: 9px 12px 9px 9px;
+        text-align: left;
+        text-decoration: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
+      }
+
+      .share-link:hover,
+      .copy-share-button:hover {
+        background: #ffffff;
+        border-color: rgba(190, 153, 91, 0.76);
+        box-shadow: 0 10px 24px rgba(16, 32, 49, 0.08);
+        transform: translateY(-1px);
+      }
+
+      .share-mark {
+        display: inline-grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 28px;
+        height: 28px;
+        border: 1px solid rgba(190, 153, 91, 0.55);
+        border-radius: 50%;
+        background: #102031;
+        color: #d8b36a;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+        line-height: 1;
+      }
+
+      .share-label {
+        flex: 1 1 auto;
+      }
+
+      .share-arrow {
+        color: #9a7438;
+        font-size: 12px;
+      }
+
+      .copy-share-button:focus-visible,
+      .share-link:focus-visible {
+        outline: 2px solid rgba(190, 153, 91, 0.9);
+        outline-offset: 3px;
+      }
+
       @media (max-width: 760px) {
         html,
         body {
@@ -141,6 +214,11 @@ const breadcrumbJsonLd = {
 
         .article-aside nav {
           display: none;
+        }
+
+        .share-links {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .article-main,
@@ -199,8 +277,14 @@ const breadcrumbJsonLd = {
           </nav>
         )}
         <div style="margin-top: 34px;">
-          <h2>Share</h2>
-          <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <h2>Share this article</h2>
+          <div class="share-links" aria-label="Social sharing links">
+            <a class="share-link" href={linkedInShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">in</span><span class="share-label">LinkedIn</span><span class="share-arrow" aria-hidden="true">↗</span></a>
+            <a class="share-link" href={xShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">X</span><span class="share-label">X</span><span class="share-arrow" aria-hidden="true">↗</span></a>
+            <a class="share-link" href={facebookShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">f</span><span class="share-label">Facebook</span><span class="share-arrow" aria-hidden="true">↗</span></a>
+            <a class="share-link" href={whatsappShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">WA</span><span class="share-label">WhatsApp</span><span class="share-arrow" aria-hidden="true">↗</span></a>
+            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}><span class="share-mark" aria-hidden="true">⧉</span><span class="share-label">Copy link</span><span class="share-arrow" aria-hidden="true">✓</span></button>
+          </div>
         </div>
       </aside>
 
@@ -236,5 +320,34 @@ const breadcrumbJsonLd = {
       </article>
     </main>
     <SiteFooter />
+    <script is:inline>
+      document.addEventListener('click', async (event) => {
+        const button = event.target.closest('[data-copy-share-link]');
+        if (!button) return;
+
+        const shareUrl = button.getAttribute('data-share-url');
+        const label = button.querySelector('.share-label');
+        const originalText = label?.textContent ?? 'Copy link';
+
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+        } catch (error) {
+          const textArea = document.createElement('textarea');
+          textArea.value = shareUrl;
+          textArea.setAttribute('readonly', '');
+          textArea.style.position = 'absolute';
+          textArea.style.left = '-9999px';
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+        }
+
+        if (label) label.textContent = 'Copied';
+        window.setTimeout(() => {
+          if (label) label.textContent = originalText;
+        }, 1800);
+      });
+    </script>
   </body>
 </html>
