@@ -7,6 +7,7 @@
 :root {
   --label-heading-gap: clamp(22px, 2.2vw, 32px);
   --label-heading-gap-compact: clamp(14px, 1.4vw, 20px);
+  --footer-logo-name-offset: 76px;
 }
 
 .eyebrow {
@@ -41,9 +42,24 @@
   margin-top: var(--label-heading-gap-compact);
 }
 
+/* Footer copy aligns under the name, not under the logo. */
+.footer-brand > p,
+.footer-brand > .social-row {
+  margin-left: var(--footer-logo-name-offset);
+}
+
+.footer-brand > p {
+  max-width: 430px;
+}
+
 @media (max-width: 640px) {
   :root {
     --label-heading-gap: 24px;
     --label-heading-gap-compact: 16px;
+    --footer-logo-name-offset: 0px;
+  }
+
+  .brand--footer {
+    align-items: flex-start;
   }
 }
