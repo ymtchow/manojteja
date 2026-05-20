@@ -1,0 +1,33 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/articles/', label: 'Articles' },
+  { href: '/#areas', label: 'Areas of Interest' },
+  { href: '/podcasts/', label: 'Podcast' },
+  { href: '/#about', label: 'About' },
+  { href: '/#contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname;
+const isActive = (href) => {
+  if (href === '/') return currentPath === '/';
+  if (href.includes('#')) return false;
+  return currentPath.startsWith(href);
+};
+---
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="Manoj Teja Yadlapati home">
+      <img src="/assets/ymt-logo-mark.png" alt="" class="brand__mark" />
+      <span class="brand__copy">
+        <span class="brand__name">MANOJ TEJA YADLAPATI</span>
+      </span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      {navItems.map((item) => (
+        <a href={item.href} class:list={['primary-nav__link', { 'is-active': isActive(item.href) }]}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

@@ -1,42 +1,226 @@
 ---
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const featured = articles[0];
+
+const featured = articles.find((article) => article.id === 'whose-law-which-court') ?? articles[0];
+const comingSoon = [
+  {
+    title: 'Letters of Credit – Bridges of Global Trust',
+    description: 'Understanding the legal architecture behind trade finance.',
+    category: 'Insurance Wordings',
+    date: 'Coming soon',
+    image: '/assets/brand-editorial-article-bg-v1.svg',
+  },
+  {
+    title: 'Why Policy Wordings Determine Outcomes More Than Most Realize',
+    description: 'The critical role of language in shaping coverage, liability and intent.',
+    category: 'Insurance Wordings',
+    date: 'Coming soon',
+    image: '/assets/brand-executive-home-bg-v3.svg',
+  },
+];
+
 const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
+
+const areas = [
+  ['◎', 'Large Multinational Corporate Accounts', 'Cross-border programmes, fronting considerations, and complex account servicing.'],
+  ['♢', 'Liability Lines', 'Commercial liability, casualty exposure, defence strategy, and claims pathways.'],
+  ['♙', 'Professional Indemnity', 'PI disputes, claims-made pressure points, and advisory-risk wording issues.'],
+  ['▤', 'Insurance Wordings', 'Policy language, exclusions, jurisdiction clauses, and coverage alignment.'],
+  ['✦', 'Specialty Lines', 'Cyber, financial lines, niche placements, and emerging risk transfer.'],
+  ['▥', 'Property Insurance', 'Property programme structure, catastrophe exposure, and business interruption themes.'],
+  ['◉', 'Geopolitical Risk & Insurance', 'Trade disruption, sanctions context, political volatility, and territorial risk.'],
+  ['◇', 'Cross-Border Disputes', 'Forum, law, enforcement and insurance response across jurisdictions.'],
+];
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Manoj Teja Y | Cross-Border Insurance Perspectives</title>
-    <meta name="description" content="Perspectives on insurance, liability, and cross-border risk from Dubai by Manoj Teja Y." />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0B1322" />
+    <title>Manoj Teja Yadlapati | Cross-border Insurance Perspectives</title>
+    <meta name="description" content="High-level articles on insurance, liability, wordings, specialty lines and cross-border risk from Dubai." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Manoj Teja Y | Cross-Border Insurance Perspectives" />
-    <meta property="og:description" content="Perspectives on insurance, liability, and cross-border risk from Dubai." />
-    <meta property="og:image" content="/assets/article-page-banner-19-may-2025.png" />
+    <meta property="og:title" content="Manoj Teja Yadlapati | Cross-border Insurance Perspectives" />
+    <meta property="og:description" content="Perspectives on insurance, liability and cross-border risk from Dubai." />
+    <meta property="og:image" content="/assets/brand-executive-home-bg-v3.svg" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-    <style>
-      :root{--navy:#0b1322;--ink:#f5efe4;--soft:rgba(245,239,228,.80);--muted:rgba(245,239,228,.62);--gold:#e8b888;--line:rgba(232,184,136,.22);--serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0b1322;color:var(--ink);font-family:var(--sans)}a{text-decoration:none;color:inherit}.page{min-height:100vh;background:radial-gradient(circle at 82% 10%,rgba(232,184,136,.16),transparent 28%),radial-gradient(circle at 8% 32%,rgba(232,184,136,.07),transparent 35%),linear-gradient(180deg,#0b1322,#111d33 48%,#07101d)}.top{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(232,184,136,.16);background:rgba(7,16,29,.84);backdrop-filter:blur(16px)}.nav{max-width:1180px;margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;gap:14px;align-items:center}.brand img{width:58px;height:42px;object-fit:contain}.brand strong{font-family:var(--serif);font-size:22px}.brand small{display:block;color:var(--gold);letter-spacing:.13em;text-transform:uppercase;font-size:10px}.links{display:flex;gap:20px;align-items:center;color:var(--soft);font-size:13px;font-weight:700}.links a:hover{color:var(--gold)}.disc{border:1px solid rgba(232,184,136,.42);border-radius:999px;padding:10px 15px;color:var(--gold)}.hero,.section{max-width:1180px;margin:auto;padding:60px 28px}.hero{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:44px;align-items:center}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}h1,h2,h3{font-family:var(--serif);margin:0;letter-spacing:-.03em}h1{font-size:clamp(44px,6vw,76px);line-height:.98}h2{font-size:clamp(34px,4vw,52px);line-height:1.05}.lede,.sub,p{color:var(--soft);line-height:1.76}.lede{font-size:18px;max-width:720px}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{border-radius:999px;padding:14px 20px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.primary{background:linear-gradient(135deg,var(--gold),#d8a45f);color:#111827}.secondary{border:1px solid rgba(232,184,136,.34);color:var(--gold)}.portrait,.panel,.feature{border:1px solid var(--line);border-radius:30px;background:rgba(245,239,228,.045);box-shadow:0 26px 72px rgba(0,0,0,.22)}.portrait{padding:18px}.portrait img{width:100%;border-radius:24px;aspect-ratio:4/4.6;object-fit:cover;object-position:center top}.caption{margin-top:14px;color:var(--soft);font-size:13px;line-height:1.6}.feature{display:grid;grid-template-columns:1fr 340px;overflow:hidden;margin-top:24px}.feature-copy{padding:34px}.feature-img{background:linear-gradient(90deg,rgba(11,19,34,.10),rgba(11,19,34,.74)),url('/assets/article-page-banner-19-may-2025.png') center/cover;min-height:310px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.meta span{border:1px solid rgba(232,184,136,.20);border-radius:999px;padding:7px 11px;color:var(--muted);font-size:12px;text-transform:uppercase}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.panel{padding:26px}.panel strong{display:block;color:var(--gold);margin-bottom:6px}.link{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.foot{max-width:1180px;margin:auto;padding:34px 28px;border-top:1px solid rgba(232,184,136,.16);display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:13px}.foot a{color:var(--gold);margin-left:12px}@media(max-width:900px){.nav,.links{flex-wrap:wrap}.hero,.feature{grid-template-columns:1fr}.grid4,.grid3{grid-template-columns:1fr 1fr}.feature-img{min-height:250px}}@media(max-width:620px){.grid4,.grid3{grid-template-columns:1fr}.hero,.section{padding:42px 20px}.foot{display:block}.foot a{margin:10px 12px 0 0;display:inline-block}}
-    </style>
   </head>
   <body>
-    <div class="page">
-      <nav class="top"><div class="nav"><a class="brand" href="/"><img src="/assets/ymt-logo-mark.png" alt="YMT logo" /><span><strong>Manoj Teja</strong><small>Cross-Border Insurance Perspectives</small></span></a><div class="links"><a href="#featured">Featured</a><a href="/articles/">Insights</a><a href="#about">About</a><a href="#contact">Contact</a><a class="disc" href="/disclaimer/">Disclaimer</a></div></div></nav>
-      <header class="hero"><div><p class="eyebrow">Perspectives from Dubai</p><h1>Insurance, liability, and cross-border risk — explained with practical clarity.</h1><p class="lede">A premium editorial space for thoughtful commentary on insurance placement, cross-border disputes, liability coverage, commercial risk, and the practical questions that sit between contracts and claims.</p><div class="actions"><a class="btn primary" href="/articles/">Explore insights</a>{featured?.data.audio && <a class="btn secondary" href={`/articles/${featured.id}/`}>Listen to audio</a>}</div></div><aside class="portrait"><img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Y" /><div class="caption">Dubai-based insurance practitioner focused on broker relations, placement strategy, liability lines, and cross-border risk interpretation.</div></aside></header>
-      <section class="section" id="featured"><p class="eyebrow">Featured publication</p><h2>Launch article</h2><p class="sub">The first publication sets the tone for the platform: measured, practical, cross-border, and insurance-aware.</p>{featured && <article class="feature"><div class="feature-copy"><p class="eyebrow">{featured.data.category}</p><h3>{featured.data.title}</h3>{featured.data.description && <p>{featured.data.description}</p>}<div class="meta"><span>{formatDate(featured.data.date)}</span>{featured.data.audio && <span>Audio perspective</span>}{featured.data.pdf && <span>PDF brief</span>}</div><div class="actions"><a class="btn primary" href={`/articles/${featured.id}/`}>Read article</a>{featured.data.audio && <a class="btn secondary" href={`/articles/${featured.id}/`}>Listen on page</a>}</div></div><a class="feature-img" href={`/articles/${featured.id}/`} aria-label={`Open ${featured.data.title}`}></a></article>}</section>
-      <section class="section"><p class="eyebrow">Editorial principles</p><h2>Designed as a practitioner publication, not a generic profile.</h2><div class="grid4"><div class="panel"><strong>Global perspective</strong><p>Analysis of contracts, claims, forums, and policy response across jurisdictions.</p></div><div class="panel"><strong>Practical insight</strong><p>Clear insurance implications rather than purely academic commentary.</p></div><div class="panel"><strong>Trusted voice</strong><p>Independent, careful, and information-led professional discussion.</p></div><div class="panel"><strong>Audio first</strong><p>Selected articles can include an embedded audio perspective on the same page.</p></div></div></section>
-      <section class="section" id="about"><p class="eyebrow">About the author</p><h2>Manoj Teja Y</h2><div class="grid3"><div class="panel"><strong>Insurance placement</strong><p>Portfolio, broker, and coverage considerations across general and specialty lines.</p></div><div class="panel"><strong>Cross-border risk</strong><p>Practical interpretation of governing law, forum, enforceability, and policy response.</p></div><div class="panel"><strong>AI and insurance knowledge</strong><p>Interest in using AI to improve insurance research, communication, and professional learning.</p></div></div></section>
-      <section class="section" id="insights"><p class="eyebrow">Insights hub</p><h2>Articles, PDFs, and podcasts.</h2><p class="sub">A single editorial hub for written commentary, downloadable material, and audio perspectives.</p><div class="grid3"><a class="panel" href="/articles/"><strong>Articles</strong><p>Long-form professional commentary and practical risk perspectives.</p><span class="link">Open articles →</span></a><a class="panel" href="/articles/"><strong>PDF briefs</strong><p>Downloadable resources appear when available for each article.</p><span class="link">View resources →</span></a><a class="panel" href="/articles/"><strong>Podcasts</strong><p>Audio perspectives are embedded directly inside selected article pages.</p><span class="link">Listen on page →</span></a></div></section>
-      <section class="section" id="contact"><div class="grid3"><div class="panel"><p class="eyebrow">Important notice</p><strong>Independent professional knowledge-sharing.</strong><p>Views shared on this website are personal and informational. They do not represent any current or former employer, insurer, broker, client, or affiliated organization.</p><a class="link" href="/disclaimer/">Read full disclaimer →</a></div><div class="panel"><p class="eyebrow">Engage</p><strong>For professional enquiries.</strong><p>Use LinkedIn or the website contact route for professional discussion, speaking invitations, or article-related comments.</p><a class="link" href="https://www.linkedin.com/in/yadlapati/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><div class="panel"><p class="eyebrow">Location</p><strong>Dubai, UAE</strong><p>Perspectives on cross-border insurance and commercial risk from Dubai.</p></div></div></section>
-      <footer><div class="foot"><div>© 2026 Manoj Teja Y · Dubai, UAE<br />Cross-Border Insurance Perspectives. General information only.</div><div><a href="/articles/">Insights</a><a href="/disclaimer/">Disclaimer</a><a href="/privacy-policy/">Privacy</a><a href="/terms-and-conditions/">Terms</a></div></div></footer>
-    </div>
+    <SiteHeader />
+    <main>
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">Cross-border insurance perspectives</p>
+            <h1>Perspectives on insurance, liability, and cross-border risk from <em>Dubai.</em></h1>
+            <div class="hero__line"></div>
+            <p class="hero__lede">High-level articles on evolving jurisdictions, complex risks, insurance wordings, and the global commercial landscape that shapes them.</p>
+            <div class="hero__actions">
+              <a class="button button--gold" href="/articles/">Explore latest perspectives →</a>
+              <a class="button button--line" href="/podcasts/">Listen to podcast →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {featured && (
+        <section class="section">
+          <div class="container featured-publication">
+            <div class="featured-publication__copy">
+              <p class="eyebrow">Featured publication</p>
+              <h2>{featured.data.title}</h2>
+              {featured.data.description && <p>{featured.data.description}</p>}
+              <p>A practical framework for determining governing law and jurisdiction in cross-border commercial and insurance disputes.</p>
+              <div class="featured-publication__actions">
+                <a class="button button--dark" href={`/articles/${featured.id}/`}>Read article</a>
+                {featured.data.audio && <a class="button button--ghost" href={`/articles/${featured.id}/#audio`}>Listen to podcast ▶</a>}
+              </div>
+            </div>
+            <a class="feature-image" href={`/articles/${featured.id}/`} aria-label={`Read ${featured.data.title}`}>
+              <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+            </a>
+          </div>
+        </section>
+      )}
+
+      <section class="section" id="areas">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Areas of interest</p>
+              <h2>Insurance themes for serious readers.</h2>
+            </div>
+            <a class="text-link" href="/articles/">View all articles →</a>
+          </div>
+          <div class="interest-grid">
+            {areas.map(([icon, title, text]) => (
+              <article class="interest-item">
+                <div class="interest-icon" aria-hidden="true">{icon}</div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Latest perspectives</p>
+              <h2>Current article and upcoming perspectives.</h2>
+            </div>
+            <a class="text-link" href="/articles/">View all articles →</a>
+          </div>
+          <div class="article-grid">
+            {featured && (
+              <a class="article-card" href={`/articles/${featured.id}/`}>
+                <img src={featured.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+                <div class="article-card__body">
+                  <p class="eyebrow">{featured.data.category}</p>
+                  <h3>{featured.data.title}</h3>
+                  {featured.data.description && <p>{featured.data.description}</p>}
+                  <div class="meta-row">
+                    <span>{readTime(featured)}</span>
+                    <span>{formatDate(featured.data.date)}</span>
+                    <span>→</span>
+                  </div>
+                </div>
+              </a>
+            )}
+            {comingSoon.map((item) => (
+              <article class="article-card article-card--soon" aria-label={`${item.title} coming soon`}>
+                <img src={item.image} alt="" />
+                <div class="article-card__body">
+                  <p class="eyebrow">{item.category}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div class="meta-row">
+                    <span>{item.date}</span>
+                    <span>In preparation</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--navy" id="about">
+        <div class="container about-band">
+          <img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Yadlapati" />
+          <div class="about-copy">
+            <p class="eyebrow">About Manoj Teja Yadlapati</p>
+            <p class="about-kicker">Editorial focus</p>
+            <h2>Insurance. Liability. Wordings. Cross-border risk.</h2>
+            <p>Independent perspectives for serious insurance readers, shaped by commercial context and practical market experience.</p>
+            <a class="button button--line" href="/articles/">Read the articles →</a>
+          </div>
+          <div class="about-principle">
+            <div class="interest-icon">◎</div>
+            <h3>Global Perspective</h3>
+            <p>Insights shaped by international exposure and cross-border commercial realities.</p>
+          </div>
+          <div class="about-principle">
+            <div class="interest-icon">♢</div>
+            <h3>Practical Insight</h3>
+            <p>Connecting legal, insurance, and commercial considerations that truly matter.</p>
+          </div>
+          <div class="about-principle">
+            <div class="interest-icon">✎</div>
+            <h3>Independent Thinking</h3>
+            <p>Unbiased perspectives on emerging risks and evolving jurisdictions.</p>
+          </div>
+          <blockquote class="quote-card">Complex risks demand clarity, context, and the right perspective.<span>— Manoj Teja Yadlapati</span></blockquote>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Publishing, speaking, and professional conversations.</h2>
+            <p style="margin-top: 14px; color: var(--paper-muted); max-width: 680px;">For article collaborations, podcast conversations, or professional dialogue around liability, wordings, specialty lines, and cross-border risk, connect through LinkedIn or email.</p>
+          </div>
+          <div class="side-card">
+            <a class="button button--dark" href="https://www.linkedin.com/in/yadlapati/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <details class="contact-drawer">
+              <summary class="button button--ghost">Email Manoj</summary>
+              <form name="contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="subject" value="Message from Manoj Teja website" />
+                <p class="hidden-field">
+                  <label>Do not fill this out <input name="bot-field" /></label>
+                </p>
+                <label>
+                  Name
+                  <input type="text" name="name" autocomplete="name" required />
+                </label>
+                <label>
+                  Email address
+                  <input type="email" name="email" autocomplete="email" required />
+                </label>
+                <label>
+                  Message
+                  <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button class="button button--dark" type="submit">Send message</button>
+              </form>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <SiteFooter />
   </body>
 </html>

@@ -1,28 +1,55 @@
 ---
 import '../../styles/global.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { getCollection } from 'astro:content';
+
+const episodes = (await getCollection('articles'))
+  .filter((article) => !article.data.draft && article.data.audio)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Podcasts | Manoj Teja Y</title>
-    <meta name="description" content="Podcast links by Manoj Teja Y." />
+    <title>Podcast | Manoj Teja</title>
+    <meta name="description" content="Audio perspectives on insurance, liability, wordings and cross-border risk." />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <main class="articles-page">
-      <section class="panel reveal show" style="max-width: 980px; margin: 40px auto; padding: 28px;">
-        <p class="eyebrow">Insurance Knowledge Library</p>
-        <h1>Podcasts</h1>
-        <p class="lede">A dedicated page for podcast links and audio resources will be added here.</p>
-        <div class="insight-grid" style="margin-top: 24px;">
-          <article class="insight-card">
-            <h3>Podcast links</h3>
-            <p>Coming soon. This section is being prepared for future podcast and audio references.</p>
-            <span class="status">Coming soon</span>
-          </article>
+  <body class="insights-page">
+    <SiteHeader />
+    <main class="insights-wrap">
+      <div class="insights-header">
+        <div>
+          <p class="eyebrow">Podcast</p>
+          <h1>Audio perspectives for article readers.</h1>
+          <p style="margin-top: 12px; color: var(--paper-muted); max-width: 700px;">Selected articles include an audio perspective for listeners who prefer to absorb complex insurance themes while travelling or between meetings.</p>
         </div>
-        <p style="margin-top: 28px;"><a class="text-link" href="/">← Back to home</a></p>
+        <a class="text-link" href="/articles/">View articles →</a>
+      </div>
+      <section class="insight-list">
+        {episodes.map((episode) => (
+          <article class="insight-row">
+            <a href={`/articles/${episode.id}/#audio`}>
+              <img src={episode.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+            </a>
+            <div>
+              <p class="eyebrow">{episode.data.category}</p>
+              <h2><a href={`/articles/${episode.id}/#audio`}>{episode.data.title}</a></h2>
+              {episode.data.description && <p>{episode.data.description}</p>}
+              <div class="meta-row">
+                <span>{formatDate(episode.data.date)}</span>
+                <span>Audio perspective</span>
+              </div>
+            </div>
+            <a class="play-link" href={`/articles/${episode.id}/#audio`} aria-label={`Listen to ${episode.data.title}`}>▶</a>
+          </article>
+        ))}
       </section>
     </main>
+    <SiteFooter />
   </body>
 </html>

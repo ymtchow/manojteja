@@ -1,117 +1,98 @@
 ---
 import '../../styles/global.css';
-import '../../styles/insights-overrides.css';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import { getCollection } from 'astro:content';
 
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const comingSoon = [
+  {
+    title: 'Letters of Credit – Bridges of Global Trust',
+    description: 'Understanding the legal architecture behind trade finance.',
+    category: 'Insurance Wordings',
+    image: '/assets/brand-editorial-article-bg-v1.svg',
+  },
+];
 
 const formatDate = (date) => date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-const estimateReadTime = (article) => `${Math.max(3, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 220))} min read`;
+const readTime = (article) => `${Math.max(6, Math.ceil((article.body || '').split(/\s+/).filter(Boolean).length / 210))} min read`;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Insights | Manoj Teja Y</title>
-    <meta name="description" content="Practical commentary on insurance, liability, placement strategy, cross-border risk, and evolving market issues across the UAE and international jurisdictions." />
-    <meta name="robots" content="index, follow" />
+    <title>Articles | Manoj Teja</title>
+    <meta name="description" content="High-level articles on insurance, liability, wordings, specialty lines and cross-border risk from Dubai." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Insights | Manoj Teja Y" />
-    <meta property="og:description" content="Practical commentary on insurance, liability, placement strategy, cross-border risk, and evolving market issues across the UAE and international jurisdictions." />
+    <meta property="og:title" content="Articles | Manoj Teja" />
+    <meta property="og:description" content="High-level articles on insurance, liability, wordings, specialty lines and cross-border risk." />
     <meta property="og:image" content="/assets/article-page-banner-19-may-2025.png" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-    <style>
-      body { min-height:100vh; background:radial-gradient(circle at 80% 8%, rgba(232,184,136,.14), transparent 26%), linear-gradient(180deg, rgba(11,19,34,.72), rgba(11,19,34,.96)), url('/assets/article-page-banner-19-may-2025.png') center center / cover fixed; }
-      .insights-hub-page { max-width:1180px; margin:0 auto; padding:34px 40px 86px; }
-      .hub-topbar { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:34px; }
-      .hub-brand { display:flex; align-items:center; gap:14px; color:var(--ink); font-size:13px; letter-spacing:.12em; text-transform:uppercase; }
-      .hub-brand img { width:58px; height:40px; object-fit:contain; }
-      .hub-back { color:var(--amber-bright); border:1px solid rgba(232,184,136,.34); border-radius:999px; padding:10px 16px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
-      .hub-hero { min-height:310px; border:1px solid rgba(232,184,136,.25); border-radius:32px; padding:48px; display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:28px; align-items:end; background:linear-gradient(105deg, rgba(11,19,34,.88) 0%, rgba(11,19,34,.76) 48%, rgba(20,33,59,.38) 100%), url('/assets/article-page-banner-19-may-2025.png') center 42% / cover; box-shadow:0 28px 80px rgba(0,0,0,.34); position:relative; overflow:hidden; }
-      .hub-hero::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 14% 8%, rgba(232,184,136,.17), transparent 32%), linear-gradient(90deg, rgba(11,19,34,.06), rgba(11,19,34,.76)); pointer-events:none; }
-      .hub-hero::after { content:""; position:absolute; right:42px; bottom:34px; width:180px; height:120px; background:url('/assets/ymt-logo-mark.png') center / contain no-repeat; opacity:.09; filter:drop-shadow(0 0 22px rgba(232,184,136,.28)); pointer-events:none; }
-      .hub-hero > * { position:relative; z-index:1; }
-      .hub-kicker, .hub-eyebrow { margin:0 0 14px; color:var(--amber-bright); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
-      .hub-hero h1 { max-width:760px; font-family:var(--serif); font-size:clamp(36px, 4.7vw, 58px); line-height:1.02; letter-spacing:-.032em; }
-      .hub-lede { max-width:720px; margin:24px 0 0; color:var(--ink-soft); font-size:16px; line-height:1.72; }
-      .hub-search-toggle { align-self:start; border:1px solid rgba(232,184,136,.42); background:rgba(11,19,34,.42); color:var(--ink); border-radius:999px; padding:13px 18px; font:700 12px var(--sans); letter-spacing:.14em; text-transform:uppercase; cursor:pointer; }
-      .hub-library { display:grid; grid-template-columns:minmax(0, 1fr) 310px; gap:26px; margin-top:30px; align-items:start; }
-      .hub-main, .hub-sidebar-card { border:1px solid rgba(232,184,136,.18); border-radius:28px; background:rgba(11,19,34,.62); backdrop-filter:blur(12px); box-shadow:0 18px 54px rgba(0,0,0,.22); }
-      .hub-main { padding:30px; }
-      .hub-toolbar { display:flex; align-items:flex-start; justify-content:space-between; gap:22px; margin-bottom:24px; }
-      .hub-toolbar h2 { margin:0; font-size:28px; }
-      .hub-search { min-width:min(420px, 100%); }
-      .hub-search label { display:block; margin-bottom:8px; color:var(--muted); font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
-      .hub-search input { width:100%; border:1px solid rgba(237,230,214,.22); border-radius:18px; background:rgba(11,19,34,.82); color:var(--ink); padding:14px 16px; font:inherit; }
-      .publication-list { display:grid; gap:14px; }
-      .publication-row { display:grid; grid-template-columns:92px minmax(0,1fr) auto; gap:22px; align-items:center; padding:20px; border:1px solid rgba(237,230,214,.12); border-radius:24px; background:linear-gradient(135deg, rgba(20,33,59,.52), rgba(11,19,34,.70)); transition:transform .2s ease, border-color .2s ease, background .2s ease; }
-      .publication-row:hover { transform:translateY(-2px); border-color:rgba(232,184,136,.44); background:linear-gradient(135deg, rgba(20,33,59,.70), rgba(11,19,34,.82)); }
-      .publication-date { color:var(--amber-bright); font:600 12px var(--sans); letter-spacing:.08em; text-transform:uppercase; line-height:1.5; }
-      .publication-copy h3 { margin:0; font-family:var(--serif); font-size:25px; line-height:1.15; }
-      .publication-copy p { margin:10px 0 0; color:var(--muted); font-size:14px; line-height:1.65; }
-      .publication-meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-      .publication-meta span { border:1px solid rgba(237,230,214,.12); border-radius:999px; padding:6px 10px; color:var(--ink-soft); font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
-      .publication-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
-      .resource-pill { display:inline-flex; align-items:center; justify-content:center; min-width:64px; border:1px solid rgba(232,184,136,.38); color:var(--amber-bright); border-radius:999px; padding:8px 11px; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-      .resource-pill.disabled { opacity:.32; color:var(--muted); border-color:rgba(237,230,214,.12); }
-      .hub-sidebar { display:grid; gap:16px; }
-      .hub-sidebar-card { padding:24px; }
-      .hub-sidebar-card h3 { font-family:var(--serif); font-size:25px; margin-bottom:12px; }
-      .hub-sidebar-card p, .hub-sidebar-card li { color:var(--muted); font-size:14px; line-height:1.7; }
-      .hub-sidebar-card ul { margin:0; padding-left:18px; }
-      .hub-home-link { margin:24px 0 0; }
-      .hub-home-link a { color:var(--amber-bright); font-weight:700; }
-      .hub-empty { padding:28px; border:1px dashed rgba(232,184,136,.26); border-radius:24px; color:var(--muted); }
-      @media (max-width:900px) { .insights-hub-page{padding:24px 20px 64px;} .hub-hero{grid-template-columns:1fr; padding:34px 26px; min-height:auto;} .hub-hero::after{right:20px; bottom:20px; width:120px; opacity:.07;} .hub-library{grid-template-columns:1fr;} .hub-toolbar{flex-direction:column;} .publication-row{grid-template-columns:1fr; text-align:left;} .publication-actions{justify-content:flex-start;} }
-    </style>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <main class="insights-hub-page">
-      <nav class="hub-topbar">
-        <a class="hub-brand" href="/"><img src="/assets/ymt-logo-mark.png" alt="YMT logo" /><span>Manoj Teja Y</span></a>
-        <a class="hub-back" href="/">Back to home</a>
-      </nav>
-
-      <section class="hub-hero">
+  <body class="insights-page">
+    <SiteHeader />
+    <main class="insights-wrap">
+      <div class="insights-header">
         <div>
-          <p class="hub-kicker">Insights</p>
-          <h1>Articles, PDF briefs, and audio resources in one place.</h1>
-          <p class="hub-lede">Practical commentary on insurance, liability, placement strategy, cross-border risk, and evolving market issues across the UAE and international jurisdictions.</p>
+          <p class="eyebrow">All articles</p>
+          <h1>High-level perspectives for insurance professionals.</h1>
         </div>
-        <button class="hub-search-toggle" type="button" aria-expanded="false" aria-controls="insightsSearch">Search</button>
-      </section>
-
-      <section class="hub-library" aria-label="Insights library">
-        <div class="hub-main">
-          <div class="hub-toolbar">
-            <div><p class="hub-eyebrow">Publication Library</p><h2>Latest insights</h2></div>
-            <div class="hub-search" id="insightsSearch" hidden><label for="insightsSearchInput">Search insights</label><input id="insightsSearchInput" type="search" placeholder="Search insights, PDFs, podcasts, jurisdictions, topics..." /></div>
+        <a class="text-link" href="/">Back home →</a>
+      </div>
+      <div class="two-column">
+        <section class="insight-list" aria-label="Article list">
+          {articles.map((article) => (
+            <article class="insight-row">
+              <a href={`/articles/${article.id}/`}>
+                <img src={article.data.featuredImage ?? '/assets/article-page-banner-19-may-2025.png'} alt="" />
+              </a>
+              <div>
+                <p class="eyebrow">{article.data.category}</p>
+                <h2><a href={`/articles/${article.id}/`}>{article.data.title}</a></h2>
+                {article.data.description && <p>{article.data.description}</p>}
+                <div class="meta-row">
+                  <span>{formatDate(article.data.date)}</span>
+                  <span>{readTime(article)}</span>
+                  {article.data.audio && <span>Audio available</span>}
+                </div>
+              </div>
+              <a class="play-link" href={`/articles/${article.id}/`} aria-label={`Open ${article.data.title}`}>▶</a>
+            </article>
+          ))}
+          {comingSoon.map((item) => (
+            <article class="insight-row insight-row--soon" aria-label={`${item.title} coming soon`}>
+              <img src={item.image} alt="" />
+              <div>
+                <p class="eyebrow">{item.category}</p>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+                <div class="meta-row">
+                  <span>Coming soon</span>
+                  <span>In preparation</span>
+                </div>
+              </div>
+              <span class="play-link">…</span>
+            </article>
+          ))}
+        </section>
+        <aside>
+          <div class="side-card">
+            <p class="eyebrow">About Manoj Teja</p>
+            <img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Yadlapati" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; margin: 14px 0;" />
+            <p>Insurance professional with a focus on liability, wordings, and cross-border risk across complex commercial environments.</p>
+            <a class="button button--ghost" style="margin-top: 16px;" href="/#about">Learn more</a>
           </div>
-          <div class="publication-list" id="publicationList">
-            {articles.length ? articles.map((article) => (
-              <article class="publication-row" data-search={`${article.data.title} ${article.data.description || ''} ${article.data.category || ''} ${article.data.pdf ? 'pdf' : ''} ${article.data.audio ? 'audio podcast' : ''}`.toLowerCase()}>
-                <div class="publication-date">{formatDate(article.data.date)}</div>
-                <div class="publication-copy"><h3><a href={`/articles/${article.id}/`}>{article.data.title}</a></h3>{article.data.description && <p>{article.data.description}</p>}<div class="publication-meta"><span>{estimateReadTime(article)}</span><span>{article.data.category}</span></div></div>
-                <div class="publication-actions" aria-label="Supplementary resources">{article.data.pdf ? <a href={article.data.pdf} class="resource-pill" target="_blank" rel="noopener noreferrer">PDF</a> : <span class="resource-pill disabled">PDF</span>}{article.data.audio ? <a href={article.data.audio} class="resource-pill" target="_blank" rel="noopener noreferrer">Audio</a> : <span class="resource-pill disabled">Audio</span>}</div>
-              </article>
-            )) : <div class="hub-empty"><h3>Insights library ready.</h3><p>The publication structure is live. New articles can now be added with optional PDF and podcast links.</p></div>}
+          <div class="side-card">
+            <p class="eyebrow">Areas of interest</p>
+            <p>Large multinational corporate accounts, liability lines, professional indemnity, insurance wordings, specialty lines, property insurance, and geopolitical risk.</p>
           </div>
-          <p class="hub-home-link"><a href="/">← Back to home</a></p>
-        </div>
-        <aside class="hub-sidebar"><div class="hub-sidebar-card"><p class="hub-eyebrow">Explore Insights</p><h3>One hub for every publication.</h3><p>Articles remain the primary reading experience. PDF and audio options appear only when available for that specific publication.</p></div><div class="hub-sidebar-card"><p class="hub-eyebrow">How to Use</p><ul><li>Search by topic, jurisdiction, line of business, or keyword.</li><li>Open the article for full reading.</li><li>Use PDF or Audio only where available.</li></ul></div></aside>
-      </section>
+        </aside>
+      </div>
     </main>
-    <script is:inline>
-      const toggle = document.querySelector('.hub-search-toggle');
-      const search = document.getElementById('insightsSearch');
-      const input = document.getElementById('insightsSearchInput');
-      const rows = Array.from(document.querySelectorAll('.publication-row'));
-      toggle?.addEventListener('click', () => { const opening = search.hasAttribute('hidden'); search.toggleAttribute('hidden', !opening); toggle.setAttribute('aria-expanded', String(opening)); if (opening) input?.focus(); });
-      input?.addEventListener('input', () => { const q = input.value.trim().toLowerCase(); rows.forEach((row) => { row.hidden = q.length > 0 && !row.dataset.search.includes(q); }); });
-    </script>
+    <SiteFooter />
   </body>
 </html>
