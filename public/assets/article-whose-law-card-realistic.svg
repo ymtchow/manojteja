@@ -1,1 +1,162 @@
-PLACEHOLDER
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Premium legal still life for cross-border jurisdiction and insurance article">
+  <defs>
+    <radialGradient id="warmLight" cx="31%" cy="67%" r="58%">
+      <stop offset="0" stop-color="#d9a64a" stop-opacity="0.22"/>
+      <stop offset="0.48" stop-color="#8d6429" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#020b13" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#060d14"/>
+      <stop offset="0.42" stop-color="#0b1823"/>
+      <stop offset="1" stop-color="#02070c"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" x2="1">
+      <stop offset="0" stop-color="#142331"/>
+      <stop offset="0.5" stop-color="#0b1620"/>
+      <stop offset="1" stop-color="#060b10"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3e7cf"/>
+      <stop offset="0.54" stop-color="#d6c49f"/>
+      <stop offset="1" stop-color="#b79c68"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0a4"/>
+      <stop offset="0.18" stop-color="#d9a64a"/>
+      <stop offset="0.54" stop-color="#8b5e23"/>
+      <stop offset="1" stop-color="#f2c56a"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" x2="1">
+      <stop offset="0" stop-color="#2b150d"/>
+      <stop offset="0.52" stop-color="#5a2d16"/>
+      <stop offset="1" stop-color="#170b07"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#000" flood-opacity="0.48"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="leather" width="84" height="84" patternUnits="userSpaceOnUse">
+      <rect width="84" height="84" fill="transparent"/>
+      <path d="M0 16c20-8 40 8 84-5M0 54c30 10 48-14 84 0M16 0c-10 28 8 42 0 84M61 0c9 24-8 52 4 84" stroke="#d9a64a" stroke-opacity="0.035" stroke-width="1" fill="none"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#warmLight)"/>
+
+  <!-- subdued legal library background -->
+  <g opacity="0.72">
+    <rect x="0" y="0" width="1600" height="500" fill="#02070c" opacity="0.36"/>
+    <rect x="100" y="0" width="12" height="520" fill="#21150f" opacity="0.74"/>
+    <rect x="1410" y="0" width="14" height="520" fill="#24180f" opacity="0.88"/>
+    <rect x="1280" y="42" width="72" height="365" rx="6" fill="#09131d" stroke="#7a5527" stroke-opacity="0.48"/>
+    <rect x="1364" y="28" width="74" height="380" rx="6" fill="#0a1420" stroke="#6a4822" stroke-opacity="0.42"/>
+    <rect x="1449" y="18" width="82" height="395" rx="6" fill="#090f17" stroke="#7c5428" stroke-opacity="0.45"/>
+    <path d="M1288 110h58M1372 114h58M1458 112h64M1289 302h57M1373 302h57M1458 298h64" stroke="#d9a64a" stroke-opacity="0.5"/>
+    <text x="1474" y="199" fill="#c69645" opacity="0.65" font-family="Georgia, serif" font-size="27">Jurisdiction</text>
+    <text x="1492" y="234" fill="#c69645" opacity="0.55" font-family="Georgia, serif" font-size="22">and</text>
+    <text x="1466" y="268" fill="#c69645" opacity="0.65" font-family="Georgia, serif" font-size="24">Cross-Border</text>
+    <text x="1496" y="302" fill="#c69645" opacity="0.55" font-family="Georgia, serif" font-size="22">Law</text>
+    <rect x="580" y="72" width="270" height="260" rx="3" fill="#080d13" stroke="#7a5527" stroke-opacity="0.36"/>
+    <circle cx="715" cy="189" r="24" fill="url(#gold)" opacity="0.58"/>
+    <rect x="312" y="94" width="180" height="210" rx="5" fill="#11110f" opacity="0.55"/>
+    <g stroke="#4c3925" opacity="0.45"><path d="M330 116v162M356 112v170M388 118v160M425 111v168M462 118v160"/></g>
+  </g>
+
+  <!-- desk -->
+  <path d="M0 402h1600v498H0z" fill="url(#desk)"/>
+  <path d="M0 402h1600v498H0z" fill="url(#leather)" opacity="0.95"/>
+  <path d="M0 404c330 44 616 54 1025 32 245-14 420-2 575 32v-66H0z" fill="#142334" opacity="0.52"/>
+  <path d="M780 574c88-25 167-37 243-31 82 6 143 27 209 45" stroke="#d9a64a" stroke-opacity="0.13" fill="none"/>
+  <path d="M756 628c170-70 355-62 524 14" stroke="#d9a64a" stroke-opacity="0.1" fill="none"/>
+  <path d="M870 612c72-24 125-27 185-12" stroke="#d9a64a" stroke-opacity="0.12" fill="none"/>
+  <g opacity="0.18" stroke="#d9a64a" fill="none" stroke-width="1">
+    <path d="M834 575c22 20 45 42 67 65M967 548c-6 34-8 66-4 98M1094 565c-33 20-64 45-91 75"/>
+    <path d="M820 625c150 20 280 19 420-7"/>
+  </g>
+
+  <!-- scales -->
+  <g transform="translate(84 162)" filter="url(#softShadow)">
+    <path d="M118 60v224" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M49 88h138" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="118" cy="48" r="15" fill="url(#gold)"/>
+    <path d="M57 88l-42 95M57 88l40 95M176 88l-42 95M176 88l40 95" stroke="#d9a64a" stroke-width="3" opacity="0.82"/>
+    <ellipse cx="56" cy="198" rx="64" ry="13" fill="#2a170e" stroke="url(#gold)" stroke-width="5"/>
+    <ellipse cx="174" cy="198" rx="64" ry="13" fill="#2a170e" stroke="url(#gold)" stroke-width="5"/>
+    <rect x="42" y="284" width="156" height="31" rx="6" fill="#271309" stroke="#d9a64a" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- compass -->
+  <g transform="translate(56 578)" filter="url(#softShadow)">
+    <ellipse cx="74" cy="74" rx="78" ry="28" fill="#05080c" opacity="0.42"/>
+    <circle cx="76" cy="78" r="68" fill="#141414" stroke="url(#gold)" stroke-width="7"/>
+    <circle cx="76" cy="78" r="47" fill="#1d2933" stroke="#d9a64a" stroke-opacity="0.65"/>
+    <path d="M76 31v94M29 78h94M43 45l66 66M109 45l-66 66" stroke="#e2bd6b" stroke-opacity="0.5"/>
+    <path d="M76 38l16 40-16 12-16-12z" fill="url(#gold)"/>
+    <path d="M76 118l-16-40 16-12 16 12z" fill="#efe0bd" opacity="0.45"/>
+    <path d="M18 15c42-45 100-36 126 4" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+  </g>
+
+  <!-- document folder and paper -->
+  <g transform="translate(274 532) rotate(-2)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="622" height="294" rx="12" fill="#04080c" stroke="#57462e" stroke-width="4"/>
+    <rect x="14" y="16" width="590" height="260" rx="4" fill="#151313" stroke="#675135" stroke-opacity="0.6"/>
+    <rect x="46" y="24" width="520" height="238" rx="2" fill="url(#paper)"/>
+    <rect x="46" y="24" width="520" height="238" rx="2" fill="#fff7df" opacity="0.18"/>
+    <g stroke="#4d3b2a" stroke-opacity="0.5" stroke-width="2">
+      <path d="M110 77h385M110 101h410M110 122h392M110 143h402M110 164h370M110 185h400"/>
+      <path d="M176 216h126M346 216h138"/>
+    </g>
+    <text x="208" y="58" fill="#2d251c" opacity="0.7" font-family="Georgia, serif" font-size="17" letter-spacing="2">PRIVATE AGREEMENT</text>
+    <circle cx="143" cy="227" r="31" fill="url(#gold)" opacity="0.75"/>
+    <circle cx="143" cy="227" r="22" fill="none" stroke="#4b2c0e" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- pen -->
+  <g transform="translate(705 690) rotate(-10)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="285" height="22" rx="11" fill="#050607"/>
+    <rect x="62" y="0" width="12" height="22" fill="url(#gold)"/>
+    <rect x="230" y="0" width="12" height="22" fill="url(#gold)"/>
+    <path d="M285 2l70 9-70 9z" fill="#d9a64a"/>
+    <path d="M330 11l-38 5 7-10z" fill="#2b1a0d" opacity="0.5"/>
+  </g>
+
+  <!-- globe and books -->
+  <g transform="translate(1185 178)" filter="url(#softShadow)">
+    <ellipse cx="125" cy="334" rx="92" ry="22" fill="#000" opacity="0.42"/>
+    <circle cx="125" cy="142" r="93" fill="#0d2433" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M62 111c52-42 106-45 161 0M61 176c50 34 110 34 163 0M125 50c-38 52-39 130 0 185M125 50c40 52 41 130 0 185" stroke="#d9a64a" stroke-opacity="0.5" fill="none"/>
+    <path d="M74 124c20-19 51-26 78-14 10 14-7 24-23 25-14 2-22 15-39 11zM133 153c28-10 57 7 71 28-32 20-70 9-86-17z" fill="#d9a64a" opacity="0.62"/>
+    <path d="M125 236v70" stroke="url(#gold)" stroke-width="8"/>
+    <rect x="81" y="302" width="90" height="16" rx="8" fill="url(#gold)"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="1384" y="384" width="165" height="44" rx="8" fill="#07121d" stroke="#5a4324"/>
+    <rect x="1372" y="430" width="184" height="50" rx="8" fill="#081522" stroke="#5a4324"/>
+    <rect x="1378" y="484" width="170" height="48" rx="8" fill="#050d16" stroke="#5a4324"/>
+    <path d="M1396 404h122M1390 452h138M1398 508h116" stroke="#d9a64a" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- gavel -->
+  <g transform="translate(1197 569)" filter="url(#softShadow)">
+    <ellipse cx="184" cy="190" rx="170" ry="52" fill="#030506" opacity="0.45"/>
+    <ellipse cx="183" cy="167" rx="154" ry="46" fill="url(#wood)" stroke="#8c6030" stroke-opacity="0.45"/>
+    <rect x="152" y="42" width="110" height="92" rx="20" fill="url(#wood)" stroke="#9f6b34" stroke-opacity="0.45"/>
+    <rect x="163" y="66" width="88" height="24" fill="url(#gold)" opacity="0.9"/>
+    <rect x="230" y="77" width="236" height="38" rx="18" fill="url(#wood)" transform="rotate(14 230 77)"/>
+    <ellipse cx="208" cy="132" rx="105" ry="34" fill="#2a140b" stroke="#8c6030" stroke-opacity="0.48"/>
+  </g>
+
+  <!-- vignette and finishing light -->
+  <rect width="1600" height="900" fill="none" stroke="#d9a64a" stroke-opacity="0.08" stroke-width="2"/>
+  <rect width="1600" height="900" fill="url(#bg)" opacity="0"/>
+  <radialGradient id="v" cx="50%" cy="52%" r="68%">
+    <stop offset="0" stop-color="#000" stop-opacity="0"/>
+    <stop offset="0.68" stop-color="#000" stop-opacity="0.05"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0.62"/>
+  </radialGradient>
+  <rect width="1600" height="900" fill="url(#v)"/>
+</svg>
