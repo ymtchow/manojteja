@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="669.6pt" height="396pt" viewBox="0 0 669.6 396" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-21T16:02:05.528894</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 396 
+L 669.6 396 
+L 669.6 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 26.856 96.445161 
+L 171 96.445161 
+L 171 53.36129 
+L 26.856 53.36129 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 171 96.445161 
+L 334.8 96.445161 
+L 334.8 53.36129 
+L 171 53.36129 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 334.8 96.445161 
+L 498.6 96.445161 
+L 498.6 53.36129 
+L 334.8 53.36129 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 498.6 96.445161 
+L 662.4 96.445161 
+L 662.4 53.36129 
+L 498.6 53.36129 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 26.856 139.529032 
+L 662.4 139.529032 
+L 662.4 96.445161 
+L 26.856 96.445161 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #f4f1ec; opacity: 0.55"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 26.856 225.696774 
+L 662.4 225.696774 
+L 662.4 182.612903 
+L 26.856 182.612903 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #f4f1ec; opacity: 0.55"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 26.856 311.864516 
+L 662.4 311.864516 
+L 662.4 268.780645 
+L 26.856 268.780645 
+z
+" clip-path="url(#p790b1fb656)" style="fill: #f4f1ec; opacity: 0.55"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 26.856 311.864516 
+L 662.4 311.864516 
+L 662.4 53.36129 
+L 26.856 53.36129 
+L 26.856 311.864516 
+z
+" clip-path="url(#p790b1fb656)" style="fill: none; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 171 311.864516 
+L 171 53.36129 
+" clip-path="url(#p790b1fb656)" style="fill: none; stroke: #d8dde2; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 334.8 311.864516 
+L 334.8 53.36129 
+" clip-path="url(#p790b1fb656)" style="fill: none; stroke: #d8dde2; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 498.6 311.864516 
+L 498.6 53.36129 
+" clip-path="url(#p790b1fb656)" style="fill: none; stroke: #d8dde2; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1a3a5c" x="334.8" y="23.318115" transform="rotate(-0 334.8 23.318115)">UAE Dispute Environments: Not Interchangeable</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5a6470" x="334.8" y="45.519471" transform="rotate(-0 334.8 45.519471)">Different legal traditions, procedural expectations and drafting conventions</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="252.9" y="77.80057" transform="rotate(-0 252.9 77.80057)">Onshore UAE Courts</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="416.7" y="77.80057" transform="rotate(-0 416.7 77.80057)">DIFC Courts</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="580.5" y="77.80057" transform="rotate(-0 580.5 77.80057)">ADGM Courts</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a3a5c" x="33.408" y="120.571394" transform="rotate(-0 33.408 120.571394)">Legal tradition</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="252.9" y="120.470534" transform="rotate(-0 252.9 120.470534)">Civil law</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="416.7" y="120.470534" transform="rotate(-0 416.7 120.470534)">Common law</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="580.5" y="120.470534" transform="rotate(-0 580.5 120.470534)">Common law</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a3a5c" x="33.408" y="163.655265" transform="rotate(-0 33.408 163.655265)">Working language</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="252.9" y="163.554405" transform="rotate(-0 252.9 163.554405)">Arabic</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="416.7" y="163.554405" transform="rotate(-0 416.7 163.554405)">English</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="580.5" y="163.554405" transform="rotate(-0 580.5 163.554405)">English</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a3a5c" x="33.408" y="206.776245" transform="rotate(-0 33.408 206.776245)">Procedural model</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="252.9" y="206.638276" transform="rotate(-0 252.9 206.638276)">Civil-law procedure</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="416.7" y="206.638276" transform="rotate(-0 416.7 206.638276)">Common-law procedure</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(534.103594 201.257331)">English common law</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(545.696016 212.019222)">directly applied</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a3a5c" x="33.408" y="249.823007" transform="rotate(-0 33.408 249.823007)">Typical user</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(209.082656 244.341202)">Domestic / regional</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(237.308203 255.103092)">parties</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(360.305156 244.341202)">International commercial</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(404.540859 255.103092)">users</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(524.105156 244.341202)">International commercial</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(568.340859 255.103092)">users</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1a3a5c" x="33.408" y="292.906878" transform="rotate(-0 33.408 292.906878)">Drafting convention</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(216.057656 287.425073)">Arabic-language</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(234.664453 298.186963)">primacy</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(377.87625 287.425073)">English-language</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(375.567891 298.186963)">common-law style</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(541.67625 287.425073)">English-language</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(539.367891 298.186963)">common-law style</text>
+   </g>
+   <g id="text_26">
+    <text style="font-style: italic; font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b8893a" x="334.8" y="333.98825" transform="rotate(-0 334.8 333.98825)">Treating these forums as a single "UAE" venue is a frequent source of unintended-venue disputes</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p790b1fb656">
+   <rect x="7.2" y="7.2" width="655.2" height="381.6"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="453.6pt" viewBox="0 0 684 453.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-21T16:02:05.630095</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 453.6 
+L 684 453.6 
+L 684 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 33.984 117 
+L 328.608 117 
+L 328.608 82.491429 
+L 33.984 82.491429 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 33.984 330.325714 
+L 328.608 330.325714 
+L 328.608 117 
+L 33.984 117 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #f4f1ec; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 54.072 133.313143 
+L 62.7768 133.313143 
+L 62.7768 125.156571 
+L 54.072 125.156571 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 54.072 196.056 
+L 62.7768 196.056 
+L 62.7768 187.899429 
+L 54.072 187.899429 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 54.072 258.798857 
+L 62.7768 258.798857 
+L 62.7768 250.642286 
+L 54.072 250.642286 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 54.072 321.541714 
+L 62.7768 321.541714 
+L 62.7768 313.385143 
+L 54.072 313.385143 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 355.392 117 
+L 650.016 117 
+L 650.016 82.491429 
+L 355.392 82.491429 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 355.392 330.325714 
+L 650.016 330.325714 
+L 650.016 117 
+L 355.392 117 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #f4f1ec; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 375.48 133.313143 
+L 384.1848 133.313143 
+L 384.1848 125.156571 
+L 375.48 125.156571 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 375.48 180.370286 
+L 384.1848 180.370286 
+L 384.1848 172.213714 
+L 375.48 172.213714 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 375.48 227.427429 
+L 384.1848 227.427429 
+L 384.1848 219.270857 
+L 375.48 219.270857 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 375.48 274.484571 
+L 384.1848 274.484571 
+L 384.1848 266.328 
+L 375.48 266.328 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 375.48 321.541714 
+L 384.1848 321.541714 
+L 384.1848 313.385143 
+L 375.48 313.385143 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 40.68 424.44 
+L 643.32 424.44 
+L 643.32 364.834286 
+L 40.68 364.834286 
+z
+" clip-path="url(#p105b49aa12)" style="fill: #b8893a; opacity: 0.12"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 40.68 364.834286 
+L 643.32 364.834286 
+" clip-path="url(#p105b49aa12)" style="fill: none; stroke: #b8893a; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 40.68 424.44 
+L 643.32 424.44 
+" clip-path="url(#p105b49aa12)" style="fill: none; stroke: #b8893a; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1a3a5c" x="342" y="32.968437" transform="rotate(-0 342 32.968437)">Cross-Border Stress Points by Line</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5a6470" x="342" y="56.878549" transform="rotate(-0 342 56.878549)">Where alignment between contract, forum and policy typically breaks</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="181.296" y="102.643058" transform="rotate(-0 181.296 102.643058)">COMMERCIAL GENERAL LIABILITY</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2b2b2b" x="77.508" y="132.11479" transform="rotate(-0 77.508 132.11479)">Territorial scope of cover</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2b2b2b" x="77.508" y="194.857647" transform="rotate(-0 77.508 194.857647)">Treatment of foreign proceedings</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(77.508 251.686867)">Defence-cost handling</text>
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(77.508 263.514142)">(in addition vs within limit)</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2b2b2b" x="77.508" y="320.343362" transform="rotate(-0 77.508 320.343362)">Breadth of "claim" definition</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="502.704" y="102.643058" transform="rotate(-0 502.704 102.643058)">PROFESSIONAL INDEMNITY</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 126.201153)">Claims-made timing</text>
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 138.028428)">and notification mechanics</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2b2b2b" x="398.916" y="179.171933" transform="rotate(-0 398.916 179.171933)">Retroactive date alignment</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 220.315438)">Geography of services</text>
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 232.142713)">actually performed</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 267.372581)">Treatment of foreign-law</text>
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 279.199856)">liability standards</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 314.429724)">Forums in which clients</text>
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(398.916 326.256999)">can bring proceedings</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 9.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b8893a" x="342" y="381.303621" transform="rotate(-0 342 381.303621)">Two diagnostic questions</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="342" y="401.826295" transform="rotate(-0 342 401.826295)">1. Does the policy respond to the category of liability alleged?</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #2b2b2b" x="342" y="417.512009" transform="rotate(-0 342 417.512009)">2. Does it respond in the place, procedure and timing in which the allegation is made?</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p105b49aa12">
+   <rect x="7.2" y="7.2" width="669.6" height="439.2"/>
+  </clipPath>
+ </defs>
+</svg>

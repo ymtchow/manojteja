@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="640.8pt" height="410.4pt" viewBox="0 0 640.8 410.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-21T16:02:05.423725</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 410.4 
+L 640.8 410.4 
+L 640.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 54.18 127.85625 
+L 210.78 127.85625 
+L 210.78 93.825 
+L 54.18 93.825 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 54.18 372.2625 
+L 210.78 372.2625 
+L 210.78 127.85625 
+L 54.18 127.85625 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #f4f1ec; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 69.84 245.41875 
+L 77.3568 245.41875 
+L 77.3568 237.99375 
+L 69.84 237.99375 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 69.84 285.6375 
+L 77.3568 285.6375 
+L 77.3568 278.2125 
+L 69.84 278.2125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 69.84 325.85625 
+L 77.3568 325.85625 
+L 77.3568 318.43125 
+L 69.84 318.43125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #1a3a5c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 242.1 127.85625 
+L 398.7 127.85625 
+L 398.7 93.825 
+L 242.1 93.825 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 242.1 372.2625 
+L 398.7 372.2625 
+L 398.7 127.85625 
+L 242.1 127.85625 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #f4f1ec; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 257.76 245.41875 
+L 265.2768 245.41875 
+L 265.2768 237.99375 
+L 257.76 237.99375 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 257.76 285.6375 
+L 265.2768 285.6375 
+L 265.2768 278.2125 
+L 257.76 278.2125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 257.76 325.85625 
+L 265.2768 325.85625 
+L 265.2768 318.43125 
+L 257.76 318.43125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #3d6b7a"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 430.02 127.85625 
+L 586.62 127.85625 
+L 586.62 93.825 
+L 430.02 93.825 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #b8893a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 430.02 372.2625 
+L 586.62 372.2625 
+L 586.62 127.85625 
+L 430.02 127.85625 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #f4f1ec; stroke: #d8dde2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 445.68 245.41875 
+L 453.1968 245.41875 
+L 453.1968 237.99375 
+L 445.68 237.99375 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #b8893a"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 445.68 285.6375 
+L 453.1968 285.6375 
+L 453.1968 278.2125 
+L 445.68 278.2125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #b8893a"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 445.68 325.85625 
+L 453.1968 325.85625 
+L 453.1968 318.43125 
+L 445.68 318.43125 
+z
+" clip-path="url(#p944be7ebca)" style="fill: #b8893a"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 72.972 217.575 
+L 191.988 217.575 
+" clip-path="url(#p944be7ebca)" style="fill: none; stroke: #1a3a5c; stroke-opacity: 0.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 260.892 217.575 
+L 379.908 217.575 
+" clip-path="url(#p944be7ebca)" style="fill: none; stroke: #3d6b7a; stroke-opacity: 0.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 448.812 217.575 
+L 567.828 217.575 
+" clip-path="url(#p944be7ebca)" style="fill: none; stroke: #b8893a; stroke-opacity: 0.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1a3a5c" x="320.4" y="35.813125" transform="rotate(-0 320.4 35.813125)">Three Questions, Kept Separate</text>
+   </g>
+   <g id="text_2">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5a6470" x="320.4" y="62.415156" transform="rotate(-0 320.4 62.415156)">Conflating these is among the most common sources of avoidable cost</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="132.48" y="109.235313" transform="rotate(-0 132.48 109.235313)">FORUM</text>
+   </g>
+   <g id="text_4">
+    <text style="font-style: italic; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="132.48" y="122.157969" transform="rotate(-0 132.48 122.157969)">Where</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(73.301 161.669825)">Which court or arbitral</text>
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(97.182187 173.369925)">seat decides?</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2b2b2b" x="82.368" y="244.75325" transform="rotate(-0 82.368 244.75325)">Reduces forum shopping</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(82.368 279.710631)">Limits jurisdictional</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(82.368 290.233369)">challenges</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(82.368 319.929381)">Curbs parallel</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(82.368 330.452119)">proceedings</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="320.4" y="109.235313" transform="rotate(-0 320.4 109.235313)">GOVERNING LAW</text>
+   </g>
+   <g id="text_10">
+    <text style="font-style: italic; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="320.4" y="122.157969" transform="rotate(-0 320.4 122.157969)">Under what rules</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.013469 155.711963)">Which legal system</text>
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(268.044812 167.483938)">governs the parties'</text>
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.266469 179.255913)">substantive rights?</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 239.491881)">Does not follow</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 250.014619)">from forum choice</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 279.710631)">Drives interpretation</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 290.233369)">of obligations</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 319.929381)">Frequent drafting</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(270.288 330.452119)">error to conflate</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="508.32" y="109.235313" transform="rotate(-0 508.32 109.235313)">ENFORCEMENT</text>
+   </g>
+   <g id="text_16">
+    <text style="font-style: italic; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="508.32" y="122.157969" transform="rotate(-0 508.32 122.157969)">Where recovery happens</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(451.189437 155.7479)">Where are the assets,</text>
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(441.319562 167.448)">and how does a judgment</text>
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(461.175031 179.219975)">become recovery?</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 239.491881)">Most often deferred</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 250.014619)">at drafting</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 279.710631)">Determines if action</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 290.233369)">is worth pursuing</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 319.929381)">Shapes defence-cost</text>
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #2b2b2b" transform="translate(458.208 330.452119)">exposure</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p944be7ebca">
+   <rect x="7.2" y="7.2" width="626.4" height="396"/>
+  </clipPath>
+ </defs>
+</svg>
