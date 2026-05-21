@@ -135,18 +135,28 @@ const breadcrumbJsonLd = {
       }
 
       .desktop-share__icons {
-        display: flex;
+        display: flex !important;
         flex-wrap: wrap;
+        align-items: center;
         gap: 9px;
         margin-top: 14px;
+        max-width: 150px;
       }
 
       .desktop-share__icon,
       .desktop-share__copy {
-        display: inline-grid;
+        -webkit-appearance: none;
+        appearance: none;
+        box-sizing: border-box;
+        display: inline-grid !important;
         place-items: center;
-        width: 39px;
-        height: 39px;
+        flex: 0 0 39px;
+        width: 39px !important;
+        height: 39px !important;
+        min-width: 39px;
+        min-height: 39px;
+        max-width: 39px;
+        max-height: 39px;
         border: 1px solid rgba(190, 153, 91, 0.5);
         border-radius: 50%;
         background: #102031;
@@ -156,6 +166,7 @@ const breadcrumbJsonLd = {
         font-size: 12px;
         font-weight: 800;
         line-height: 1;
+        padding: 0;
         text-decoration: none;
         transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
       }
@@ -180,6 +191,7 @@ const breadcrumbJsonLd = {
       }
 
       .article-share {
+        display: none;
         margin: clamp(34px, 5vw, 54px) 0 0;
         padding: clamp(22px, 4vw, 30px);
         border: 1px solid rgba(190, 153, 91, 0.28);
@@ -311,6 +323,10 @@ const breadcrumbJsonLd = {
         .article-aside nav,
         .desktop-share {
           display: none;
+        }
+
+        .article-share {
+          display: block;
         }
 
         .share-links {
