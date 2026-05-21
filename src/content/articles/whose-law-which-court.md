@@ -84,3 +84,15 @@ The most useful questions are:
 The strongest risk architecture is not the most complicated one. It is the one where the contract, the chosen forum, the governing law, the enforcement path and the insurance programme all point in a commercially coherent direction.
 
 That coherence should be tested before a claim exists. Once a dispute begins, parties often discover that jurisdiction and coverage are not technical footnotes. They are the structure that decides whether a legal right becomes a practical recovery.
+
+## Selected official references reviewed
+
+Accessed and checked on 19 May 2026 for the general institutional descriptions used in this article.
+
+- DIFC Courts: jurisdiction and court FAQs describing the English-language common-law commercial forum and jurisdiction framework: [Courts FAQ](https://www.difccourts.ae/about/faq/courts-faq) and [Jurisdiction](https://www.difccourts.ae/about/jurisdiction)
+- ADGM Courts: official materials describing ADGM Courts and the direct application of English common law within ADGM: [ADGM Courts](https://www.adgm.com/adgm-courts/) and [English common law](https://www.adgm.com/adgm-courts/english-common-law)
+- UAE Government portal: federal judiciary overview explaining the federal and local court structure in the UAE: [Federal judiciary](https://u.ae/about-the-uae/the-uae-government/the-federal-judiciary)
+
+## Disclaimer
+
+This article is provided for general information and professional discussion only. It does not constitute legal, insurance, broking or risk-management advice. Specific matters should be reviewed with qualified legal counsel, insurance brokers and relevant specialists.
