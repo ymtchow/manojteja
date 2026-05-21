@@ -75,14 +75,23 @@ const comingSoon = [
         <aside>
           <div class="side-card side-card--profile">
             <div class="side-card__section">
-              <p class="eyebrow">About the Editor</p>
+              <p class="eyebrow">Editorial Focus</p>
               <img src="/assets/headshot.jpg" alt="Portrait of Manoj Teja Yadlapati" />
               <p>The Cross-Border Risk Review is edited by Manoj Teja Yadlapati, with a focus on insurance, liability, cross-border risk, and the growing influence of artificial intelligence on risk, claims, and governance.</p>
-              <a class="button button--ghost" href="/#about">Learn more</a>
+              <a class="button button--ghost" href="/#editorial-focus">Explore focus</a>
             </div>
             <div class="side-card__section side-card__section--bordered">
               <p class="eyebrow">Areas of interest</p>
-              <p>Large multinational corporate accounts, liability lines, professional indemnity, insurance wordings, specialty lines, property insurance, and geopolitical risk.</p>
+              <div class="interest-mini-list">
+                <span>Large Multinational Corporate Accounts</span>
+                <span>Liability Lines</span>
+                <span>Professional Indemnity</span>
+                <span>Insurance Wordings</span>
+                <span>Specialty Lines</span>
+                <span>Property Insurance</span>
+                <span>AI-Driven Risk &amp; Insurance</span>
+                <span>Cross-Border Disputes</span>
+              </div>
             </div>
           </div>
         </aside>
@@ -176,6 +185,23 @@ const comingSoon = [
 
       .side-card__section--bordered p:not(.eyebrow) {
         margin-top: 10px;
+      }
+
+      .interest-mini-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .interest-mini-list span {
+        display: block;
+        padding: 11px 12px;
+        border-left: 2px solid rgba(184, 143, 72, 0.55);
+        background: rgba(7, 18, 29, 0.035);
+        color: var(--paper-ink);
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.35;
       }
 
       .no-results {
