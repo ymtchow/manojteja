@@ -3,7 +3,7 @@ title: "Whose Law, Which Court?"
 description: "A practical insurance-professional guide to jurisdiction, governing law, enforcement and coverage alignment."
 date: 2026-05-19
 category: "Cross-Border Risk"
-pdf: "https://drive.google.com/file/d/1YFldqmJecGxXKwdMGCzb1Kor358U3D9x/view?usp=sharing"
+pdf: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Whose_Law_Which_Court.pdf"
 audio: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Podcast%20Whose%20law%20%3F%20which%20court%20%3F.m4a"
 featuredImage: "/assets/article-whose-law-card.webp"
 draft: false
@@ -11,88 +11,111 @@ draft: false
 
 ## Executive take-away
 
-> In cross-border disputes, the real risk is rarely one bad clause. It is the silent mismatch between the contract, the chosen forum, the place where assets sit, and the territorial or jurisdictional reach of the liability policy.
+> In cross-border disputes, losses are seldom traceable to a single defective clause. The more frequent cause is misalignment between the contract that was negotiated, the forum that was chosen, the jurisdiction where the assets sit, and the territorial reach of the policy expected to respond.
 
 ## Why this question matters before a claim exists
 
-A contract may be negotiated in London, performed in Dubai, serviced from Mumbai and disputed in more than one jurisdiction. On paper it may look like one commercial relationship. In practice it can become a contest between legal systems, procedural rules, asset locations and policy wording.
+A contract may be negotiated in London, performed in Dubai, serviced from Mumbai, and disputed across more than one jurisdiction at the same time. On paper it reads as a single commercial relationship. Under pressure it becomes a contest between legal systems, procedural rules, asset locations and policy wording.
 
-For insurance professionals, that contest is not an academic legal problem. It affects claim notification, reservation of rights, defence strategy, settlement leverage and the insured’s realistic route to recovery. The question is not simply, “Which court is named in the contract?” The better question is, “Does the entire risk architecture still work when pressure arrives?”
+For insurance professionals, that contest carries practical consequences. It shapes claim notification, reservations of rights, defence strategy, settlement leverage, and whether the insured has a realistic route to recovery. The relevant enquiry at placement is therefore broader than which court the contract names; it extends to whether the entire structure still functions when a dispute crystallises.
 
-That architecture has four moving parts: the court or tribunal, the law that governs the substance of the dispute, the place where a judgment or award can be enforced, and the insurance policy that is expected to respond. If those parts were not reviewed together at placement or renewal, a dispute can expose gaps that felt invisible at the contracting stage.
+Four elements need to be considered together: the court or tribunal selected, the law governing the substance of the dispute, the place where any judgment or award must be enforced, and the insurance policy expected to respond. When those elements are reviewed separately, or only at the contracting stage, a subsequent dispute will frequently expose gaps that were not visible at signing.
 
-<figure class="article-figure">
-  <img src="/assets/articles/whose-law-four-lens-dispute-architecture.svg" alt="Four-lens dispute architecture showing forum, law, assets and policy as connected decision points." loading="lazy" />
-  <figcaption>Figure 1. A minimalist framework for aligning dispute planning with insurance response.</figcaption>
+<figure class="article-figure" style="margin:30px 0;padding:22px;border:1px solid rgba(217,166,74,.28);border-radius:18px;background:linear-gradient(135deg,#061522,#0c2436);box-shadow:0 18px 44px rgba(16,32,49,.12);">
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+    <div style="padding:18px;border:1px solid rgba(217,166,74,.55);border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Forum</strong><p style="margin-top:6px;color:#626b75;">Court or tribunal selected</p></div>
+    <div style="padding:18px;border:1px solid rgba(217,166,74,.55);border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Governing law</strong><p style="margin-top:6px;color:#626b75;">Substantive legal standard</p></div>
+    <div style="padding:18px;border:1px solid rgba(217,166,74,.55);border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Enforcement</strong><p style="margin-top:6px;color:#626b75;">Asset location and recovery route</p></div>
+    <div style="padding:18px;border:1px solid rgba(217,166,74,.55);border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Policy response</strong><p style="margin-top:6px;color:#626b75;">Territory, defence costs and claim trigger</p></div>
+  </div>
+  <figcaption style="margin-top:12px;color:#efc979;font-size:13px;text-align:center;">Figure 1. The four-element alignment framework</figcaption>
 </figure>
 
-## The three questions that shape cross-border disputes
+## Three questions, kept separate
 
-Every cross-border contract should answer three questions clearly and separately. Confusing them is one of the most common causes of expensive friction.
+Three questions should be addressed in any cross-border contract, and addressed separately. Conflating them is among the more common sources of avoidable cost and procedural friction.
 
-**Forum:** which court or arbitral tribunal is intended to hear the dispute? A clean forum clause reduces the risk of forum shopping, procedural objections and parallel proceedings.
+**Forum.** Which court, or which arbitral seat, is intended to determine the dispute? A precise forum clause reduces exposure to forum shopping, jurisdictional challenges and parallel proceedings.
 
-**Governing law:** which law decides the parties’ rights and obligations? The court and the governing law are not automatically the same thing.
+**Governing law.** Which legal system governs the parties' substantive rights and obligations? Governing law does not follow automatically from the choice of forum. Treating the two as equivalent is a frequent and costly drafting error.
 
-**Enforcement:** where are the counterparty’s assets, and how will a judgment or award be converted into commercial recovery?
+**Enforcement.** Where are the counterparty's assets located, and through what process will a judgment or arbitral award be converted into actual recovery? This is the question most often deferred at the drafting stage, and frequently the one that determines whether the proceedings were commercially worth pursuing.
 
-The third question is often the most commercial. A claimant does not need an elegant judgment in the wrong place; it needs a recoverable outcome. A defendant and its insurers also need to understand where proceedings may multiply and where defence costs may be incurred.
-
-## Why DIFC Courts remain commercially relevant
-
-The DIFC Courts remain attractive in many commercial settings because they offer an English-language, common-law court environment within Dubai’s wider legal architecture. For international businesses and their advisers, that can provide procedural familiarity, specialist commercial handling and a forum that is easier to navigate than an unfamiliar local court system.
-
-But DIFC should not be treated as a prestige label inserted by habit. A DIFC clause is useful only if it supports the enforcement strategy, reflects the counterparty profile and sits comfortably with the insurance programme. The same caution applies to any preferred forum: the clause must be commercially useful, not merely familiar.
-
-<figure class="article-figure">
-  <img src="/assets/articles/whose-law-difc-court-choice.svg" alt="DIFC forum-selection diagram mapping procedural familiarity, governing law, enforcement route and insurance response." loading="lazy" />
-  <figcaption>Figure 2. DIFC forum selection should be tested against enforcement, governing law and insurance response.</figcaption>
+<figure class="article-figure" style="margin:30px 0;padding:22px;border:1px solid rgba(217,166,74,.28);border-radius:18px;background:#fbfaf7;box-shadow:0 18px 44px rgba(16,32,49,.08);">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+    <div style="padding:18px;border-left:4px solid #d9a64a;background:#f4f1eb;"><strong>1. Forum</strong><p style="margin-top:6px;">Where will the dispute be heard?</p></div>
+    <div style="padding:18px;border-left:4px solid #d9a64a;background:#f4f1eb;"><strong>2. Governing law</strong><p style="margin-top:6px;">Which law governs the substance?</p></div>
+    <div style="padding:18px;border-left:4px solid #d9a64a;background:#f4f1eb;"><strong>3. Enforcement</strong><p style="margin-top:6px;">Where will recovery be pursued?</p></div>
+  </div>
+  <figcaption style="margin-top:12px;color:#626b75;font-size:13px;text-align:center;">Figure 2. Three questions, kept separate</figcaption>
 </figure>
+
+A judgment obtained in a jurisdiction where the counterparty holds no recoverable assets has limited commercial value. For defendants and their insurers, the practical question is which jurisdictions could foreseeably see proceedings, and where the resulting defence costs will be incurred.
+
+## DIFC Courts: useful when the use is real
+
+The DIFC Courts continue to attract international commercial users for understandable reasons. They operate in English, apply a common-law procedural framework, and sit within Dubai's broader legal architecture. For multinational businesses and their advisers, that combination offers procedural familiarity, specialist commercial handling, and a forum more easily navigated than an unfamiliar local court system.
+
+A DIFC clause should not be inserted as a prestige label by default. It is genuinely useful only where it supports the intended enforcement strategy, fits the counterparty profile, and aligns with the insurance programme expected to respond. The same discipline applies to any preferred forum: the relevant test is whether the choice does commercial work, not whether the name is familiar.
 
 ## The UAE is not one dispute environment
 
-Businesses often speak loosely about “UAE law”. In dispute planning, that shorthand can obscure important distinctions. Onshore UAE courts, DIFC Courts and ADGM Courts each carry different procedural expectations, legal traditions and drafting implications.
+References to "UAE law" are often made loosely. For dispute-planning purposes, that shorthand obscures distinctions that matter. Onshore UAE courts, the DIFC Courts and the ADGM Courts each operate within different legal traditions, different procedural expectations, and different drafting conventions. Treating them as interchangeable within a contract clause is a frequent source of disputes ending up in an unintended venue.
 
-That distinction matters when a group contracts across multiple jurisdictions, services clients from different UAE bases, or buys liability coverage that may be expected to respond to disputes filed in more than one forum. A policy that looks adequate for domestic operations may feel narrow once the claim path becomes international.
-
-<figure class="article-figure">
-  <img src="/assets/articles/whose-law-uae-three-legal-environments.svg" alt="Three UAE dispute environments: Onshore UAE Courts, DIFC Courts and ADGM Courts." loading="lazy" />
-  <figcaption>Figure 3. Mainland UAE, DIFC and ADGM should be treated as distinct environments for drafting and insurance review.</figcaption>
+<figure class="article-figure" style="margin:30px 0;padding:22px;border:1px solid rgba(217,166,74,.28);border-radius:18px;background:linear-gradient(135deg,#fbfaf7,#f4f1eb);box-shadow:0 18px 44px rgba(16,32,49,.08);">
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
+    <div style="padding:18px;border:1px solid rgba(7,18,29,.14);border-radius:14px;background:#fff;"><strong>Onshore UAE Courts</strong><p style="margin-top:6px;">Distinct procedural expectations and drafting conventions.</p></div>
+    <div style="padding:18px;border:1px solid rgba(217,166,74,.55);border-radius:14px;background:#fff;"><strong>DIFC Courts</strong><p style="margin-top:6px;">English-language, common-law procedural framework.</p></div>
+    <div style="padding:18px;border:1px solid rgba(7,18,29,.14);border-radius:14px;background:#fff;"><strong>ADGM Courts</strong><p style="margin-top:6px;">Different legal tradition, procedure and drafting implications.</p></div>
+  </div>
+  <figcaption style="margin-top:12px;color:#626b75;font-size:13px;text-align:center;">Figure 3. Comparison of UAE dispute environments</figcaption>
 </figure>
 
-## Insurance response is a separate question
+The distinction is particularly relevant for groups contracting across multiple jurisdictions, servicing clients from different UAE bases, or purchasing liability cover expected to respond to claims filed in more than one of these forums. A policy that appears adequate for domestic operations may prove narrow once the claim path becomes international.
 
-A liability policy does not automatically follow the commercial contract. The policy has its own insuring clause, territorial limits, jurisdictional extensions, exclusions, defence-cost provisions, sanctions language and claims conditions. That means the dispute clause and the insurance clause should be analysed separately before being tested together.
+## Where coverage actually breaks
 
-In practice, the policy question may be: will defence costs be advanced in that forum, will local counsel be covered, will an overseas judgment or award be recognised for indemnity purposes, and are there restrictions on settlement authority? A contract can send the dispute to one place while the policy quietly limits response in another.
+Cross-border coverage problems are usually a product of misalignment rather than of any single dramatic exclusion. The contract points one way, the claim is filed another way, and the policy was written for a narrower territorial footprint than the dispute now requires.
 
-## Practical checklist before placement or renewal
+On Commercial General Liability, the predictable stress points are territorial scope, the treatment of foreign proceedings, defence-cost handling, and the breadth of the policy's definition of "claim". On Professional Indemnity, the focus shifts to claims-made timing, retroactive dates, notification mechanics, the geography in which services were actually performed, the treatment of foreign-law liability standards, and whether the policy realistically contemplates the forums in which clients could bring proceedings.
 
-A simple pre-loss review can prevent expensive surprises. At minimum, the contract, forum clause, governing law clause, enforcement route and insurance wording should be reviewed together.
+<figure class="article-figure" style="margin:30px 0;padding:22px;border:1px solid rgba(217,166,74,.28);border-radius:18px;background:linear-gradient(135deg,#061522,#0c2436);box-shadow:0 18px 44px rgba(16,32,49,.12);">
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+    <div style="padding:18px;border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Commercial General Liability</strong><ul style="margin:10px 0 0;color:#344052;"><li>Territorial scope</li><li>Treatment of foreign proceedings</li><li>Defence-cost handling</li><li>Definition of "claim"</li></ul></div>
+    <div style="padding:18px;border-radius:14px;background:#fbfaf7;"><strong style="color:#182230;">Professional Indemnity</strong><ul style="margin:10px 0 0;color:#344052;"><li>Claims-made timing and retroactive dates</li><li>Notification mechanics</li><li>Geography in which services were performed</li><li>Foreign-law liability standards</li><li>Forums in which clients could bring proceedings</li></ul></div>
+  </div>
+  <figcaption style="margin-top:12px;color:#efc979;font-size:13px;text-align:center;">Figure 4. Cross-border stress points by line</figcaption>
+</figure>
 
-The most useful questions are:
+Two questions, taken in sequence, will identify most of the alignment risk in a programme. Does the policy respond to the category of liability being alleged? And does it respond in the place, procedure and timing in which the allegation is actually being made?
 
-1. Does the forum clause match the commercial enforcement strategy?
-2. Is the governing law clause clear and separate from the forum clause?
-3. Where are the assets or business operations that matter for recovery?
-4. Does the liability policy respond to proceedings in that forum?
-5. Are defence costs, local counsel and settlement control addressed clearly?
-6. Do any exclusions, sanctions provisions or territorial limits narrow the expected response?
+## A short checklist before placement or renewal
 
-## Closing perspective
+Before a material cross-border contract is signed or a programme is renewed, the contract and the policy should be examined together. Six review points are worth running through in sequence.
 
-The strongest risk architecture is not the most complicated one. It is the one where the contract, the chosen forum, the governing law, the enforcement path and the insurance programme all point in a commercially coherent direction.
+| Review point | Question to ask | Why it matters |
+|---|---|---|
+| Governing law | Is the substantive law stated, and does it actually suit the deal? | Drives the liability standard the defence has to argue against. |
+| Forum clause | Is it exclusive, non-exclusive, or arbitral — and consistent with the rest of the contract? | Decides where the spend lands and who picks counsel. |
+| Asset location | If a judgment or award is issued, where will it have to be enforced? | Tells you whether the legal spend produces recovery or paper. |
+| Policy territory | Does the cover match where services are delivered, clients sit, and claims can be brought? | The most common source of false comfort at placement. |
+| Definition of claim | Are foreign proceedings, investigations and pre-action demands treated as claims? | Controls when notification has to go in, and how clean the trigger is. |
+| Disclosure | Have the cross-border activities and the contract templates actually been shown to the brokers and insurers? | Information not disclosed at placement tends to surface at renewal, and occasionally at the point of claim. |
 
-That coherence should be tested before a claim exists. Once a dispute begins, parties often discover that jurisdiction and coverage are not technical footnotes. They are the structure that decides whether a legal right becomes a practical recovery.
+## Closing thought
 
-## Selected official references reviewed
+The most effective risk architecture is usually not the most elaborate. It is one in which the contract, the chosen forum, the governing law, the enforcement route and the insurance programme are commercially coherent with each other.
 
-Accessed and checked on 19 May 2026 for the general institutional descriptions used in this article.
+That alignment is best tested before any dispute exists. Once proceedings are underway, parties commonly find that jurisdiction and coverage are not procedural footnotes; they are the structural framework that determines whether a legal entitlement converts into actual recovery.
 
-- DIFC Courts: jurisdiction and court FAQs describing the English-language common-law commercial forum and jurisdiction framework: [Courts FAQ](https://www.difccourts.ae/about/faq/courts-faq) and [Jurisdiction](https://www.difccourts.ae/about/jurisdiction)
-- ADGM Courts: official materials describing ADGM Courts and the direct application of English common law within ADGM: [ADGM Courts](https://www.adgm.com/adgm-courts/) and [English common law](https://www.adgm.com/adgm-courts/english-common-law)
-- UAE Government portal: federal judiciary overview explaining the federal and local court structure in the UAE: [Federal judiciary](https://u.ae/about-the-uae/the-uae-government/the-federal-judiciary)
+## Selected official references
+
+Institutional descriptions in this note are drawn from the following public sources, last checked 19 May 2026.
+
+- DIFC Courts — jurisdiction and FAQs on the English-language common-law commercial forum: [Courts FAQ](https://www.difccourts.ae/about/faq/courts-faq) and [Jurisdiction](https://www.difccourts.ae/about/jurisdiction)
+- ADGM Courts — official materials on the direct application of English common law within ADGM: [ADGM Courts](https://www.adgm.com/adgm-courts/) and [English common law](https://www.adgm.com/adgm-courts/english-common-law)
+- UAE Government portal — federal judiciary overview: [Federal judiciary](https://u.ae/about-the-uae/the-uae-government/the-federal-judiciary)
 
 ## Disclaimer
 
-This article is provided for general information and professional discussion only. It does not constitute legal, insurance, broking or risk-management advice. Specific matters should be reviewed with qualified legal counsel, insurance brokers and relevant specialists.
+This note is general information and professional discussion only. It is not legal, insurance, broking or risk-management advice. Specific matters should be reviewed with qualified counsel and brokers.
