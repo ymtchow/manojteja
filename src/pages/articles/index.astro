@@ -51,7 +51,7 @@ const comingSoon = [
         </form>
         <p class="article-count" data-article-count></p>
       </div>
-      <div class="two-column">
+      <div class="two-column articles-layout">
         <section class="insight-list" aria-label="Article list" data-article-list data-page-size={ARTICLES_PER_PAGE}>
           {articles.map((article) => (
             <div
@@ -147,6 +147,15 @@ const comingSoon = [
         font-size: 13px;
         font-weight: 700;
         white-space: nowrap;
+      }
+
+      .articles-layout {
+        align-items: start;
+      }
+
+      .articles-layout .insight-list {
+        align-content: start;
+        gap: 24px;
       }
 
       .article-list__item[hidden],
