@@ -3,8 +3,9 @@ const path = require('path');
 
 const distDir = 'dist';
 const faviconTags = [
-  '<link rel="icon" href="/favicon.svg" type="image/svg+xml" />',
-  '<link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />',
+  '<link rel="icon" href="/favicon.svg?v=ymt-ring-2026" type="image/svg+xml" />',
+  '<link rel="shortcut icon" href="/favicon.svg?v=ymt-ring-2026" type="image/svg+xml" />',
+  '<link rel="apple-touch-icon" href="/favicon.svg?v=ymt-ring-2026" />',
   '<meta name="theme-color" content="#0b1322" />'
 ].join('\n');
 
