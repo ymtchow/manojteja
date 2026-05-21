@@ -3,7 +3,7 @@ title: "Whose Law, Which Court?"
 description: "A practical insurance-professional guide to jurisdiction, governing law, enforcement and coverage alignment."
 date: 2026-05-19
 category: "Cross-Border Risk"
-pdf: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Whose_Law_Which_Court.pdf"
+pdf: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Whose%20Law%20Which%20Court%20-%20PDF%20-%20Publish.pdf"
 audio: "https://pub-dfe7ff4631c440c1a5716662c3bfabb5.r2.dev/Podcast%20Whose%20law%20%3F%20which%20court%20%3F.m4a"
 featuredImage: "/assets/article-whose-law-card.webp"
 draft: false
@@ -21,17 +21,12 @@ For insurance professionals, that contest carries practical consequences. It sha
 
 Four elements need to be considered together: the court or tribunal selected, the law governing the substance of the dispute, the place where any judgment or award must be enforced, and the insurance policy expected to respond. When those elements are reviewed separately, or only at the contracting stage, a subsequent dispute will frequently expose gaps that were not visible at signing.
 
-<figure class="article-figure article-visual article-visual--alignment" aria-label="The Four-Element Alignment chart">
-  <div class="article-visual__title">The Four-Element Alignment</div>
-  <div class="article-visual__subtitle">Cross-border disputes expose gaps when these are reviewed separately</div>
-  <div class="article-visual__four-grid">
-    <div class="article-visual__box"><strong>FORUM</strong><span>Court or arbitral seat selected</span></div>
-    <div class="article-visual__box"><strong>GOVERNING LAW</strong><span>Law applied to parties' substantive rights</span></div>
-    <div class="article-visual__box"><strong>ENFORCEMENT</strong><span>Where assets sit; route to actual recovery</span></div>
-    <div class="article-visual__box"><strong>INSURANCE POLICY</strong><span>Territorial reach; response to foreign proceedings</span></div>
-  </div>
-  <div class="article-visual__gold-line" aria-hidden="true"></div>
-  <div class="article-visual__footer">Must remain commercially coherent with each other</div>
+<figure class="article-figure article-figure--svg">
+  <img
+    src="/assets/articles/whose-law-four-element-alignment.svg"
+    alt="The Four-Element Alignment"
+    loading="lazy"
+  />
 </figure>
 
 ## Three questions, kept separate
@@ -44,38 +39,12 @@ Three questions should be addressed in any cross-border contract, and addressed 
 
 **Enforcement.** Where are the counterparty's assets located, and through what process will a judgment or arbitral award be converted into actual recovery? This is the question most often deferred at the drafting stage, and frequently the one that determines whether the proceedings were commercially worth pursuing.
 
-<figure class="article-figure article-visual article-visual--three" aria-label="Three Questions, Kept Separate chart">
-  <div class="article-visual__title">Three Questions, Kept Separate</div>
-  <div class="article-visual__subtitle">Conflating these is among the most common sources of avoidable cost</div>
-  <div class="article-visual__three-grid">
-    <div class="article-visual__panel article-visual__panel--navy">
-      <div class="article-visual__panel-head"><strong>FORUM</strong><em>Where</em></div>
-      <h3>Which court or arbitral seat decides?</h3>
-      <ul>
-        <li>Reduces forum shopping</li>
-        <li>Limits jurisdictional challenges</li>
-        <li>Curbs parallel proceedings</li>
-      </ul>
-    </div>
-    <div class="article-visual__panel article-visual__panel--teal">
-      <div class="article-visual__panel-head"><strong>GOVERNING LAW</strong><em>Under what rules</em></div>
-      <h3>Which legal system governs the parties' substantive rights?</h3>
-      <ul>
-        <li>Does not follow from forum choice</li>
-        <li>Drives interpretation of obligations</li>
-        <li>Frequent drafting error to conflate</li>
-      </ul>
-    </div>
-    <div class="article-visual__panel article-visual__panel--gold">
-      <div class="article-visual__panel-head"><strong>ENFORCEMENT</strong><em>Where recovery happens</em></div>
-      <h3>Where are the assets, and how does a judgment become recovery?</h3>
-      <ul>
-        <li>Most often deferred at drafting</li>
-        <li>Determines if action is worth pursuing</li>
-        <li>Shapes defence-cost exposure</li>
-      </ul>
-    </div>
-  </div>
+<figure class="article-figure article-figure--svg">
+  <img
+    src="/assets/articles/whose-law-three-questions-kept-separate.svg"
+    alt="Three Questions, Kept Separate"
+    loading="lazy"
+  />
 </figure>
 
 A judgment obtained in a jurisdiction where the counterparty holds no recoverable assets has limited commercial value. For defendants and their insurers, the practical question is which jurisdictions could foreseeably see proceedings, and where the resulting defence costs will be incurred.
@@ -90,52 +59,12 @@ A DIFC clause should not be inserted as a prestige label by default. It is genui
 
 References to "UAE law" are often made loosely. For dispute-planning purposes, that shorthand obscures distinctions that matter. Onshore UAE courts, the DIFC Courts and the ADGM Courts each operate within different legal traditions, different procedural expectations, and different drafting conventions. Treating them as interchangeable within a contract clause is a frequent source of disputes ending up in an unintended venue.
 
-<figure class="article-figure article-visual article-visual--table" aria-label="UAE Dispute Environments comparison table">
-  <div class="article-visual__title">UAE Dispute Environments: Not Interchangeable</div>
-  <div class="article-visual__subtitle">Different legal traditions, procedural expectations and drafting conventions</div>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Onshore UAE Courts</th>
-        <th>DIFC Courts</th>
-        <th>ADGM Courts</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Legal tradition</th>
-        <td>Civil law</td>
-        <td>Common law</td>
-        <td>Common law</td>
-      </tr>
-      <tr>
-        <th>Working language</th>
-        <td>Arabic</td>
-        <td>English</td>
-        <td>English</td>
-      </tr>
-      <tr>
-        <th>Procedural model</th>
-        <td>Civil-law procedure</td>
-        <td>Common-law procedure</td>
-        <td>English common law directly applied</td>
-      </tr>
-      <tr>
-        <th>Typical user</th>
-        <td>Domestic / regional parties</td>
-        <td>International commercial users</td>
-        <td>International commercial users</td>
-      </tr>
-      <tr>
-        <th>Drafting convention</th>
-        <td>Arabic-language primacy</td>
-        <td>English-language common-law style</td>
-        <td>English-language common-law style</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="article-visual__footer">Treating these forums as a single "UAE" venue is a frequent source of unintended-venue disputes</div>
+<figure class="article-figure article-figure--svg">
+  <img
+    src="/assets/articles/whose-law-uae-dispute-environments.svg"
+    alt="UAE Dispute Environments: Not Interchangeable"
+    loading="lazy"
+  />
 </figure>
 
 The distinction is particularly relevant for groups contracting across multiple jurisdictions, servicing clients from different UAE bases, or purchasing liability cover expected to respond to claims filed in more than one of these forums. A policy that appears adequate for domestic operations may prove narrow once the claim path becomes international.
@@ -146,35 +75,12 @@ Cross-border coverage problems are usually a product of misalignment rather than
 
 On Commercial General Liability, the predictable stress points are territorial scope, the treatment of foreign proceedings, defence-cost handling, and the breadth of the policy's definition of "claim". On Professional Indemnity, the focus shifts to claims-made timing, retroactive dates, notification mechanics, the geography in which services were actually performed, the treatment of foreign-law liability standards, and whether the policy realistically contemplates the forums in which clients could bring proceedings.
 
-<figure class="article-figure article-visual article-visual--stress" aria-label="Cross-Border Stress Points by Line chart">
-  <div class="article-visual__title">Cross-Border Stress Points by Line</div>
-  <div class="article-visual__subtitle">Where alignment between contract, forum and policy typically breaks</div>
-  <div class="article-visual__stress-grid">
-    <div class="article-visual__panel article-visual__panel--navy">
-      <div class="article-visual__panel-head"><strong>COMMERCIAL GENERAL LIABILITY</strong></div>
-      <ul>
-        <li>Territorial scope of cover</li>
-        <li>Treatment of foreign proceedings</li>
-        <li>Defence-cost handling (in addition vs within limit)</li>
-        <li>Breadth of "claim" definition</li>
-      </ul>
-    </div>
-    <div class="article-visual__panel article-visual__panel--teal">
-      <div class="article-visual__panel-head"><strong>PROFESSIONAL INDEMNITY</strong></div>
-      <ul>
-        <li>Claims-made timing and notification mechanics</li>
-        <li>Retroactive date alignment</li>
-        <li>Geography of services actually performed</li>
-        <li>Treatment of foreign-law liability standards</li>
-        <li>Forums in which clients can bring proceedings</li>
-      </ul>
-    </div>
-  </div>
-  <div class="article-visual__diagnostic">
-    <strong>Two diagnostic questions</strong>
-    <span>1. Does the policy respond to the category of liability alleged?</span>
-    <span>2. Does it respond in the place, procedure and timing in which the allegation is made?</span>
-  </div>
+<figure class="article-figure article-figure--svg">
+  <img
+    src="/assets/articles/whose-law-cross-border-stress-points.svg"
+    alt="Cross-Border Stress Points by Line"
+    loading="lazy"
+  />
 </figure>
 
 Two questions, taken in sequence, will identify most of the alignment risk in a programme. Does the policy respond to the category of liability being alleged? And does it respond in the place, procedure and timing in which the allegation is actually being made?
