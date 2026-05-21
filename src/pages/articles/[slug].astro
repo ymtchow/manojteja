@@ -130,13 +130,53 @@ const breadcrumbJsonLd = {
         margin-top: 34px;
       }
 
-      .desktop-share .share-links {
-        grid-template-columns: 1fr;
-        margin-top: 12px;
-      }
-
       .desktop-share h2 {
         margin: 0;
+      }
+
+      .desktop-share__icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 14px;
+      }
+
+      .desktop-share__icon,
+      .desktop-share__copy {
+        display: inline-grid;
+        place-items: center;
+        width: 39px;
+        height: 39px;
+        border: 1px solid rgba(190, 153, 91, 0.5);
+        border-radius: 50%;
+        background: #102031;
+        color: #d8b36a;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1;
+        text-decoration: none;
+        transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
+      }
+
+      .desktop-share__icon:hover,
+      .desktop-share__copy:hover {
+        background: #0b1725;
+        border-color: rgba(216, 179, 106, 0.9);
+        box-shadow: 0 10px 24px rgba(16, 32, 49, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .desktop-share__icon svg,
+      .desktop-share__copy svg {
+        width: 17px;
+        height: 17px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.75;
       }
 
       .article-share {
@@ -235,7 +275,9 @@ const breadcrumbJsonLd = {
       }
 
       .copy-share-button:focus-visible,
-      .share-link:focus-visible {
+      .share-link:focus-visible,
+      .desktop-share__icon:focus-visible,
+      .desktop-share__copy:focus-visible {
         outline: 2px solid rgba(190, 153, 91, 0.9);
         outline-offset: 3px;
       }
@@ -332,20 +374,23 @@ const breadcrumbJsonLd = {
         )}
         <section class="desktop-share" aria-label="Share this article on desktop">
           <h2>Share</h2>
-          <div class="share-links" aria-label="Desktop social sharing links">
-            <a class="share-link" href={linkedInShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">in</span><span class="share-label">LinkedIn</span></a>
-            <a class="share-link" href={xShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">X</span><span class="share-label">X</span></a>
-            <a class="share-link" href={facebookShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">f</span><span class="share-label">Facebook</span></a>
-            <a class="share-link" href={whatsappShareUrl} target="_blank" rel="noopener noreferrer">
-              <span class="share-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                  <path d="M7.2 19.1 4.5 20l.9-2.6a8.1 8.1 0 1 1 1.8 1.7Z" />
-                  <path d="M9.2 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.4.5c.8 1.4 1.8 2.3 3.2 3.1l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.8-.5.3-1.2.5-1.9.4-3.5-.5-6.4-3.3-7-6.8-.1-.7.1-1.4.4-1.9Z" />
-                </svg>
-              </span>
-              <span class="share-label">WhatsApp</span>
+          <div class="desktop-share__icons" aria-label="Desktop social sharing links">
+            <a class="desktop-share__icon" href={linkedInShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">in</a>
+            <a class="desktop-share__icon" href={xShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
+            <a class="desktop-share__icon" href={facebookShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a>
+            <a class="desktop-share__icon" href={whatsappShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M7.2 19.1 4.5 20l.9-2.6a8.1 8.1 0 1 1 1.8 1.7Z" />
+                <path d="M9.2 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.4.5c.8 1.4 1.8 2.3 3.2 3.1l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.8-.5.3-1.2.5-1.9.4-3.5-.5-6.4-3.3-7-6.8-.1-.7.1-1.4.4-1.9Z" />
+              </svg>
             </a>
-            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}><span class="share-mark" aria-hidden="true">⧉</span><span class="share-label">Copy link</span></button>
+            <button class="desktop-share__copy" type="button" data-copy-share-link data-share-url={articleUrl} aria-label="Copy article link">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <rect x="8" y="8" width="10" height="10" rx="2" />
+                <path d="M6 14H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1" />
+              </svg>
+              <span class="share-label" hidden>Copy link</span>
+            </button>
           </div>
         </section>
       </aside>
