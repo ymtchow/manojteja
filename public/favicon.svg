@@ -1,45 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="title desc">
-  <title id="title">YMT premium ring favicon</title>
-  <desc id="desc">Premium navy and gold YMT ring emblem for The Cross-Border Risk Review</desc>
-  <defs>
-    <radialGradient id="navy" cx="50%" cy="42%" r="62%">
-      <stop offset="0%" stop-color="#16243a"/>
-      <stop offset="58%" stop-color="#0b1424"/>
-      <stop offset="100%" stop-color="#050912"/>
-    </radialGradient>
-    <linearGradient id="gold" x1="13%" y1="10%" x2="87%" y2="90%">
-      <stop offset="0%" stop-color="#fff2bf"/>
-      <stop offset="22%" stop-color="#d79a2e"/>
-      <stop offset="47%" stop-color="#fff0b4"/>
-      <stop offset="72%" stop-color="#b77518"/>
-      <stop offset="100%" stop-color="#f6d276"/>
-    </linearGradient>
-    <linearGradient id="deepGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8f5c18"/>
-      <stop offset="45%" stop-color="#ffe6a0"/>
-      <stop offset="100%" stop-color="#a96b19"/>
-    </linearGradient>
-    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#000000" flood-opacity="0.42"/>
-    </filter>
-    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.55"/>
-    </filter>
-  </defs>
-
-  <rect width="512" height="512" rx="96" fill="#f7f1e7"/>
-  <g filter="url(#shadow)">
-    <circle cx="256" cy="256" r="205" fill="url(#navy)"/>
-    <circle cx="256" cy="256" r="214" fill="none" stroke="url(#gold)" stroke-width="16"/>
-    <circle cx="256" cy="256" r="189" fill="none" stroke="#1b2b44" stroke-width="10"/>
-    <circle cx="256" cy="256" r="183" fill="none" stroke="url(#deepGold)" stroke-width="5" opacity="0.96"/>
-    <path d="M145 188a128 128 0 0 1 222 0" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M367 324a128 128 0 0 1-222 0" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
-  </g>
-
-  <g filter="url(#textShadow)">
-    <text x="256" y="306" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="155" font-weight="700" letter-spacing="-15" fill="#06101f" stroke="#0b1526" stroke-width="11">YMT</text>
-    <text x="256" y="306" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="155" font-weight="700" letter-spacing="-15" fill="url(#gold)" stroke="#fff0b4" stroke-width="2.5">YMT</text>
-    <text x="256" y="306" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="155" font-weight="700" letter-spacing="-15" fill="none" stroke="#7a4b13" stroke-width="1.4" opacity="0.55">YMT</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title desc">
+  <title id="title">YMT embossed favicon</title>
+  <desc id="desc">Embossed YMT monogram in gold and navy blue</desc>
+  <image href="data:image/png;base64,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" width="64" height="64" preserveAspectRatio="xMidYMid slice"/>
 </svg>
