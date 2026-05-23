@@ -12,6 +12,13 @@ const articles = (await getCollection('articles'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const comingSoon = [
   {
+    title: 'Insurance in the Age of Brain-Computer Interfaces',
+    description: 'A future-facing insurance reflection on how brain-computer interfaces could reshape claims, data, consent, and risk assessment.',
+    category: 'EMERGING RISK & AI',
+    image: '/assets/article-brain-computer-interface-card.webp',
+    searchText: 'Cyberpunk Underwriting',
+  },
+  {
     title: 'Letters of Credit – Bridges of Global Trust',
     description: 'Understanding the legal architecture behind trade finance.',
     category: 'Insurance Wordings',
@@ -66,7 +73,7 @@ const comingSoon = [
             <div
               class="article-list__item"
               data-article-item
-              data-search={`${item.title ?? ''} ${item.description ?? ''} ${item.category ?? ''} coming soon in preparation`.toLowerCase()}
+              data-search={`${item.title ?? ''} ${item.description ?? ''} ${item.category ?? ''} ${item.searchText ?? ''} coming soon in preparation`.toLowerCase()}
             >
               <ArticleCard item={item} variant="row" comingSoon />
             </div>
