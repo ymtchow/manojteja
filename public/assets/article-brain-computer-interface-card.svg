@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Brain-computer interface insurance article card">
+  <defs>
+    <radialGradient id="g1" cx="62%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#F5C96F" stop-opacity="0.55"/>
+      <stop offset="30%" stop-color="#B88F48" stop-opacity="0.34"/>
+      <stop offset="70%" stop-color="#07121D" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#020914" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020914"/>
+      <stop offset="0.45" stop-color="#07121D"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE8A3"/>
+      <stop offset="0.4" stop-color="#D6A84E"/>
+      <stop offset="1" stop-color="#8F6424"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0v54" fill="none" stroke="#D6A84E" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1040" cy="380" r="520" fill="url(#g1)" filter="url(#soft)"/>
+  <path d="M0 690C250 590 415 770 650 650c210-108 310-300 590-246 160 31 240 142 360 124v372H0Z" fill="#020914" opacity="0.72"/>
+  <g opacity="0.22" stroke="#F5C96F" stroke-width="2" fill="none">
+    <path d="M100 190h310m-248 82h222m-278 430h420m730-560h220m-112 90h270m-300 430h170"/>
+    <circle cx="410" cy="190" r="6" fill="#F5C96F"/><circle cx="384" cy="272" r="5" fill="#F5C96F"/><circle cx="526" cy="620" r="6" fill="#F5C96F"/><circle cx="1254" cy="142" r="6" fill="#F5C96F"/><circle cx="1476" cy="232" r="5" fill="#F5C96F"/><circle cx="1504" cy="660" r="6" fill="#F5C96F"/>
+  </g>
+  <g transform="translate(585 135)" filter="url(#glow)">
+    <path d="M210 125c-65 8-115 62-115 128 0 24 7 48 20 67-48 25-80 76-80 134 0 85 69 154 154 154h222c114 0 206-92 206-206 0-94-64-176-154-199-35-58-103-88-170-72-25-8-53-10-83-6Z" fill="#050B12" stroke="url(#gold)" stroke-width="8"/>
+    <path d="M214 170c-36 30-55 66-55 109 0 50 27 83 82 99m-3-202c46 28 65 71 57 130m103-119c31 46 31 92 0 138m-108 54c49 13 92 5 129-23m-208 78c55 36 117 39 185 10m-92-278v318m-91-195h259m-205 87h295" fill="none" stroke="#F5C96F" stroke-width="7" stroke-linecap="round" stroke-opacity="0.92"/>
+    <g fill="#FFE8A3">
+      <circle cx="304" cy="166" r="13"/><circle cx="213" cy="289" r="12"/><circle cx="472" cy="289" r="12"/><circle cx="267" cy="376" r="12"/><circle cx="562" cy="376" r="12"/><circle cx="304" cy="484" r="13"/>
+    </g>
+  </g>
+  <g transform="translate(180 238)">
+    <rect x="0" y="0" width="372" height="426" rx="18" fill="#07121D" fill-opacity="0.78" stroke="#B88F48" stroke-opacity="0.48"/>
+    <path d="M42 62h210M42 116h286M42 170h236M42 224h304M42 278h180" stroke="#D6A84E" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+    <path d="M42 348h122" stroke="#FFE8A3" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <g opacity="0.55" stroke="#F5C96F" fill="none">
+    <path d="M800 640c115 42 258 42 430-16" stroke-width="4"/>
+    <path d="M735 696c190 78 397 66 621-35" stroke-width="2" opacity="0.5"/>
+  </g>
+  <text x="180" y="760" fill="#F5C96F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="5">CYBERPUNK UNDERWRITING</text>
+</svg>
