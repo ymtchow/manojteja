@@ -13,6 +13,13 @@ const articles = (await getCollection('articles'))
 const featured = articles.find((article) => article.id === 'whose-law-which-court') ?? articles[0];
 const comingSoon = [
   {
+    title: 'Insurance in the Age of Brain–Computer Interfaces',
+    description: 'A future-facing insurance reflection on how brain-computer interfaces could reshape claims, data, consent, and risk assessment.',
+    category: 'Emerging Risk & AI',
+    image: '/assets/article-brain-computer-interface-card.svg',
+    metaLabel: 'Cyberpunk Underwriting',
+  },
+  {
     title: 'Letters of Credit – Bridges of Global Trust',
     description: 'Understanding the legal architecture behind trade finance.',
     category: 'Insurance Wordings',
@@ -113,7 +120,7 @@ const areas = [
           </div>
           <div class="article-grid">
             {featured && <ArticleCard article={featured} variant="grid" />}
-            {comingSoon.map((item) => <ArticleCard item={item} variant="grid" comingSoon />)}
+            {comingSoon.map((item) => <ArticleCard item={item} variant="grid" comingSoon metaLabel={item.metaLabel} />)}
           </div>
         </div>
       </section>
