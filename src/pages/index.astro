@@ -6,23 +6,12 @@ import SiteFooter from '../components/SiteFooter.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
-const articleOrder = ['whose-law-which-court', 'ai-insurance-workforce-shift-gcc'];
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
-  .sort((a, b) => {
-    const aIndex = articleOrder.indexOf(a.id);
-    const bIndex = articleOrder.indexOf(b.id);
-    if (aIndex !== -1 || bIndex !== -1) {
-      return (aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex);
-    }
-    return b.data.date.valueOf() - a.data.date.valueOf();
-  });
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const featured = articles.find((article) => article.id === 'whose-law-which-court') ?? articles[0];
-const latestArticles = [
-  featured,
-  ...articles.filter((article) => article.id !== featured?.id),
-].filter(Boolean);
+const featured = articles[0];
+const latestArticles = articles.filter((article) => article.id !== featured?.id);
 const comingSoon = [
   {
     title: 'Insurance in the Age of Brain-Computer Interfaces',
@@ -87,8 +76,11 @@ const areas = [
             <div class="featured-publication__copy">
               <p class="eyebrow">Featured publication</p>
               <h2>{featured.data.title}</h2>
-              {featured.data.description && <p>{featured.data.description}</p>}
-              <p>A practical lens on law, forum, enforcement, and insurance response in cross-border commercial and insurance disputes.</p>
+              {featured.data.description ? (
+                <p>{featured.data.description}</p>
+              ) : (
+                <p>Selected latest perspective from The Cross-Border Risk Review.</p>
+              )}
               <div class="featured-publication__actions">
                 <a class="button button--dark" href={`/articles/${featured.id}/`}>Read article</a>
                 {featured.data.audio && <a class="button button--ghost" href={`/articles/${featured.id}/#audio`}>Listen to podcast ▶</a>}
