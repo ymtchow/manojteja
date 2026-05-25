@@ -6,10 +6,18 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const ARTICLES_PER_PAGE = 6;
+const articleOrder = ['whose-law-which-court', 'ai-insurance-workforce-shift-gcc'];
 
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  .sort((a, b) => {
+    const aIndex = articleOrder.indexOf(a.id);
+    const bIndex = articleOrder.indexOf(b.id);
+    if (aIndex !== -1 || bIndex !== -1) {
+      return (aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex) - (bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex);
+    }
+    return b.data.date.valueOf() - a.data.date.valueOf();
+  });
 const comingSoon = [
   {
     title: 'Insurance in the Age of Brain-Computer Interfaces',
