@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">AI insurance and GCC risk landscape</title>
+  <desc id="desc">A navy and gold editorial illustration with a shield, scales, Dubai skyline, and luminous GCC digital map.</desc>
+  <defs>
+    <radialGradient id="glow" cx="62%" cy="28%" r="52%">
+      <stop offset="0" stop-color="#1e8fff" stop-opacity="0.72"/>
+      <stop offset="0.45" stop-color="#064f94" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#020b13" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#8e6421"/>
+      <stop offset="0.45" stop-color="#f1c56e"/>
+      <stop offset="1" stop-color="#9b6b24"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="#020b13"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <g opacity="0.55" stroke="#0e7ee9" stroke-width="1">
+    <path d="M420 148h120l36 42h70l38-36h120M452 205h84l34 32h112l38-31h170M483 263h110l30 27h160l46-36h86" fill="none"/>
+    <path d="M735 112v95M782 132v125M620 150v162M880 190v130M535 165v180"/>
+    <circle cx="540" cy="148" r="3" fill="#56b7ff"/><circle cx="645" cy="190" r="3" fill="#56b7ff"/><circle cx="782" cy="132" r="3" fill="#56b7ff"/><circle cx="890" cy="206" r="3" fill="#56b7ff"/>
+  </g>
+  <g transform="translate(580 85) scale(1.08)" fill="none" stroke="#62baff" stroke-width="4" filter="url(#soft)" opacity="0.85">
+    <path d="M80 170 L35 205 L66 247 L145 274 L232 238 L300 244 L330 205 L292 170 L246 118 L195 85 L128 94 Z"/>
+  </g>
+  <g transform="translate(580 85) scale(1.08)" fill="none" stroke="#77c5ff" stroke-width="2.2">
+    <path d="M80 170 L35 205 L66 247 L145 274 L232 238 L300 244 L330 205 L292 170 L246 118 L195 85 L128 94 Z"/>
+    <path d="M80 170l65 104M128 94l17 180M195 85l37 153M246 118l-101 156M292 170l-60 68M66 247l166-9M35 205l257-35" opacity="0.75"/>
+    <g fill="#78c9ff" stroke="none"><circle cx="80" cy="170" r="4"/><circle cx="35" cy="205" r="4"/><circle cx="145" cy="274" r="4"/><circle cx="232" cy="238" r="4"/><circle cx="300" cy="244" r="4"/><circle cx="195" cy="85" r="4"/><circle cx="246" cy="118" r="4"/></g>
+  </g>
+  <g transform="translate(480 360)" stroke="#59baff" stroke-width="1.2" fill="none" opacity="0.76">
+    <ellipse cx="220" cy="70" rx="150" ry="28"/><ellipse cx="220" cy="70" rx="94" ry="17"/><path d="M220 0v150" opacity="0.5"/><path d="M130 135c55 26 127 26 180 0"/>
+  </g>
+  <g transform="translate(0 545)">
+    <rect y="140" width="1200" height="115" fill="#03111d" opacity="0.78"/>
+    <g fill="#071828" stroke="#c8943d" stroke-width="1.5">
+      <path d="M18 140V80h16v60zM48 140V50h26v90zM95 140V82h20v58zM865 140V18l11-35 11 35v122zM916 140V58h30l22 30v52zM990 140V36h18v104zM1038 140V78h28v62zM1092 140V52h40v88z"/>
+      <path d="M430 140V72h30v68zM472 140V38h34v102zM520 140V88h23v52zM560 140V52h42v88zM620 140V102h28v38zM670 140V72h35v68zM730 140V42h42v98zM790 140V90h31v50z"/>
+    </g>
+    <path d="M0 143h1200" stroke="#e4b15f" stroke-width="2" opacity="0.8"/>
+    <path d="M0 190h1200" stroke="#2a6ea8" stroke-width="1" opacity="0.5"/>
+  </g>
+  <g transform="translate(92 318)">
+    <ellipse cx="145" cy="300" rx="150" ry="30" fill="#040b12" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M145 0 C105 18 74 24 32 24 v142 c0 92 74 145 113 158 c40-13 113-66 113-158 V24 c-42 0-74-6-113-24z" fill="#07121d" stroke="url(#gold)" stroke-width="10"/>
+    <path d="M145 44 C117 57 94 62 65 64 v96 c0 62 50 98 80 109 c30-11 80-47 80-109 V64 c-29-2-52-7-80-20z" fill="none" stroke="#d8a84d" stroke-width="2" opacity="0.9"/>
+    <g stroke="#d8a84d" stroke-width="1.5" opacity="0.75"><path d="M82 160l63-116 62 116-62 109z"/><path d="M82 160h125M112 107h66M110 213h70M145 44v225"/></g>
+  </g>
+  <g transform="translate(316 510)" stroke="url(#gold)" stroke-width="4" fill="none">
+    <path d="M70 0v130M25 130h90M12 0h116M70 0L30 70M70 0l40 70"/>
+    <path d="M7 70h46c-3 20-43 20-46 0zM87 70h46c-3 20-43 20-46 0z" fill="#2a1a09"/>
+  </g>
+  <path d="M60 720 C330 650 710 675 1150 605" stroke="#e2ad55" stroke-width="3" opacity="0.85" fill="none"/>
+  <path d="M60 735 C350 705 715 740 1150 694" stroke="#1d78c4" stroke-width="2" opacity="0.4" fill="none"/>
+</svg>
