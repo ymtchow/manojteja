@@ -3,7 +3,7 @@ title: "AI in Insurance: The Workforce Shift the GCC Cannot Ignore"
 description: "A concise plain-English review of how AI is reshaping insurance jobs, skills, and governance in 2026."
 date: 2026-05-25
 category: "AI-Driven Risk & Insurance"
-featuredImage: "/assets/article-ai-insurance-gcc-card.svg"
+featuredImage: "/assets/article-ai-insurance-gcc-card-correct.svg"
 draft: false
 ---
 
