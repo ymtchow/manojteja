@@ -33,27 +33,17 @@ const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(`${article.da
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': articleUrl,
-  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
   headline: article.data.title,
   description: seoDescription,
   image: [heroImageUrl],
   datePublished: publishedIso,
   dateModified: publishedIso,
-  author: {
-    '@type': 'Person',
-    name: 'Manoj Teja Yadlapati',
-    url: siteUrl,
-  },
+  author: { '@type': 'Person', name: 'Manoj Teja Yadlapati', url: siteUrl },
   publisher: {
     '@type': 'Organization',
     name: 'The Cross-Border Risk Review',
-    logo: {
-      '@type': 'ImageObject',
-      url: absoluteUrl('/assets/ymt-logo-mark.png'),
-    },
+    logo: { '@type': 'ImageObject', url: absoluteUrl('/assets/ymt-logo-mark.png') },
   },
   articleSection: article.data.category,
   wordCount,
@@ -62,24 +52,9 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: `${siteUrl}/`,
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Articles',
-      item: new URL('/articles/', `${siteUrl}/`).toString(),
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: article.data.title,
-      item: articleUrl,
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Articles', item: new URL('/articles/', `${siteUrl}/`).toString() },
+    { '@type': 'ListItem', position: 3, name: article.data.title, item: articleUrl },
   ],
 };
 ---
@@ -121,257 +96,110 @@ const breadcrumbJsonLd = {
           var(--article-hero-image) center / cover no-repeat;
       }
 
-      .article-hero > div {
-        max-width: 680px;
-      }
+      .article-hero > div { max-width: 680px; }
 
-      .desktop-share {
-        display: block;
-        margin-top: 34px;
-      }
-
-      .desktop-share h2 {
-        margin: 0;
-      }
-
-      .desktop-share__icons {
-        display: flex !important;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 9px;
-        margin-top: 14px;
-        max-width: 150px;
-      }
+      .desktop-share { display: block; margin-top: 34px; }
+      .desktop-share h2 { margin: 0 0 12px; }
+      .desktop-share__icons { display: grid; gap: 10px; margin-top: 12px; }
 
       .desktop-share__icon,
       .desktop-share__copy {
         -webkit-appearance: none;
         appearance: none;
         box-sizing: border-box;
-        display: inline-grid !important;
-        place-items: center;
-        flex: 0 0 39px;
-        width: 39px !important;
-        height: 39px !important;
-        min-width: 39px;
-        min-height: 39px;
-        max-width: 39px;
-        max-height: 39px;
-        border: 1px solid rgba(190, 153, 91, 0.5);
-        border-radius: 50%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+        min-height: 42px;
+        border: 1px solid rgba(190, 153, 91, 0.52);
+        border-radius: 999px;
         background: #102031;
         color: #d8b36a;
         cursor: pointer;
         font: inherit;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 800;
+        letter-spacing: 0.08em;
         line-height: 1;
-        padding: 0;
+        padding: 0 14px;
         text-decoration: none;
-        transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
+        text-transform: uppercase;
       }
 
       .desktop-share__icon:hover,
-      .desktop-share__copy:hover {
+      .desktop-share__copy:hover,
+      .share-link:hover,
+      .copy-share-button:hover {
         background: #0b1725;
-        border-color: rgba(216, 179, 106, 0.9);
-        box-shadow: 0 10px 24px rgba(16, 32, 49, 0.12);
-        transform: translateY(-1px);
-      }
-
-      .desktop-share__icon svg,
-      .desktop-share__copy svg {
-        width: 17px;
-        height: 17px;
-        fill: none;
-        stroke: currentColor;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 1.75;
+        border-color: rgba(216, 179, 106, 0.95);
+        color: #efc979;
       }
 
       .article-share {
         display: block;
-        margin: clamp(34px, 5vw, 54px) 0 0;
-        padding: clamp(22px, 4vw, 30px);
+        margin: clamp(24px, 4vw, 36px) 0 0;
+        padding: clamp(20px, 4vw, 28px);
         border: 1px solid rgba(190, 153, 91, 0.28);
-        border-radius: 26px;
+        border-radius: 22px;
         background:
-          linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(247, 240, 228, 0.7)),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 240, 228, 0.74)),
           radial-gradient(circle at top left, rgba(216, 179, 106, 0.16), transparent 34%);
         box-shadow: 0 18px 44px rgba(16, 32, 49, 0.08);
       }
 
+      .article-share--top { margin-bottom: 26px; }
       .article-share h2 {
         margin: 0;
         color: #102031;
         font-family: Newsreader, Georgia, serif;
-        font-size: clamp(24px, 4vw, 32px);
+        font-size: clamp(23px, 3vw, 30px);
         font-weight: 600;
-        letter-spacing: -0.02em;
       }
-
-      .article-share p {
-        margin: 8px 0 0;
-        color: rgba(16, 32, 49, 0.68);
-        font-size: 14px;
-        line-height: 1.6;
-      }
-
-      .share-links {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: 18px;
-      }
+      .article-share p { margin: 8px 0 0; color: rgba(16, 32, 49, 0.68); font-size: 14px; line-height: 1.6; }
+      .share-links { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
 
       .share-link,
       .copy-share-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 9px;
         width: 100%;
         min-height: 46px;
-        border: 1px solid rgba(190, 153, 91, 0.34);
+        border: 1px solid rgba(190, 153, 91, 0.42);
         border-radius: 999px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 240, 228, 0.66));
-        color: #102031;
-        cursor: pointer;
-        font: inherit;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        padding: 9px 12px 9px 9px;
-        text-align: center;
-        text-decoration: none;
-        transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease, background 160ms ease;
-      }
-
-      .share-link:hover,
-      .copy-share-button:hover {
-        background: #ffffff;
-        border-color: rgba(190, 153, 91, 0.76);
-        box-shadow: 0 10px 24px rgba(16, 32, 49, 0.08);
-        transform: translateY(-1px);
-      }
-
-      .share-mark {
-        display: inline-grid;
-        place-items: center;
-        flex: 0 0 auto;
-        width: 28px;
-        height: 28px;
-        border: 1px solid rgba(190, 153, 91, 0.55);
-        border-radius: 50%;
         background: #102031;
         color: #d8b36a;
-        font-size: 11px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
         font-weight: 800;
-        letter-spacing: 0.01em;
-        line-height: 1;
-      }
-
-      .share-mark svg {
-        width: 15px;
-        height: 15px;
-        fill: none;
-        stroke: currentColor;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 1.75;
-      }
-
-      .share-label {
-        line-height: 1;
+        letter-spacing: 0.06em;
+        padding: 9px 14px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
       }
 
       .copy-share-button:focus-visible,
       .share-link:focus-visible,
       .desktop-share__icon:focus-visible,
-      .desktop-share__copy:focus-visible {
-        outline: 2px solid rgba(190, 153, 91, 0.9);
-        outline-offset: 3px;
-      }
+      .desktop-share__copy:focus-visible { outline: 2px solid rgba(190, 153, 91, 0.9); outline-offset: 3px; }
 
-      @media (max-width: 980px) {
-        .share-links {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-      }
+      @media (max-width: 980px) { .share-links { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
       @media (max-width: 760px) {
-        html,
-        body {
-          max-width: 100%;
-          overflow-x: hidden;
-        }
-
-        .article-layout {
-          display: block;
-          width: 100%;
-          max-width: 100%;
-          padding: 28px 20px 56px;
-          overflow: hidden;
-        }
-
-        .article-aside {
-          position: static;
-          margin-bottom: 24px;
-        }
-
-        .article-aside nav,
-        .desktop-share {
-          display: none;
-        }
-
-        .article-share {
-          display: block;
-        }
-
-        .share-links {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .article-main,
-        .article-content,
-        .article-hero,
-        .audio-card {
-          width: 100%;
-          max-width: 100%;
-          min-width: 0;
-        }
-
-        .article-hero {
-          min-height: 360px;
-          margin: 22px 0 0;
-          padding: 28px 22px;
-        }
-
-        .article-hero h1 {
-          font-size: clamp(34px, 10vw, 44px);
-          line-height: 1.05;
-        }
-
-        .article-hero p {
-          font-size: 16px;
-          line-height: 1.55;
-        }
-
-        .article-content table {
-          display: block;
-          max-width: 100%;
-          overflow-x: auto;
-        }
-
-        .featured-publication__actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .featured-publication__actions .button {
-          width: 100%;
-        }
+        html, body { max-width: 100%; overflow-x: hidden; }
+        .article-layout { display: block; width: 100%; max-width: 100%; padding: 28px 20px 56px; overflow: hidden; }
+        .article-aside { position: static; margin-bottom: 24px; }
+        .article-aside nav, .desktop-share { display: none; }
+        .share-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .article-main, .article-content, .article-hero, .audio-card { width: 100%; max-width: 100%; min-width: 0; }
+        .article-hero { min-height: 360px; margin: 22px 0 0; padding: 28px 22px; }
+        .article-hero h1 { font-size: clamp(34px, 10vw, 44px); line-height: 1.05; }
+        .article-hero p { font-size: 16px; line-height: 1.55; }
+        .featured-publication__actions { flex-direction: column; align-items: stretch; }
+        .featured-publication__actions .button { width: 100%; }
       }
     </style>
   </head>
@@ -390,23 +218,12 @@ const breadcrumbJsonLd = {
         )}
         <section class="desktop-share" aria-label="Share this article on desktop">
           <h2>Share</h2>
-          <div class="desktop-share__icons" aria-label="Desktop social sharing links">
-            <a class="desktop-share__icon" href={linkedInShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">in</a>
-            <a class="desktop-share__icon" href={xShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on X">X</a>
-            <a class="desktop-share__icon" href={facebookShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a>
-            <a class="desktop-share__icon" href={whatsappShareUrl} target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">
-              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                <path d="M7.2 19.1 4.5 20l.9-2.6a8.1 8.1 0 1 1 1.8 1.7Z" />
-                <path d="M9.2 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.4.5c.8 1.4 1.8 2.3 3.2 3.1l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.8-.5.3-1.2.5-1.9.4-3.5-.5-6.4-3.3-7-6.8-.1-.7.1-1.4.4-1.9Z" />
-              </svg>
-            </a>
-            <button class="desktop-share__copy" type="button" data-copy-share-link data-share-url={articleUrl} aria-label="Copy article link">
-              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                <rect x="8" y="8" width="10" height="10" rx="2" />
-                <path d="M6 14H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1" />
-              </svg>
-              <span class="share-label" hidden>Copy link</span>
-            </button>
+          <div class="desktop-share__icons">
+            <button class="desktop-share__icon" type="button" data-share-open={linkedInShareUrl}>LinkedIn</button>
+            <button class="desktop-share__icon" type="button" data-share-open={xShareUrl}>X</button>
+            <button class="desktop-share__icon" type="button" data-share-open={facebookShareUrl}>Facebook</button>
+            <button class="desktop-share__icon" type="button" data-share-open={whatsappShareUrl}>WhatsApp</button>
+            <button class="desktop-share__copy" type="button" data-copy-share-link data-share-url={articleUrl}>Copy link</button>
           </div>
         </section>
       </aside>
@@ -425,6 +242,18 @@ const breadcrumbJsonLd = {
           </div>
         </section>
 
+        <section class="article-share article-share--top" aria-label="Share this article">
+          <h2>Share this article</h2>
+          <p>Use the buttons below to share or copy this article link.</p>
+          <div class="share-links">
+            <button class="share-link" type="button" data-share-open={linkedInShareUrl}>LinkedIn</button>
+            <button class="share-link" type="button" data-share-open={xShareUrl}>X</button>
+            <button class="share-link" type="button" data-share-open={facebookShareUrl}>Facebook</button>
+            <button class="share-link" type="button" data-share-open={whatsappShareUrl}>WhatsApp</button>
+            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}>Copy link</button>
+          </div>
+        </section>
+
         {article.data.audio && (
           <section class="audio-card" id="audio" aria-label="Audio perspective">
             <p class="eyebrow">Listen to audio perspective</p>
@@ -432,27 +261,17 @@ const breadcrumbJsonLd = {
           </section>
         )}
 
-        <div class="article-content">
-          <Content />
-        </div>
+        <div class="article-content"><Content /></div>
 
-        <section class="article-share" aria-label="Share this article">
+        <section class="article-share" aria-label="Share this article again">
           <h2>Share this article</h2>
           <p>Forward this perspective to your professional network or save the link for later reference.</p>
-          <div class="share-links" aria-label="Social sharing links">
-            <a class="share-link" href={linkedInShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">in</span><span class="share-label">LinkedIn</span></a>
-            <a class="share-link" href={xShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">X</span><span class="share-label">X</span></a>
-            <a class="share-link" href={facebookShareUrl} target="_blank" rel="noopener noreferrer"><span class="share-mark" aria-hidden="true">f</span><span class="share-label">Facebook</span></a>
-            <a class="share-link" href={whatsappShareUrl} target="_blank" rel="noopener noreferrer">
-              <span class="share-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                  <path d="M7.2 19.1 4.5 20l.9-2.6a8.1 8.1 0 1 1 1.8 1.7Z" />
-                  <path d="M9.2 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.4.5c.8 1.4 1.8 2.3 3.2 3.1l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.6v.5c0 .3-.2.6-.5.8-.5.3-1.2.5-1.9.4-3.5-.5-6.4-3.3-7-6.8-.1-.7.1-1.4.4-1.9Z" />
-                </svg>
-              </span>
-              <span class="share-label">WhatsApp</span>
-            </a>
-            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}><span class="share-mark" aria-hidden="true">⧉</span><span class="share-label">Copy link</span></button>
+          <div class="share-links">
+            <button class="share-link" type="button" data-share-open={linkedInShareUrl}>LinkedIn</button>
+            <button class="share-link" type="button" data-share-open={xShareUrl}>X</button>
+            <button class="share-link" type="button" data-share-open={facebookShareUrl}>Facebook</button>
+            <button class="share-link" type="button" data-share-open={whatsappShareUrl}>WhatsApp</button>
+            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}>Copy link</button>
           </div>
         </section>
 
@@ -465,12 +284,17 @@ const breadcrumbJsonLd = {
     <SiteFooter />
     <script is:inline>
       document.addEventListener('click', async (event) => {
-        const button = event.target.closest('[data-copy-share-link]');
-        if (!button) return;
+        const openButton = event.target.closest('[data-share-open]');
+        if (openButton) {
+          const url = openButton.getAttribute('data-share-open');
+          window.open(url, '_blank', 'noopener,noreferrer,width=720,height=640');
+          return;
+        }
 
-        const shareUrl = button.getAttribute('data-share-url');
-        const label = button.querySelector('.share-label');
-        const originalText = label?.textContent ?? 'Copy link';
+        const copyButton = event.target.closest('[data-copy-share-link]');
+        if (!copyButton) return;
+        const shareUrl = copyButton.getAttribute('data-share-url');
+        const originalText = copyButton.textContent;
 
         try {
           await navigator.clipboard.writeText(shareUrl);
@@ -486,10 +310,8 @@ const breadcrumbJsonLd = {
           document.body.removeChild(textArea);
         }
 
-        if (label) label.textContent = 'Copied';
-        window.setTimeout(() => {
-          if (label) label.textContent = originalText;
-        }, 1800);
+        copyButton.textContent = 'Copied';
+        window.setTimeout(() => { copyButton.textContent = originalText; }, 1800);
       });
     </script>
   </body>
