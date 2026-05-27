@@ -243,18 +243,6 @@ const breadcrumbJsonLd = {
           </div>
         </section>
 
-        <section class="article-share article-share--top" aria-label="Share this article">
-          <h2>Share this article</h2>
-          <p>Use the buttons below to share or copy this article link.</p>
-          <div class="share-links">
-            <button class="share-link" type="button" data-share-open={linkedInShareUrl}>LinkedIn</button>
-            <button class="share-link" type="button" data-share-open={xShareUrl}>X</button>
-            <button class="share-link" type="button" data-share-open={facebookShareUrl}>Facebook</button>
-            <button class="share-link" type="button" data-share-open={whatsappShareUrl}>WhatsApp</button>
-            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}>Copy link</button>
-          </div>
-        </section>
-
         {article.data.audio && (
           <section class="audio-card" id="audio" aria-label="Audio perspective">
             <p class="eyebrow">Listen to audio perspective</p>
@@ -263,18 +251,6 @@ const breadcrumbJsonLd = {
         )}
 
         <div class="article-content"><Content /></div>
-
-        <section class="article-share" aria-label="Share this article again">
-          <h2>Share this article</h2>
-          <p>Forward this perspective to your professional network or save the link for later reference.</p>
-          <div class="share-links">
-            <button class="share-link" type="button" data-share-open={linkedInShareUrl}>LinkedIn</button>
-            <button class="share-link" type="button" data-share-open={xShareUrl}>X</button>
-            <button class="share-link" type="button" data-share-open={facebookShareUrl}>Facebook</button>
-            <button class="share-link" type="button" data-share-open={whatsappShareUrl}>WhatsApp</button>
-            <button class="copy-share-button" type="button" data-copy-share-link data-share-url={articleUrl}>Copy link</button>
-          </div>
-        </section>
 
         <div class="featured-publication__actions" style="margin: 32px 0 0;">
           {article.data.pdf && <a class="button button--dark" href={article.data.pdf} target="_blank" rel="noopener noreferrer">Open PDF brief ↗</a>}
