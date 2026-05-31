@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" role="img" aria-labelledby="title desc">
+  <title id="title">Linked regional losses from one El Nino cycle</title>
+  <desc id="desc">Diagram showing one climate cycle connecting India agriculture, South China flood, North China heat or drought, and Southeast Asia or Australia dryness.</desc>
+  <rect width="1080" height="620" fill="#f7f2ea"/>
+  <rect x="54" y="42" width="972" height="526" rx="26" fill="#ffffff" stroke="#d8c6a3"/>
+  <text x="90" y="100" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="800" fill="#102031">One signal, linked regional losses</text>
+  <text x="90" y="134" font-family="Inter, Arial, sans-serif" font-size="18" fill="#5f6a75">For reinsurers, the problem is not coincidence. It is correlation.</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <circle cx="540" cy="308" r="88" fill="#102031"/>
+    <circle cx="540" cy="308" r="120" fill="none" stroke="#d8b36a" stroke-width="3" stroke-dasharray="8 10"/>
+    <text x="540" y="296" text-anchor="middle" font-size="24" font-weight="800" fill="#d8b36a">El Niño</text>
+    <text x="540" y="327" text-anchor="middle" font-size="16" fill="#f7f2ea">common climate driver</text>
+    <g stroke="#c99437" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M474 250L302 190"/>
+      <path d="M610 246L786 184"/>
+      <path d="M470 368L302 444"/>
+      <path d="M610 370L788 446"/>
+    </g>
+    <g>
+      <rect x="132" y="132" width="292" height="112" rx="18" fill="#fff1df" stroke="#d8c6a3"/>
+      <text x="278" y="176" text-anchor="middle" font-size="21" font-weight="800" fill="#102031">India agriculture</text>
+      <text x="278" y="207" text-anchor="middle" font-size="15" fill="#5f6a75">monsoon and crop income stress</text>
+      <rect x="656" y="132" width="292" height="112" rx="18" fill="#eaf4f6" stroke="#b7d0d8"/>
+      <text x="802" y="176" text-anchor="middle" font-size="21" font-weight="800" fill="#102031">South China flood</text>
+      <text x="802" y="207" text-anchor="middle" font-size="15" fill="#5f6a75">river-basin and infrastructure exposure</text>
+      <rect x="132" y="388" width="292" height="112" rx="18" fill="#f4dedf" stroke="#d7aaaa"/>
+      <text x="278" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#102031">North China heat</text>
+      <text x="278" y="463" text-anchor="middle" font-size="15" fill="#5f6a75">drought and temperature pressure</text>
+      <rect x="656" y="388" width="292" height="112" rx="18" fill="#f3e6d0" stroke="#d4bd91"/>
+      <text x="802" y="432" text-anchor="middle" font-size="21" font-weight="800" fill="#102031">Regional spillover</text>
+      <text x="802" y="463" text-anchor="middle" font-size="15" fill="#5f6a75">Southeast Asia or Australia stress</text>
+    </g>
+  </g>
+</svg>
