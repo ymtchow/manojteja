@@ -3,6 +3,7 @@ title: "One Ocean, Two Catastrophes"
 description: "El Niño, agriculture and the insurance question in India and China."
 date: 2026-05-31
 category: "Climate · Agriculture · Insurance Resilience"
+featuredImage: "/assets/el-nino-article-card.png"
 draft: false
 ---
 
@@ -11,6 +12,11 @@ draft: false
 One warm patch of water in the Pacific Ocean can travel much farther than it looks on a map. In 2026, El Niño is again moving into the risk conversation, with potential effects on India’s monsoon season, flood conditions in parts of China, and the loss ratios of insurers and reinsurers far away from the fields and river basins where the damage first appears.
 
 The World Meteorological Organization has signalled a likely return of El Niño conditions from mid-2026. For insurance, this is not only a climate update. It is a reminder that one ocean cycle can place pressure on agriculture, flood exposure, public budgets, and reinsurance portfolios at the same time.
+
+<figure class="article-figure">
+  <img src="/assets/articles/el-nino-mechanism.png" alt="Normal Pacific conditions compared with El Niño conditions, showing warm water and rainfall shifting east." loading="lazy" />
+  <figcaption>Figure 1 — In a normal year, winds keep warm water and rain closer to Asia and Australia. During El Niño, both drift east.</figcaption>
+</figure>
 
 ## What El Niño means, in plain terms
 
@@ -26,6 +32,11 @@ India’s exposure mainly runs through the southwest monsoon, which delivers a m
 
 The 2026 outlook makes this practical. On 29 May 2026, the India Meteorological Department revised its seasonal forecast to 90% of the Long Period Average, with a model error of ±4%. In simple terms, the forecast moved below the “normal” band of 96% to 104%. The same update assigned a 60% probability to deficient rainfall, which means the risk signal is meaningful but still probabilistic, not certain.
 
+<figure class="article-figure">
+  <img src="/assets/articles/el-nino-india-monsoon-forecast.png" alt="India 2026 monsoon forecast chart showing rainfall below the normal band." loading="lazy" />
+  <figcaption>Figure 2 — India’s 2026 monsoon forecast sits below the “normal” band. Source: India Meteorological Department.</figcaption>
+</figure>
+
 For insurers, the lesson is not alarm. It is income volatility. A weak monsoon can affect yields, farm cash flow, food prices, and rural demand. Crop insurance exists to absorb exactly this kind of shock. India’s public-private crop insurance structure already operates at a scale few markets can match. The next improvement opportunity is speed and transparency: clearer triggers, better satellite and rainfall data, and faster settlement so the cover stabilises income when farmers need it most.
 
 ## China: flood and drought can sit inside the same season
@@ -35,6 +46,11 @@ China presents a different underwriting challenge. El Niño can raise the odds o
 The risk is not limited to property damage. River-basin flooding can affect transport, infrastructure, late-season crops, hydropower, and business continuity. The China National Climate Centre has indicated that El Niño effects may strengthen through summer and autumn 2026, with rainfall pressure south of the Yangtze and higher-than-usual temperatures in many areas.
 
 China also has significant agricultural insurance penetration compared with many emerging markets. That is a strength, but it does not remove the underwriting question. Wide coverage still needs pricing, accumulation control, and reinsurance support that reflect today’s climate variability rather than only yesterday’s averages.
+
+<figure class="article-figure">
+  <img src="/assets/articles/el-nino-correlated-losses.png" alt="Regional loss map showing linked El Niño exposures across India, China, Southeast Asia and Australia." loading="lazy" />
+  <figcaption>Figure 3 — A single El Niño can trigger linked losses across the region, which is what undercuts diversification.</figcaption>
+</figure>
 
 ## Where the exposure actually sits for insurers
 
@@ -47,6 +63,11 @@ Once the meteorology is stripped back, four practical insurance themes remain.
 **Third,** the protection gap becomes a public liability. The protection gap is the difference between total economic loss and the portion actually insured. When that gap is wide, recovery costs often migrate to households, lenders, businesses, and government budgets.
 
 **Fourth,** reinsurers face correlation rather than coincidence. Reinsurance works best when losses are diversified. But a single El Niño can stress India agriculture, southern China flood exposure, Southeast Asia dryness, and Australian fire weather in the same cycle. These losses are linked, and linked losses are harder to diversify.
+
+<figure class="article-figure">
+  <img src="/assets/articles/el-nino-insurance-themes.png" alt="Four insurance themes linking crop income stability, flood insurance, protection gaps and reinsurance correlation." loading="lazy" />
+  <figcaption>Figure 4 — Four ways one weather signal reaches the insurance balance sheet.</figcaption>
+</figure>
 
 ## The tools are improving
 
