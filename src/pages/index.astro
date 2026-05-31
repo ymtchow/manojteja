@@ -90,8 +90,8 @@ const areas = [
                 {featured.data.audio && <a class="button button--ghost" href={`/articles/${featured.id}/#audio`}>Listen to podcast ▶</a>}
               </div>
             </div>
-            <a class="feature-image" href={`/articles/${featured.id}/`} aria-label={`Read ${featured.data.title}`}>
-              <img src={featured.data.featuredImage ?? '/assets/article-whose-law-card.webp'} alt="" />
+            <a class:list={['feature-image', { 'feature-image--blank': !featured.data.featuredImage }]} href={`/articles/${featured.id}/`} aria-label={`Read ${featured.data.title}`}>
+              {featured.data.featuredImage && <img src={featured.data.featuredImage} alt="" />}
             </a>
           </div>
         </section>
@@ -209,6 +209,10 @@ const areas = [
 
       .hero__actions {
         margin-top: 34px;
+      }
+
+      .feature-image--blank {
+        background: #fff;
       }
 
       .contact-actions {
