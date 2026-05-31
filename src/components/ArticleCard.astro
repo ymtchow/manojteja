@@ -13,7 +13,7 @@ const data = article?.data ?? item ?? {};
 const title = data.title ?? '';
 const description = data.description ?? '';
 const category = data.category ?? '';
-const image = data.featuredImage ?? data.image ?? '/assets/article-page-banner-19-may-2025.png';
+const image = data.featuredImage ?? data.image ?? null;
 const date = data.date;
 const hasAudio = Boolean(data.audio);
 const resolvedHref = href ?? (article ? `/articles/${article.id}/` : undefined);
@@ -25,8 +25,8 @@ const classes = ['article-card', `article-card--${variant}`, { 'article-card--so
 ---
 {isLinked ? (
   <a class:list={classes} href={resolvedHref}>
-    <div class="article-card__media">
-      <img src={image} alt={imageAlt} loading="lazy" />
+    <div class:list={['article-card__media', { 'article-card__media--blank': !image }]}> 
+      {image && <img src={image} alt={imageAlt} loading="lazy" />}
     </div>
     <div class="article-card__body">
       {category && <p class="eyebrow">{category}</p>}
@@ -43,8 +43,8 @@ const classes = ['article-card', `article-card--${variant}`, { 'article-card--so
   </a>
 ) : (
   <article class:list={classes} aria-label={title ? `${title} coming soon` : undefined}>
-    <div class="article-card__media">
-      <img src={image} alt={imageAlt} loading="lazy" />
+    <div class:list={['article-card__media', { 'article-card__media--blank': !image }]}> 
+      {image && <img src={image} alt={imageAlt} loading="lazy" />}
     </div>
     <div class="article-card__body">
       {category && <p class="eyebrow">{category}</p>}
@@ -81,6 +81,10 @@ const classes = ['article-card', `article-card--${variant}`, { 'article-card--so
     position: relative;
     overflow: hidden;
     background: var(--navy-900);
+  }
+
+  .article-card__media--blank {
+    background: #fff;
   }
 
   .article-card__media img {
