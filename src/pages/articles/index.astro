@@ -6,7 +6,12 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const ARTICLES_PER_PAGE = 6;
-const articleOrder = ['whose-law-which-court', 'ai-insurance-workforce-shift-gcc'];
+const articleOrder = [
+  'whose-law-which-court',
+  'ai-insurance-workforce-shift-gcc',
+  'one-ocean-two-catastrophes-el-nino-insurance-india-china',
+  'the-insured-name-problem',
+];
 
 const articles = (await getCollection('articles'))
   .filter((article) => !article.data.draft)
